@@ -34,28 +34,6 @@ $wp_customize->add_control( new WP_Customize_Control(
     )
 ));
 
-/*----------- Top bar Email-----------*/
-// Settings
-$wp_customize->add_setting( 'topbar_email', array(
-  'default' => '',
-  'type' => 'theme_mod',
-  'capability' => 'edit_theme_options',
-  'transport' => 'refresh',
-  'sanitize_callback' => 'esc_html',
-) );
-//Controls
-$wp_customize->add_control( new WP_Customize_Control(
-  $wp_customize,
-  'topbar_email',
-    array(
-      'type' => 'text',
-      'section'    => 'general_settings_section',
-      'priority'   => 4,
-      'label' => __( 'Endereço de email na barra no top do website', 'dimakin' ),
-      'description' => ''
-    )
-));
-
 /*----------- Google Analytics -----------*/
 // Settings
 $wp_customize->add_setting( 'google_analytics', array(
