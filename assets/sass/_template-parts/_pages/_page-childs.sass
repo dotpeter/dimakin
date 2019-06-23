@@ -1,0 +1,58 @@
+.page-template-page-childs
+  .page-content-wrapper
+    .col-12
+      padding-left: 0
+      padding-right: 0
+
+
+
+.pagechild-wrapper
+  border: 1px solid $light-color
+  margin-bottom: 40px
+  &:hover
+    .pagechild-thumbnail
+      img
+        transform: scale(1.1)
+        filter: contrast(90%)
+    .pagechild-content
+      i
+        background-color: $primary-color
+        color: #fff
+        border-color: $primary-color
+
+  .pagechild-header
+    .pagechild-title
+      padding: 20px
+      margin: 0
+      color: $secondary-color
+      font-size: 22px
+      font-weight: 400
+      &::after
+        display: none
+    .pagechild-thumbnail
+      overflow: hidden
+      img
+        transition: all .6s
+        vertical-align: middle
+        width: 100%
+        filter: contrast(80%)
+  .pagechild-content
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: space-between
+    padding: 20px
+    p
+      margin: 0
+      color: $smooth-grey
+      line-height: 1.2
+    .pagechild-excerpt
+      color: $smooth-grey
+      margin: 0
+      line-height: 1.2
+    i
+      border: 1px solid $blue-grey
+      text-align: center
+      padding: 12px 16px
+      margin-left: 40px
+      color: $blue-grey

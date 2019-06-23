@@ -1,0 +1,160 @@
+.products-wrapper
+  padding: 80px 0
+  position: relative
+  overflow: hidden
+  .primary-btn
+    float: right
+    display: block
+    width: 240px
+    text-align: center
+    margin: 0px auto
+    margin-top: 20px
+    background-color: $primary-color
+    color: #fff
+    &:hover
+      background-color: $secondary-color
+  .products-slider-wrapper
+    .flex-viewport
+      .products-slider-container
+        margin: 0
+        padding: 0
+        list-style-type: none
+        .product
+          position: relative
+          margin: 0
+          padding: 0
+          box-shadow: 0 7px 22px rgba(19,19,19,.08)
+          overflow: hidden
+          border: 1px solid #f1f1f1
+          margin-bottom: 30px
+          &:hover
+            .woocommerce-loop-product__link
+              img
+                transform: scale(1.1)
+                //filter: contrast(90%)
+          .woocommerce-loop-product__link
+            position: relative
+            display: block
+            overflow: hidden
+            img
+              overflow: hidden
+              transition: all .6s
+              vertical-align: middle
+              width: 100%
+              //filter: contrast(80%)
+            .onsale
+              position: absolute
+              top: 20px
+              right: 20px
+              background-color: $primary-color
+              z-index: 2
+              color: $light-color
+              padding: 10px
+              font-size: 10px
+              text-transform: uppercase
+          .product-details
+            padding: 30px 20px
+            .product-cat
+              margin-bottom: 5px
+              text-transform: uppercase
+              //font-style: italic
+              font-size: 11px
+              font-family: $secondaryfont
+              color: $primary-color
+
+            .woocommerce-loop-product__title
+              margin-bottom: 10px
+              margin-top: 0
+              padding: 0
+              color: $secondary-color
+              font-size: 18px
+              &::after
+                display: none
+              &:hover
+                color: $primary-color
+            p
+              color: $smooth-grey
+              margin: 0
+              width: 100%
+
+      .flex-control-nav .flex-control-paging
+        position: absolute
+        top: 0
+        width: 50%
+      .flex-direction-nav
+        .flex-nav-prev
+          .flex-prev
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -20px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-end
+            margin: 0
+            opacity: 1
+            transition: all 0.3s ease-in-out
+            background-color: $primary-color
+            width: 50px
+            height: 70px
+            padding: 20px 10px
+            cursor: pointer
+            &::before
+              font-family: 'FontAwesome'
+              content: '\f104'
+              font-size: 30px
+              display: block
+              color: #fff
+            &:hover
+              background-color: $secondary-color
+              color: #fff
+              left: 0
+
+        .flex-nav-next
+          .flex-next
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: -20px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            margin: 0
+            opacity: 1
+            transition: all 0.3s ease-in-out
+            background-color: $primary-color
+            width: 50px
+            height: 70px
+            padding: 20px 10px
+            &::before
+              font-family: 'FontAwesome'
+              content: '\f105'
+              font-size: 30px
+              display: block
+              color:  #fff
+            &:hover
+              background-color: $secondary-color
+              color: #fff
+              right: 0
+
+@media (max-width: $medium)
+  .products-wrapper
+    .section-title
+    .primary-btn
+    .products-slider-wrapper
+      .flex-viewport
+        .products-slider-container
+          margin: 0 40px
+          padding: 0
+
+@media (max-width: $small)
+  .products-wrapper
+    .section-title
+    .primary-btn
+    .products-slider-wrapper
+      .flex-viewport
+        .products-slider-container
+          margin: 0 20px
+          padding: 0
