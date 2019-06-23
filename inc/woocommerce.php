@@ -108,7 +108,7 @@ function dimack_loop_product_cat() {
             $cat_links[] = $term->name;
         }
         $on_cat = join( " ", $cat_links );
-       echo '<p class="product-cat">' . $on_cat . '</p>';
+       /*echo '<p class="product-cat">' . $on_cat . '</p>';*/
 
      endif;
 }

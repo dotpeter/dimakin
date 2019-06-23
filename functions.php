@@ -40,7 +40,11 @@ if ( ! function_exists( 'dimack_setup' ) ) :
 
     add_image_size( 'post-full-width', 1920, 400, array('center','center') );
 
-    add_image_size( 'post-custom-thumb', 540, 160, array('center','center') );
+    add_image_size( 'post-custom-thumb', 540, 260, array('center','center') );
+
+    add_image_size( 'services-thumb', 520, 347, array('center','center') );
+
+    add_image_size( 'childpage-thumb', 830, 365, array('center','center') );
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(

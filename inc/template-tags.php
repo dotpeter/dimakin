@@ -144,16 +144,17 @@ if ( ! function_exists( 'dimack_child_pages_loop' ) ) {
           <header id="post-<?php the_ID(); ?>" class="pagechild-header">
             <?php $title = get_the_title(); ?>
             <h3 class="pagechild-title"><?php echo mb_strimwidth( $title, 0, 60, '...' ); ?></h3>
-            <?php if ( has_post_thumbnail() ) : ?>
+            <section class="pagechild-content">
+              <?php the_excerpt(); ?>
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </section>
+            <?php if ( has_post_thumbnail('childpage-thumb') ) : ?>
               <figure class="pagechild-thumbnail">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('childpage-thumb'); ?>
               </figure>
             <?php endif; ?>
           </header>
-          <section class="pagechild-content">
-            <?php the_excerpt(); ?>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </section>
+
         </article>
       </a>
     </div>
