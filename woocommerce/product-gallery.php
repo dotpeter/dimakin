@@ -13,7 +13,7 @@ $productGallery2 = $product->get_gallery_image_ids();
 
 if(!empty($productGallery)) {
 
-  echo '<div id="product-slider" class="flexslider"><ul class="slides">';
+  echo '<div class="product-gallery-wrapper"><div id="product-slider" class="flexslider"><ul class="slides">';
 
   foreach( $productGallery as $productPhoto ) {
     $galleryFull = wp_get_attachment_image($productPhoto, 'woocommerce_single');
@@ -28,7 +28,7 @@ if(!empty($productGallery)) {
     $galleryThumb = wp_get_attachment_image($gallery, 'thumbnail');
     echo '<li>' , $galleryThumb , '</li>';
   }
-  echo '</ul></div>';
+  echo '</ul></div></div>';
 }
 
 

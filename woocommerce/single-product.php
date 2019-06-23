@@ -23,10 +23,10 @@ global $product;
     <div class="product-content-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-md-6">
             <?php get_template_part('woocommerce/product', 'gallery'); ?>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-md-6">
             <div class="product-details">
               <?php
                 echo '<h1 class="product-title">', $product->get_name() , '</h1>';
