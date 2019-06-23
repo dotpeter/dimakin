@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row  align-items-center">
       <div class="col-6">
-        <?php do_action('dimack_social'); ?>
+        <?php do_action('dimakin_social'); ?>
       </div><!-- col-6 -->
       <div class="col-6">
         <div class="language-wrapper">

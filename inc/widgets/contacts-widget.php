@@ -5,12 +5,12 @@
  * -----------------------------------------------------------
  */
 
-class dimackContactsWidget extends WP_Widget {
+class dimakinContactsWidget extends WP_Widget {
 
   /*----------- Register widget with wordpress -----------*/
   function __construct() {
     parent::__construct(
-      'dimack_contacts_widget',
+      'dimakin_contacts_widget',
       esc_html__('Contactos', 'dimakin'),
       array( 'description' => esc_html__('Os seus contactos', 'dimakin'), )
     );

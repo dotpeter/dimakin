@@ -5,9 +5,9 @@
  * -----------------------------------------------------------
  */
 
- function dimack_operations_locals_mb() {
+ function dimakin_operations_locals_mb() {
    // Start with an underscore to hide fields from custom fields list
-   $prefix = '_dimack_olocals_';
+   $prefix = '_dimakin_olocals_';
    /**
    * Initiate the metabox
    */
@@ -76,4 +76,4 @@
   ) );
 
  }
- add_action( 'cmb2_admin_init', 'dimack_operations_locals_mb' );
+ add_action( 'cmb2_admin_init', 'dimakin_operations_locals_mb' );

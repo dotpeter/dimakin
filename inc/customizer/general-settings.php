@@ -9,7 +9,7 @@ $wp_customize->add_section( 'general_settings_section', array(
     'theme_supports' => '',
     'title' => __( 'Definições Gerais', 'dimakin' ),
     'description' => __( 'Defina algumas opçôes aqui.', 'dimakin' ),
-    'panel' => 'dimack_theme_panel',
+    'panel' => 'dimakin_theme_panel',
 ) );
 
 /*----------- Blog Description -----------*/

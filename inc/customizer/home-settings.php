@@ -9,7 +9,7 @@ $wp_customize->add_section( 'slider_section', array(
     'theme_supports' => '',
     'title' => __( 'Slider Settings', 'dimakin' ),
     'description' => __( 'Define your home slider.', 'dimakin' ),
-    'panel' => 'dimack_theme_panel',
+    'panel' => 'dimakin_theme_panel',
 ) );
 
 // Settings

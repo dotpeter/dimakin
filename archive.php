@@ -21,7 +21,7 @@ get_header(); ?>
       <div class="container">
         <div class="row">
           <?php while ( have_posts() ) : the_post(); ?>
-            <?php do_action( 'dimack_loop' ); ?>
+            <?php do_action( 'dimakin_loop' ); ?>
           <?php endwhile; // End of the loop
           else:
             get_template_part( 'template-parts/post/content', 'none' );
@@ -29,7 +29,7 @@ get_header(); ?>
         </div><!-- row ends -->
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-             <?php do_action( 'dimack_pagination' ); ?>
+             <?php do_action( 'dimakin_pagination' ); ?>
           </div>
         </div>
       </div>

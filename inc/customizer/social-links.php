@@ -8,7 +8,7 @@ $wp_customize->add_section( 'social_section', array(
     'theme_supports' => '',
     'title' => __( 'Redes Socias', 'dimakin' ),
     'description' => __( 'Insira aqui os links para as suas redes socias', 'dimakin' ),
-    'panel' => 'dimack_theme_panel',
+    'panel' => 'dimakin_theme_panel',
 ) );
 
 

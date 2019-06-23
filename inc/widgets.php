@@ -7,7 +7,7 @@
 
 require_once ('widgets/contacts-widget.php');
 
-function dimack_widgets() {
-	register_widget( 'dimackContactsWidget' );
+function dimakin_widgets() {
+	register_widget( 'dimakinContactsWidget' );
 }
-add_action( 'widgets_init', 'dimack_widgets' );
+add_action( 'widgets_init', 'dimakin_widgets' );

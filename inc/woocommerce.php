@@ -6,7 +6,7 @@
  */
 
 /*----------- Add woocommerce support to the theme -----------*/
-function dimack_add_woocommerce_support() {
+function dimakin_add_woocommerce_support() {
   add_theme_support( 'woocommerce', array(
       'product_grid'          => array(
           'default_rows'    => 3,
@@ -19,7 +19,7 @@ function dimack_add_woocommerce_support() {
   ) );
 }
 
-add_action( 'after_setup_theme', 'dimack_add_woocommerce_support' );
+add_action( 'after_setup_theme', 'dimakin_add_woocommerce_support' );
 
 add_theme_support( 'wc-product-gallery-zoom' );
 
@@ -62,43 +62,43 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
 /*----------- Add custom main wrappers -----------*/
-function dimack_wrapper_start() {
+function dimakin_wrapper_start() {
   echo '<main id="main-wrapper">';
 }
 
-function dimack_wrapper_end() {
+function dimakin_wrapper_end() {
   echo '</main>';
 }
 
-add_action('woocommerce_before_main_content', 'dimack_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'dimack_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'dimakin_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'dimakin_wrapper_end', 10);
 
 /*----------- Customize default woocommerce breadcrumbs -----------*/
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 
-if (!function_exists('dimack_yoast_breadcrumb') ) {
-  function dimack_yoast_breadcrumb() {
+if (!function_exists('dimakin_yoast_breadcrumb') ) {
+  function dimakin_yoast_breadcrumb() {
     yoast_breadcrumb('<div class="breadcrumbs-wrapper"><div class="container"><div class="row"><div class="col-12"><p id="breadcrumbs">','</p></div></div></div></div>');
   }
 }
 
-add_action( 'woocommerce_before_main_content','dimack_yoast_breadcrumb', 20, 0);
+add_action( 'woocommerce_before_main_content','dimakin_yoast_breadcrumb', 20, 0);
 
 
 /*----------- Wrappe the single product page on the theme container -----------*/
-function dimack_before_single_product( ) {
+function dimakin_before_single_product( ) {
   echo '<div class="woo-content-wrapper"><div class="container">';
 };
 
-function dimack_after_single_product( ) {
+function dimakin_after_single_product( ) {
   echo '</div></div>';
 };
 
-add_action( 'woocommerce_before_main_content', 'dimack_before_single_product', 30 );
-add_action( 'woocommerce_after_main_content', 'dimack_after_single_product', 30 );
+add_action( 'woocommerce_before_main_content', 'dimakin_before_single_product', 30 );
+add_action( 'woocommerce_after_main_content', 'dimakin_after_single_product', 30 );
 
 /*----------- Display categories on the product loop -----------*/
-function dimack_loop_product_cat() {
+function dimakin_loop_product_cat() {
   echo '<div class="product-details">';
     $terms = get_the_terms( get_the_ID(), 'product_cat' );
     if ( $terms && ! is_wp_error( $terms ) ) :
@@ -113,17 +113,17 @@ function dimack_loop_product_cat() {
      endif;
 }
 
-add_action( 'woocommerce_shop_loop_item_title', 'dimack_loop_product_cat', 1 );
+add_action( 'woocommerce_shop_loop_item_title', 'dimakin_loop_product_cat', 1 );
 
 /*----------- Wrappe the details of the product in the loop -----------*/
-function dimack_loop_product_contend_end() {
+function dimakin_loop_product_contend_end() {
   echo '</div>';
 }
 
-add_action( 'woocommerce_shop_loop_item', 'dimack_loop_product_contend_end', 1 );
+add_action( 'woocommerce_shop_loop_item', 'dimakin_loop_product_contend_end', 1 );
 
 /*----------- Display excerpt on the product loop -----------*/
-function dimack_excerpt_in_products_loop() {
+function dimakin_excerpt_in_products_loop() {
 
   global $post;
   $text = $post->post_excerpt;
@@ -133,14 +133,14 @@ function dimack_excerpt_in_products_loop() {
 
 }
 
-add_action( 'woocommerce_after_shop_loop_item_title', 'dimack_excerpt_in_products_loop', 40 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'dimakin_excerpt_in_products_loop', 40 );
 
 
 /*----------- Remove default thumbnails from single product page -----------*/
 //remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 
 /*----------- Add custom structure thumnials to the single product page -----------*/
-function dimack_show_product_thumbnails() {
+function dimakin_show_product_thumbnails() {
   if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
     return;
   }
@@ -155,13 +155,13 @@ function dimack_show_product_thumbnails() {
   echo '</div></div></div>';
 }
 
-//add_action( 'woocommerce_after_single_product_summary', 'dimack_show_product_thumbnails', 9 );
+//add_action( 'woocommerce_after_single_product_summary', 'dimakin_show_product_thumbnails', 9 );
 
 /*----------- Remove default images from single product page -----------*/
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 
 /*----------- Add custom structure images to the single product page -----------*/
-function dimack_show_product_images() {
+function dimakin_show_product_images() {
   if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
     return;
   }
@@ -192,24 +192,24 @@ function dimack_show_product_images() {
   </div>
   <?php
 }
-add_action( 'woocommerce_before_single_product_summary', 'dimack_show_product_images', 20 );
+add_action( 'woocommerce_before_single_product_summary', 'dimakin_show_product_images', 20 );
 
 
 /*----------- Add a row from theme grid to the producty page -----------*/
-function dimack_before_show_product() {
+function dimakin_before_show_product() {
   echo '<div class="row">';
 }
-function dimack_after_product_summary() {
+function dimakin_after_product_summary() {
   echo '</div>';
 }
 
-add_action( 'woocommerce_before_single_product_summary', 'dimack_before_show_product', 10 );
+add_action( 'woocommerce_before_single_product_summary', 'dimakin_before_show_product', 10 );
 
-add_action( 'woocommerce_single_product_summary', 'dimack_after_product_summary', 60 );
+add_action( 'woocommerce_single_product_summary', 'dimakin_after_product_summary', 60 );
 
 
 /*----------- Add 'NEW' status to the producs loop -----------*/
-function dimack_new_badge_shop_page() {
+function dimakin_new_badge_shop_page() {
    global $product;
    $newness_days = 30;
    $created = strtotime( $product->get_date_created() );
@@ -218,11 +218,11 @@ function dimack_new_badge_shop_page() {
    }
 }
 
-add_action( 'woocommerce_before_shop_loop_item_title', 'dimack_new_badge_shop_page', 3 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'dimakin_new_badge_shop_page', 3 );
 
 
 /*----------- Add description to products in the archive loop -----------*/
-function dimack_archive_page_description($category){
+function dimakin_archive_page_description($category){
   $cat_id      = $category->term_id;
   $prod_term   = get_term($cat_id,'product_cat');
   $description = $prod_term->description;
@@ -230,23 +230,23 @@ function dimack_archive_page_description($category){
   echo '<div class="product-cat-description"><p>', mb_strimwidth( $description, 0, 120, '...' ), '</p></div>';
 
 }
-add_action( 'woocommerce_after_subcategory_title', 'dimack_archive_page_description', 10 );
+add_action( 'woocommerce_after_subcategory_title', 'dimakin_archive_page_description', 10 );
 
 /*----------- Add Button to the product page -----------*/
-function dimack_page_products_button() {
+function dimakin_page_products_button() {
   $product_btn_contact_url = get_theme_mod( 'product_btn_contact_url' );
   if ( !empty( $product_btn_contact_url ) ) {
     echo '<a href="' , esc_url($product_btn_contact_url), '" class="primary-btn">', esc_html__('Fale Connosco', 'dimakin') ,'</a>';
   }
 }
 
-add_action('woocommerce_single_product_summary', 'dimack_page_products_button', 30);
+add_action('woocommerce_single_product_summary', 'dimakin_page_products_button', 30);
 
 /*----------- Change number of related products -----------*/
 
-function dimack_change_number_related_products( $args ) {
+function dimakin_change_number_related_products( $args ) {
  $args['posts_per_page'] = 3; // # of related products
  $args['columns'] = 3; // # of columns per row
  return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'dimack_change_number_related_products', 9999 );
+add_filter( 'woocommerce_output_related_products_args', 'dimakin_change_number_related_products', 9999 );

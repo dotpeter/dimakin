@@ -6,12 +6,12 @@
  * -----------------------------------------------------------
  */
 
-$olocals_subtitle = get_post_meta( get_the_ID(), '_dimack_olocals_subtitle', true );
-$olocals_description = get_post_meta( get_the_ID(), '_dimack_olocals_description', true );
+$olocals_subtitle = get_post_meta( get_the_ID(), '_dimakin_olocals_subtitle', true );
+$olocals_description = get_post_meta( get_the_ID(), '_dimakin_olocals_description', true );
 
 get_header();
 
-do_action('dimack_breadcrumbs');
+do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -56,23 +56,23 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
       </div>
        <div class="row">
          <?php
-          $olocals = get_post_meta( get_the_ID(), '_dimack_olocals_group', true );
+          $olocals = get_post_meta( get_the_ID(), '_dimakin_olocals_group', true );
 
           foreach ( (array)$olocals as $key => $olocal) {
 
             $ol_title = $ol_address = $ol_phone = $pl_map = '';
 
-            if ( isset($olocal[ '_dimack_olocals_title']) ) {
-              $ol_title = $olocal['_dimack_olocals_title'];
+            if ( isset($olocal[ '_dimakin_olocals_title']) ) {
+              $ol_title = $olocal['_dimakin_olocals_title'];
             }
-            if ( isset($olocal['_dimack_olocals_address']) ) {
-              $ol_address = $olocal['_dimack_olocals_address'];
+            if ( isset($olocal['_dimakin_olocals_address']) ) {
+              $ol_address = $olocal['_dimakin_olocals_address'];
             }
-            if ( isset($olocal['_dimack_olocals_phone']) ) {
-              $ol_phone = $olocal['_dimack_olocals_phone'];
+            if ( isset($olocal['_dimakin_olocals_phone']) ) {
+              $ol_phone = $olocal['_dimakin_olocals_phone'];
             }
-            if ( isset($olocal['_dimack_olocals_map']) ) {
-              $ol_map = $olocal[ '_dimack_olocals_map'];
+            if ( isset($olocal['_dimakin_olocals_map']) ) {
+              $ol_map = $olocal[ '_dimakin_olocals_map'];
             }
             if ( isset( $ol_title, $ol_address, $ol_phone ) ) {
               $allowed_html = [

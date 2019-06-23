@@ -5,9 +5,9 @@
  * -----------------------------------------------------------
  */
 
- function dimack_contacts_mb() {
+ function dimakin_contacts_mb() {
    // Start with an underscore to hide fields from custom fields list
-   $prefix = '_dimack_contacts_';
+   $prefix = '_dimakin_contacts_';
    /**
    * Initiate the metabox
    */
@@ -58,4 +58,4 @@
      'type'    => 'textarea_code',
    ) );
  }
- add_action( 'cmb2_admin_init', 'dimack_contacts_mb' );
+ add_action( 'cmb2_admin_init', 'dimakin_contacts_mb' );

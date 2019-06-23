@@ -21,4 +21,6 @@ if ( file_exists( dirname( __FILE__ ) . '/lib/cmb2/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/lib/CMB2/init.php';
 }
 
+require_once dirname( __FILE__ ) . '/lib/cmb2-field-post-search-ajax-master/cmb-field-post-search-ajax.php';
+
 require_once dirname( __FILE__ ) . '/lib/custom-metaboxes/metaboxes.php';

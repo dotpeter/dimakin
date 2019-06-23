@@ -11,7 +11,7 @@ $wp_customize->add_section( 'cookies_section', array(
   'theme_supports' => '',
   'title' => __( 'Aviso de Cookies', 'dimakin' ),
   'description' => __( 'Defina o aviso de política de privacidade e uso de cookies.', 'dimakin' ),
-  'panel' => 'dimack_theme_panel',
+  'panel' => 'dimakin_theme_panel',
 ) );
 
  /*----------- Cookie bar text-----------*/

@@ -25,6 +25,6 @@
       echo '<p class="no-navigation">' , esc_html__('Menu não definido', 'dimakin') , '</p>';
     endif; ?>
     <div class="mobile-nav-extras">
-      <?php do_action('dimack_social'); ?>
+      <?php do_action('dimakin_social'); ?>
     </div><!-- mobile-nav-extras -->
   </div><!-- mobile-navigation-wrapper -->

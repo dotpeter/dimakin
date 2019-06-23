@@ -28,7 +28,7 @@ if(!empty($cookieBarText)) {
   <div class="container footer-extras">
     <div class="row align-items-center">
       <div class="col-12">
-        <?php do_action('dimack_social'); ?>
+        <?php do_action('dimakin_social'); ?>
       </div><!-- col -->
     </div><!-- row -->
     <div class="row">

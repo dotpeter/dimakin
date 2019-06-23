@@ -7,7 +7,7 @@
 
 get_header();
 
-do_action( 'dimack_breadcrumbs' );
+do_action( 'dimakin_breadcrumbs' );
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -22,7 +22,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
   ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php do_action('dimack_post_navigation'); ?>
+    <?php do_action('dimakin_post_navigation'); ?>
     <?php
     if(has_post_thumbnail()){
       echo '<header class="post-header-bg" style="background-image: url(' , esc_url($featured_img_url) , ');"></header>';
@@ -49,9 +49,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
           </div><!-- row -->
 
       </div><!-- container -->
-      <?php do_action('dimack_post_tags'); ?>
+      <?php do_action('dimakin_post_tags'); ?>
     </div><!-- post-content-wrapper -->
-    <?php do_action('dimack_related_posts'); ?>
+    <?php do_action('dimakin_related_posts'); ?>
   </article>
 </main>
 

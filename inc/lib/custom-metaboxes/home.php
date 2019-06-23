@@ -5,9 +5,9 @@
  * -----------------------------------------------------------
  */
 
- if ( ! function_exists('dimack_home_services') ) {
-   function dimack_home_services() {
-   	$prefix = '_dimack_home_';
+ if ( ! function_exists('dimakin_home_services') ) {
+   function dimakin_home_services() {
+   	$prefix = '_dimakin_home_';
    	/**
    	 * Initiate the metabox
    	 */
@@ -56,5 +56,5 @@
          'type' => 'file',
      ) );
    }
-   add_action( 'cmb2_init', 'dimack_home_services' );
+   add_action( 'cmb2_init', 'dimakin_home_services' );
  }

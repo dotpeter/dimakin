@@ -6,17 +6,17 @@
  * -----------------------------------------------------------
  */
 
- $contacts_desc = get_post_meta( get_the_ID(), '_dimack_contacts_desc', true );
- $contacts_title = get_post_meta( get_the_ID(), '_dimack_contacts_title', true );
- $contacts_address = get_post_meta( get_the_ID(), '_dimack_contacts_address', true );
- $contacts_phone = get_post_meta( get_the_ID(), '_dimack_contacts_phone', true );
- $contacts_email = get_post_meta( get_the_ID(), '_dimack_contacts_email', true );
- $contacts_form = get_post_meta( get_the_ID(), '_dimack_contacts_shortcode', true );
- $contacts_map = get_post_meta( get_the_ID(), '_dimack_contacts_map', true );
+ $contacts_desc = get_post_meta( get_the_ID(), '_dimakin_contacts_desc', true );
+ $contacts_title = get_post_meta( get_the_ID(), '_dimakin_contacts_title', true );
+ $contacts_address = get_post_meta( get_the_ID(), '_dimakin_contacts_address', true );
+ $contacts_phone = get_post_meta( get_the_ID(), '_dimakin_contacts_phone', true );
+ $contacts_email = get_post_meta( get_the_ID(), '_dimakin_contacts_email', true );
+ $contacts_form = get_post_meta( get_the_ID(), '_dimakin_contacts_shortcode', true );
+ $contacts_map = get_post_meta( get_the_ID(), '_dimakin_contacts_map', true );
 
 get_header();
 
-do_action('dimack_breadcrumbs');
+do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -66,7 +66,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 </div>
 
               <h4><?php _e( 'Siga-nos nas redes sociais', 'dimakin' ); ?></h4>
-              <?php do_action('dimack_social'); ?>
+              <?php do_action('dimakin_social'); ?>
             </div>
           </div>
           <div class="col-12 col-md-6">

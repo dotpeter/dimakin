@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-  <?php do_action('dimack_touch_icons');  ?>
+  <?php do_action('dimakin_touch_icons');  ?>
   <link rel="icon" href="<?php get_site_icon_url(); ?>">
   <!--[if IE]>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">

@@ -9,7 +9,7 @@
 
  get_header(); ?>
 
- <?php do_action('dimack_breadcrumbs');?>
+ <?php do_action('dimakin_breadcrumbs');?>
  <main class="main-wrapper">
    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -42,7 +42,7 @@
 
                   if ( $parent_loop->have_posts() ) :
                     while ( $parent_loop->have_posts() ) : $parent_loop->the_post();
-                      do_action( 'dimack_child_pages' );
+                      do_action( 'dimakin_child_pages' );
                     endwhile;
                     endif;
                     wp_reset_postdata();

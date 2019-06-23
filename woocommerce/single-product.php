@@ -11,12 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-do_action('dimack_breadcrumbs');
+do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 global $product;
-$product = wc_get_product( $product_id );
 
 ?>
 <main class="main-wrapper">
@@ -25,7 +24,7 @@ $product = wc_get_product( $product_id );
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <?php get_template_part('woocommerce/product', 'images'); ?>
+            <?php get_template_part('woocommerce/product', 'gallery'); ?>
           </div>
           <div class="col-6">
             <div class="product-details">
@@ -34,14 +33,16 @@ $product = wc_get_product( $product_id );
                 echo '<p class="product-description">' , $product->get_description() , '<p>';
               ?>
               <div class="product-actions">
-                <a href="primary-btn">Fale Connosco</a>
-                <a href="secondary-btn">Ver Catalogo</a>
-              </div>
-            </div><!-- page-content-wrapper -->
+                <a href="" class="primary-btn">Fale Connosco</a>
+                <a href="" class="secondary-btn">Ver Catalogo</a>
+              </div><!-- product-actions -->
+            </div><!-- product-details -->
           </div><!-- col -->
         </div><!-- row -->
       </div><!-- container -->
-    </div><!-- article-content -->
+    </div><!-- product-content-wrapper -->
+    <?php get_template_part('woocommerce/product', 'videos'); ?>
+    <?php get_template_part('woocommerce/product', 'recommendations'); ?>
   </article><!-- article -->
 </main><!-- main-wrapper -->
 <?php

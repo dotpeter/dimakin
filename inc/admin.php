@@ -45,7 +45,7 @@ For more information on creating Dashboard Widgets, view:
 http://digwp.com/2010/10/customize-wordpress-dashboard/
 */
 // RSS Dashboard Widget
-function dimack_rss_dashboard_widget() {
+function dimakin_rss_dashboard_widget() {
 	if ( function_exists( 'fetch_feed' ) ) {
 		// include_once( ABSPATH . WPINC . '/feed.php' );               // include the required file
 		$feed = fetch_feed( 'http://feeds.feedburner.com/wpcandy' );        // specify the source feed
@@ -71,8 +71,8 @@ function dimack_rss_dashboard_widget() {
 	<?php }
 }
 // calling all custom dashboard widgets
-function dimack_custom_dashboard_widgets() {
-	wp_add_dashboard_widget( 'dimack_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'dimakin' ), 'dimack_rss_dashboard_widget' );
+function dimakin_custom_dashboard_widgets() {
+	wp_add_dashboard_widget( 'dimakin_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'dimakin' ), 'dimakin_rss_dashboard_widget' );
 	/*
 	Be sure to drop any other created Dashboard Widgets
 	in this function and they will all load.
@@ -81,23 +81,23 @@ function dimack_custom_dashboard_widgets() {
 // removing the dashboard widgets
 add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
 // adding any custom widgets
-//add_action( 'wp_dashboard_setup', 'dimack_custom_dashboard_widgets' );
+//add_action( 'wp_dashboard_setup', 'dimakin_custom_dashboard_widgets' );
 
 /************* CUSTOM LOGIN PAGE *****************/
 // calling your own login css so you can style it
 //Updated to proper 'enqueue' method
 //http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
-function dimack_login_css() {
-	wp_enqueue_style( 'dimack_login_css', get_template_directory_uri() . '/assets/css/admin-login.css', false );
+function dimakin_login_css() {
+	wp_enqueue_style( 'dimakin_login_css', get_template_directory_uri() . '/assets/css/admin-login.css', false );
 }
 // changing the logo link from wordpress.org to your site
-function dimack_login_url() {  return home_url(); }
+function dimakin_login_url() {  return home_url(); }
 // changing the alt text on the logo to show your site name
-function dimack_login_title() { return get_option( 'blogname' ); }
+function dimakin_login_title() { return get_option( 'blogname' ); }
 // calling it only on the login page
-add_action( 'login_enqueue_scripts', 'dimack_login_css', 10 );
-add_filter( 'login_headerurl', 'dimack_login_url' );
-add_filter( 'login_headertitle', 'dimack_login_title' );
+add_action( 'login_enqueue_scripts', 'dimakin_login_css', 10 );
+add_filter( 'login_headerurl', 'dimakin_login_url' );
+add_filter( 'login_headertitle', 'dimakin_login_title' );
 /************* CUSTOMIZE ADMIN *******************/
 /*
 I don't really recommend editing the admin too much
@@ -106,9 +106,9 @@ are a few funtions which you can choose to use if
 you like.
 */
 // Custom Backend Footer
-function dimack_custom_admin_footer() {
+function dimakin_custom_admin_footer() {
 	_e( '<span id="footer-thankyou">Developed by <a href="http://crew.pt" target="_blank">CREW</a></span>.', 'dimakin' );
 }
 // adding it to the admin area
-add_filter( 'admin_footer_text', 'dimack_custom_admin_footer' );
+add_filter( 'admin_footer_text', 'dimakin_custom_admin_footer' );
 ?>

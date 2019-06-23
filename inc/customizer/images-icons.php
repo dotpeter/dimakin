@@ -9,7 +9,7 @@ $wp_customize->add_section( 'images_icons', array(
     'theme_supports' => '',
     'title' => __('Icons', 'dimakin'),
     'description' => __('Icons para iPad, iPhone e Android', 'dimakin'),
-    'panel' => 'dimack_theme_panel',
+    'panel' => 'dimakin_theme_panel',
 ) );
 
 /*----------- iPhone(first generation or 2G), iPhone 3G, iPhone 3GS -----------*/

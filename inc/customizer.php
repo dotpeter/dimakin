@@ -1,8 +1,8 @@
 <?php
-function dimack_customize_register($wp_customize) {
+function dimakin_customize_register($wp_customize) {
   // Do stuff with $wp_customize, the WP_Customize_Manager object.
   // New panel for the theme options.
-  $wp_customize->add_panel('dimack_theme_panel', array(
+  $wp_customize->add_panel('dimakin_theme_panel', array(
       'priority' => 20,
       'capability' => 'edit_theme_options',
       'theme_supports' => '',
@@ -17,4 +17,4 @@ function dimack_customize_register($wp_customize) {
   require get_parent_theme_file_path('/inc/customizer/cookie-bar.php');
 
 }
-add_action('customize_register', 'dimack_customize_register');
+add_action('customize_register', 'dimakin_customize_register');

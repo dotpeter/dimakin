@@ -7,7 +7,7 @@
 
 get_header();
 
-do_action('dimack_breadcrumbs');
+do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 

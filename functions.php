@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'dimack_setup' ) ) :
+if ( ! function_exists( 'dimakin_setup' ) ) :
 
   /**
   * Sets up theme defaults and registers support for various WordPress features.
@@ -9,7 +9,7 @@ if ( ! function_exists( 'dimack_setup' ) ) :
   * runs before the init hook. The init hook is too late for some features, such
   * as indicating support for post thumbnails.
   */
-  function dimack_setup() {
+  function dimakin_setup() {
     /*
     * Make theme available for translation.
     * Translations can be filed in the /languages/ directory.
@@ -139,12 +139,12 @@ if ( ! function_exists( 'dimack_setup' ) ) :
         array(
           'name'  => __( 'Primary', 'dimakin' ),
           'slug'  => 'primary',
-          //'color' => dimack_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 33 ),
+          //'color' => dimakin_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 33 ),
         ),
         array(
           'name'  => __( 'Secondary', 'dimakin' ),
           'slug'  => 'secondary',
-          //'color' => dimack_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 23 ),
+          //'color' => dimakin_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 23 ),
         ),
         array(
           'name'  => __( 'Dark Gray', 'dimakin' ),
@@ -171,12 +171,12 @@ if ( ! function_exists( 'dimack_setup' ) ) :
     add_theme_support( 'yoast-seo-breadcrumbs' );
 
     // cleaning up random code around images
-    add_filter( 'the_content', 'dimack_filter_ptags_on_images' );
+    add_filter( 'the_content', 'dimakin_filter_ptags_on_images' );
   }
 
 endif;
 
-add_action( 'after_setup_theme', 'dimack_setup' );
+add_action( 'after_setup_theme', 'dimakin_setup' );
 
 /**
 * Register widget area.
@@ -184,7 +184,7 @@ add_action( 'after_setup_theme', 'dimack_setup' );
 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
 */
 
-function dimack_widgets_init() {
+function dimakin_widgets_init() {
 
   register_sidebar(
     array(
@@ -224,7 +224,7 @@ function dimack_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'dimack_widgets_init' );
+add_action( 'widgets_init', 'dimakin_widgets_init' );
 
 
 /**
@@ -235,20 +235,20 @@ add_action( 'widgets_init', 'dimack_widgets_init' );
 * @global int $content_width Content width.
 */
 
-function dimack_content_width() {
+function dimakin_content_width() {
   // This variable is intended to be overruled from themes.
   // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
   // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-  $GLOBALS['content_width'] = apply_filters( 'dimack_content_width', 640 );
+  $GLOBALS['content_width'] = apply_filters( 'dimakin_content_width', 640 );
 }
 
-add_action( 'after_setup_theme', 'dimack_content_width', 0 );
+add_action( 'after_setup_theme', 'dimakin_content_width', 0 );
 
 /**
 * Enqueue scripts and styles.
 */
 
-function dimack_scripts() {
+function dimakin_scripts() {
 
   if (!is_admin()) {
 
@@ -258,14 +258,14 @@ function dimack_scripts() {
     // Theme styles.
     wp_enqueue_style( 'dimakin-styles', get_theme_file_uri( '/assets/css/style.min.css' ) );
 
-    // Font Awesome style
+    // Font Awesome styles.
     wp_enqueue_style( 'font-awesome-styles', get_theme_file_uri( '/assets/css/vendor/font-awesome.min.css' ) );
+
+    // FancyBox styles.
+    wp_enqueue_style( 'fancybox-styles', get_theme_file_uri( '/assets/css/vendor/jquery.fancybox.min.css' ) );
 
     // Animate css.
     wp_enqueue_style( 'animate-css', get_theme_file_uri( '/assets/css/vendor/animate.css' ) );
-
-    // Facnybox for a light box.
-    //wp_enqueue_style( 'fancybox', get_theme_file_uri( '/assets/css/jquery.fancybox.min.css' ) );
 
     // Flexslider styles.
     wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ) );
@@ -285,7 +285,7 @@ function dimack_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'dimack_scripts' );
+add_action( 'wp_enqueue_scripts', 'dimakin_scripts' );
 
 /**
 * Fix skip link focus in IE11.
@@ -295,7 +295,7 @@ add_action( 'wp_enqueue_scripts', 'dimack_scripts' );
 *
 * @link https://git.io/vWdr2
 */
-function dimack_skip_link_focus_fix() {
+function dimakin_skip_link_focus_fix() {
 
   // The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
   ?>
@@ -306,31 +306,31 @@ function dimack_skip_link_focus_fix() {
 
 }
 
-add_action( 'wp_print_footer_scripts', 'dimack_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'dimakin_skip_link_focus_fix' );
 
 /**
 * Enqueue supplemental block editor styles.
 */
 
-function dimack_editor_customizer_styles() {
+function dimakin_editor_customizer_styles() {
 
   wp_enqueue_style( 'dimakin-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
 
   if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
     // Include color patterns.
     require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-    wp_add_inline_style( 'dimakin-editor-customizer-styles', dimack_custom_colors_css() );
+    wp_add_inline_style( 'dimakin-editor-customizer-styles', dimakin_custom_colors_css() );
   }
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'dimack_editor_customizer_styles' );
+add_action( 'enqueue_block_editor_assets', 'dimakin_editor_customizer_styles' );
 
 /**
 * Display custom color CSS in customizer and on frontend.
 */
 
-function dimack_colors_css_wrap() {
+function dimakin_colors_css_wrap() {
 
   // Only include custom colors in customizer or frontend.
   if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
@@ -346,13 +346,13 @@ function dimack_colors_css_wrap() {
   ?>
 
   <style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
-    <?php echo dimack_custom_colors_css(); ?>
+    <?php echo dimakin_custom_colors_css(); ?>
   </style>
   <?php
 
 }
 
-add_action( 'wp_head', 'dimack_colors_css_wrap' );
+add_action( 'wp_head', 'dimakin_colors_css_wrap' );
 
 
 /**
