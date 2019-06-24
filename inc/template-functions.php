@@ -39,9 +39,6 @@ if( !function_exists('dimakin_hide_editor') ) {
     if( $template_file === 'page-operation-locals.php' ) {
       remove_post_type_support( 'page', 'editor' );
     }
-    if( $template_file === 'page-childs.php' ) {
-      remove_post_type_support( 'page', 'editor' );
-    }
 
   }
   add_action( 'admin_head', 'dimakin_hide_editor' );

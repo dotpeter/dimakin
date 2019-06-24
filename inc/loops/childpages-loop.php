@@ -26,6 +26,7 @@ if ( ! function_exists( 'dimakin_child_pages_loop' ) ) {
             <a href="<?php the_permalink(); ?>" class="child-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
           </section>
 
+
         </article>
       </a>
     </div>

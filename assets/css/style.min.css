@@ -126,6 +126,8 @@ big{font-size:125%}
 .section-title{font-size:22px;font-weight:600;color:#1b1f23;margin-bottom:30px;text-transform:uppercase}
 .section-title::after{content:'';background-color:#3481b9;height:3px;display:block;width:60px;margin-top:10px}
 .section-description{text-align:center;font-size:20px;margin-bottom:40px;color:#cacaca}
+.description{font-size:16px;font-style:italic;margin-bottom:30px}
+.description p{color:#8c8c8c}
 a{color:#3481b9;text-decoration:none;border:0}
 a:visited{color:#3481b9}
 a:hover,a:focus,a:active{color:#1b1f23;outline:0;border:0;-moz-outline-style:none}
@@ -282,6 +284,8 @@ embed,iframe,object{max-width:100%}
 .page-template-page-contacts .contacts-info-wrapper .social-icons a .fa{width:20px;font-size:14px}
 .page-template-page-contacts .contacts-info-wrapper .social-icons a:first-child{margin-left:0}
 .page-template-page-contacts .contacts-info-wrapper .social-icons a:hover{color:#3481b9;border-color:#3481b9}
+.map-wrapper{margin-bottom:40px}
+.map-wrapper .container-fluid{padding-left:0;padding-right:0}
 .main-wrapper-locals{padding:100px 0}
 .main-wrapper-locals .subtitle{font-weight:400;margin-bottom:10px}
 .main-wrapper-locals .subtitle::after{display:none}
