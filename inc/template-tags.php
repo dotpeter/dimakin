@@ -138,23 +138,22 @@ if ( ! function_exists( 'dimakin_default_loop' ) ) {
 if ( ! function_exists( 'dimakin_child_pages_loop' ) ) {
   function dimakin_child_pages_loop() {
     ?>
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <a href="<?php the_permalink(); ?>">
-        <article class="pagechild-wrapper">
-          <header id="post-<?php the_ID(); ?>" class="pagechild-header">
+        <article class="news-card">
+          <section class="news-card-content">
             <?php $title = get_the_title(); ?>
-            <h3 class="pagechild-title"><?php echo mb_strimwidth( $title, 0, 60, '...' ); ?></h3>
-            <section class="pagechild-content">
-              <?php the_excerpt(); ?>
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </section>
-            <?php if ( has_post_thumbnail('childpage-thumb') ) : ?>
-              <figure class="pagechild-thumbnail">
-                <?php the_post_thumbnail('childpage-thumb'); ?>
+            <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 40, '...' ); ?></h3></a>
+            <?php the_excerpt(); ?>
+            <a href="<?php the_permalink(); ?>" class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          </section>
+          <header id="post-<?php the_ID(); ?>" class="news-card-header">
+            <?php if ( has_post_thumbnail() ) : ?>
+              <figure class="card-thumbnail">
+                <?php the_post_thumbnail('post-custom-thumb'); ?>
               </figure>
             <?php endif; ?>
           </header>
-
         </article>
       </a>
     </div>

@@ -43,7 +43,7 @@
 
                     if ( $parent_loop->have_posts() ) :
                       while ( $parent_loop->have_posts() ) : $parent_loop->the_post();
-                        do_action( 'news_loop' );
+                        do_action( 'dimakin_child_pages' );
                       endwhile;
                       endif;
                       wp_reset_postdata();
