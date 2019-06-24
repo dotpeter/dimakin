@@ -33,9 +33,29 @@ global $product;
                 echo '<p class="product-description">' , $product->get_description() , '<p>';
               ?>
               <div class="product-actions">
-                <a href="" class="primary-btn">Fale Connosco</a>
-                <a href="" class="secondary-btn">Ver Catalogo</a>
+                <?php
+                  $getQote = esc_url(get_theme_mod( 'product_btn_contact_url' ));
+                  $pdf = wp_get_attachment_url(get_post_meta( get_the_ID(), '_dimakin_products_catalog_id', true));
+                  if(!empty($getQote)) {
+                    echo '<a href="', $getQote , '" class="primary-btn" >' , __('Fale Connosco', 'dimakin') , '</a>';
+                  }
+                  if(!empty($pdf)) {
+                    echo '<a href="', esc_url($pdf) , '" class="secondary-btn" target="_blank">' , __('Catálogo', 'dimakin') , '</a>';
+                  }
+                ?>
               </div><!-- product-actions -->
+              <?php
+                $productsTags = get_the_terms( get_the_ID(), 'product_tag' );
+                if ( $productsTags && ! is_wp_error( $productsTags) ) {
+                    echo '<p class="product-tags"><i class="fa fa-tags" aria-hidden="true"></i><strong>', __('Tags: ', 'dimakin') ,'</strong>';
+                    foreach ($productsTags as $tag) {
+                        $tagTitle = $tag->name; // tag name
+                        $tag_link = get_term_link( $tag );// tag archive link
+                        echo '<span>', $tagTitle ,'</span>';
+                    }
+                    echo '</p>';
+                }
+              ?>
             </div><!-- product-details -->
           </div><!-- col -->
         </div><!-- row -->

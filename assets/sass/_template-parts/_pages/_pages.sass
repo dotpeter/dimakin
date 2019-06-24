@@ -6,55 +6,34 @@
 @import "_404"
 @import "_page-products"
 
-//body class
-.page-template-default
+.pull-top
+  margin-top: 0
 
-  //main wrapper
-  .wthumb
-    margin-top: 0
-
-    //article class
-    .type-page
-      .page-header-bg
-        width: 100%
-        max-width: 100%
-        height: 400px
-        background-color: #f9f9f9
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
-      .page-content-wrapper
-        .container
-          //position: relative
-          .page-title-wrapper
-            //position: relative
-            //top: -130px
-            //left: 0
-            //right: 0
-            //background-color: #fff
-            //padding: 40px
-            //margin: 0 15px
-            margin-top: 40px
-            margin-bottom: 40px
-            .page-title
-              margin-bottom: 0
-          .page-content
-            //position: relative
-            //padding: 0 40px
+.header-background
+  width: 100%
+  max-width: 100%
+  height: 400px
+  background-color: #f9f9f9
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  display: flex
+  align-items: flex-end
+  margin-bottom: 60px
+  .title-wrapper
+    width: 100%
+    padding: 35px 20px
+    background-color: #fff
+    .title
+      margin-bottom: 0
+      &::after
+        margin-bottom: 0
 
 @media (max-width: $small)
-  .page-template-default
-    //main wrapper
-    .wthumb
-      //article class
-      .type-page
-        .page-header-bg
-          height: 200px
-        .page-content-wrapper
-          .container
-            .page-title-wrapper
-              //margin: 0 15px
-              //padding: 40px 10px
-              .page-title
-            .page-content
-              //padding: 0 20px
+  .pull-top
+    margin-top: 0
+  .header-background
+    height: 300px
+    margin-bottom: 40px
+    .title-wrapper
+      margin: 0 15px

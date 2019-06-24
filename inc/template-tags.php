@@ -138,7 +138,7 @@ if ( ! function_exists( 'dimakin_default_loop' ) ) {
 if ( ! function_exists( 'dimakin_child_pages_loop' ) ) {
   function dimakin_child_pages_loop() {
     ?>
-    <div class="col-12">
+    <div class="col-12 col-md-4">
       <a href="<?php the_permalink(); ?>">
         <article class="pagechild-wrapper">
           <header id="post-<?php the_ID(); ?>" class="pagechild-header">

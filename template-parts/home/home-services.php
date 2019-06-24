@@ -6,7 +6,7 @@
 $service_items = get_post_meta( get_the_ID(), '_dimakin_home_group', true );
 
 if(!empty($service_items)) {
-  echo '<section class="services-wrapper"><div class="container-fluid"><div class="row middle-xs middle-sm middle-md middle-lg">';
+  echo '<section class="services-wrapper"><div class="container-fluid"><div class="row justify-content-center align-items-center no-gutters">';
 
   if ( $service_items ) {
 
@@ -25,7 +25,7 @@ if(!empty($service_items)) {
 
       if ( !empty( array( $service_title ) ) ) {
 
-        echo '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="service-box" href="' . $service_url . '"><img class="service-bg" src="' . $service_image . '"><div class="service-overlay"><span><i class="fa fa-plus"></i><p class="service-title">' . $service_title . '</p></span></div></a></div>';
+        echo '<div class="col-12 col-md-4"><a class="service-box" href="' . $service_url . '"><img class="service-background" src="' . $service_image . '"><div class="service-overlay"><span class="service-btn"><i class="fa fa-plus"></i><p class="service-title">' . $service_title . '</p></span></div></a></div>';
 
       }
 

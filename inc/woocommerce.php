@@ -214,7 +214,9 @@ function dimakin_new_badge_shop_page() {
    $newness_days = 30;
    $created = strtotime( $product->get_date_created() );
    if ( ( time() - ( 60 * 60 * 24 * $newness_days ) ) < $created ) {
-      echo '<span class="itsnew onsale">' . esc_html__( 'Novo!', 'dimakin' ) . '</span>';
+     if( get_post_meta( get_the_ID(), '_dimakin_products_isnew', 1 ) ) {
+      echo '<span class="itsnew">' . esc_html__( 'Novo!', 'dimakin' ) . '</span>';
+     }
    }
 }
 

@@ -28,26 +28,28 @@
                  <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
                </div>
                <div class="page-content-wrapper">
-                 <?php the_content(); ?>
-                <?php
-                  $childs_args = array(
-                    'post_type'      => 'page',
-                    'posts_per_page' => -1,
-                    'post_parent'    => $post->ID,
-                    'order'          => 'ASC',
-                    'orderby'        => 'menu_order'
-                  );
+                 <div class="row">
+                  <?php the_content(); ?>
+                  <?php
+                    $childs_args = array(
+                      'post_type'      => 'page',
+                      'posts_per_page' => -1,
+                      'post_parent'    => $post->ID,
+                      'order'          => 'ASC',
+                      'orderby'        => 'menu_order'
+                    );
 
-                  $parent_loop = new WP_Query( $childs_args );
+                    $parent_loop = new WP_Query( $childs_args );
 
-                  if ( $parent_loop->have_posts() ) :
-                    while ( $parent_loop->have_posts() ) : $parent_loop->the_post();
-                      do_action( 'dimakin_child_pages' );
-                    endwhile;
-                    endif;
-                    wp_reset_postdata();
+                    if ( $parent_loop->have_posts() ) :
+                      while ( $parent_loop->have_posts() ) : $parent_loop->the_post();
+                        do_action( 'news_loop' );
+                      endwhile;
+                      endif;
+                      wp_reset_postdata();
 
-                  ?>
+                    ?>
+                 </div>
                </div>
              </div>
              <div class="col-12 col-md-3">

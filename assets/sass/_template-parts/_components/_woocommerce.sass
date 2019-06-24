@@ -128,14 +128,15 @@ li.product
   margin-top: 0
   padding: 0
   color: $secondary-color
-  font-size: 18px
+  font-size: 15px
+  font-weight: 600
   &::after
     display: none
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title
   color: $secondary-color
   //font-style: italic
-  font-size: 18px
+  font-size: 16px
   padding: 30px 20px 0px 20px
   margin-bottom: 10px
   &::after
@@ -146,26 +147,26 @@ li.product
 
 /*------------ Product page title styles ------------*/
 .woocommerce div.product .product_title
-  font-size: 40px
+  font-size: 18px
   margin-bottom: 30px
-  font-weight: 300
+  font-weight: 600
   color: $dark
   &::after
     content: ''
-    background-color: $light-color
+    background-color: $primary-color
     height: 4px
     display: block
     width: 60px
     margin-top: 10px
 
 .woocommerce-products-header__title
-  font-size: 40px
-  font-weight: 300
+  font-size: 22px
+  font-weight: 600
   color: $dark
   margin-bottom: 10px
   &::after
     content: ''
-    background-color: $light-color
+    background-color: $primary-color
     height: 4px
     display: block
     width: 60px
@@ -194,18 +195,20 @@ li.product
         line-height: 1
 
 /*------------ Product Onsale Stamp ------------*/
-.woocommerce
-  span.onsale
-    top: 20px
-    left: 0
-    background-color: $primary-color
-    color: $light-color
-    padding: 10px
-    font-size: 10px
-    text-transform: uppercase
-    border-radius: 0
-    margin: 0
-    line-height: 1
+
+span.itsnew
+  position: absolute
+  top: 20px
+  right: 20px
+  background-color: $primary-color
+  color: $light-color
+  padding: 10px
+  font-size: 10px
+  text-transform: uppercase
+  border-radius: 0
+  margin: 0
+  line-height: 1
+  z-index: 10
 
 /*------------ Product FanvyBox ------------*/
 .pswp__bg
