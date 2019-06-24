@@ -1,4 +1,13 @@
+.wp-core-ui { background-color: #454545; color: #959595; }
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJhZG1pbi1sb2dpbi5zYXNzIl0sImZpbGUiOiJhZG1pbi1sb2dpbi5jc3MifQ== */
+.wp-core-ui #nav a, .wp-core-ui #backtoblog a { color: #CBCBCB; }
+
+.wp-core-ui #login h1 a { background-image: url("../images/dimakin-logo.svg"); background-position: center center; background-size: 100px; width: 100px; height: 100px; }
+
+.wp-core-ui #login #loginform #wp-submit { border-radius: 0; border: 1px solid #3481b9; background-color: #3481b9; color: #fff; box-shadow: none; text-shadow: none; text-transform: uppercase; font-size: 12px; font-weight: 400; padding: 10px 15px; margin: 0; }
+
+.wp-core-ui #login #loginform #wp-submit:hover { background-color: #3481b9; border-color: #3481b9; color: #fff; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWRtaW4tbG9naW4uY3NzIiwic291cmNlcyI6WyJhZG1pbi1sb2dpbi5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBLEFBQUEsV0FBVyxDQUFDLEVBQ1YsZ0JBQWdCLEVBSEEsT0FBTyxFQUl2QixLQUFLLEVBQUUsT0FBTyxHQTRCZ0I7O0FBOUJoQyxBQUlJLFdBSk8sQ0FHVCxJQUFJLENBQ0YsQ0FBQyxFQUpMLFdBQVcsQ0FHSCxXQUFXLENBQ2YsQ0FBQyxDQUFDLEVBQ0EsS0FBSyxFQUFFLE9BQU8sR0FBRzs7QUFMdkIsQUFRTSxXQVJLLENBTVQsTUFBTSxDQUNKLEVBQUUsQ0FDQSxDQUFDLENBQUMsRUFDQSxnQkFBZ0IsRUFBRSxpQ0FBaUMsRUFDbkQsbUJBQW1CLEVBQUUsYUFBYSxFQUNsQyxlQUFlLEVBQUUsS0FBSyxFQUN0QixLQUFLLEVBQUUsS0FBSyxFQUNaLE1BQU0sRUFBRSxLQUFLLEdBQUc7O0FBYnhCLEFBZU0sV0FmSyxDQU1ULE1BQU0sQ0FRSixVQUFVLENBQ1IsVUFBVSxDQUFDLEVBQ1QsYUFBYSxFQUFFLENBQUMsRUFDaEIsTUFBTSxFQUFFLEdBQUcsQ0FBQyxLQUFLLENBcEJULE9BQU8sRUFxQmYsZ0JBQWdCLEVBckJSLE9BQU8sRUFzQmYsS0FBSyxFQUFFLElBQUksRUFDWCxVQUFVLEVBQUUsSUFBSSxFQUNoQixXQUFXLEVBQUUsSUFBSSxFQUNqQixjQUFjLEVBQUUsU0FBUyxFQUN6QixTQUFTLEVBQUUsSUFBSSxFQUNmLFdBQVcsRUFBRSxHQUFHLEVBQ2hCLE9BQU8sRUFBRSxTQUFTLEVBQ2xCLE1BQU0sRUFBRSxDQUFDLEdBSVM7O0FBOUIxQixBQTJCUSxXQTNCRyxDQU1ULE1BQU0sQ0FRSixVQUFVLENBQ1IsVUFBVSxBQVlQLE1BQU0sQ0FBQyxFQUNOLGdCQUFnQixFQS9CVixPQUFPLEVBZ0NiLFlBQVksRUFoQ04sT0FBTyxFQWlDYixLQUFLLEVBQUUsSUFBSSxHQUFHIn0= */
 
 /*# sourceMappingURL=admin-login.css.map */
