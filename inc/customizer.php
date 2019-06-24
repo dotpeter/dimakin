@@ -6,8 +6,8 @@ function dimakin_customize_register($wp_customize) {
       'priority' => 20,
       'capability' => 'edit_theme_options',
       'theme_supports' => '',
-      'title' => __('Opções Dimack', 'dimakin'),
-      'description' => __('Main options to the dimakin Theme.', 'dimakin'),
+      'title' => __('Opções Dimakin', 'dimakin'),
+      'description' => __('Opções relativas ao tema e website dimakin.pt', 'dimakin'),
   ) );
   require get_parent_theme_file_path('/inc/customizer/social-links.php');
   require get_parent_theme_file_path('/inc/customizer/home-settings.php');
