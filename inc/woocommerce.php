@@ -14,7 +14,7 @@ function dimakin_add_woocommerce_support() {
           'max_rows'        => 4,
           'default_columns' => 3,
           'min_columns'     => 1,
-          'max_columns'     => 6,
+          'max_columns'     => 3,
       ),
   ) );
 }

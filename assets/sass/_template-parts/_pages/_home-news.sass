@@ -1,5 +1,7 @@
 .news-wrapper
   padding: 80px 0
+  .section-title
+    margin-bottom: 30px
   .primary-btn
     float: right
     display: block
@@ -11,3 +13,10 @@
     color: #fff
     &:hover
       background-color: $secondary-color
+
+@media (max-width: $medium)
+  .news-wrapper
+    .section-title
+      font-size: 22px
+    .primary-btn
+      float: none

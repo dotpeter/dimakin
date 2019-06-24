@@ -48,7 +48,9 @@
           font-size: 26px
         .product-description
           color: $smooth-grey
+          font-size: 14px
         .product-actions
+          margin-top: 40px
           .primary-btn
             background-color: $primary-color
             color:  #fff
@@ -79,9 +81,9 @@
           max-height: 200px
 
   .section-title
-    font-size: 20px
+    font-size: 18px
     font-weight: 600
-    margin-bottom: 20px
+    margin-bottom: 30px
     &::after
       margin-bottom: 0
 
@@ -90,12 +92,24 @@
     .main-wrapper
       margin: 40px 0
       .product-content-wrapper
+        #product-slider
+          .flex-direction-nav
+            display: none
+        #product-gallery
+          .flex-direction-nav
+            .flex-nav-prev
+              .flex-prev
+                left: -18px
+            .flex-nav-next
+              .flex-next
+                right: -18px
         .product-details
           .product-title
             color: $secondary-color
             font-size: 26px
           .product-description
             color: $smooth-grey
+            font-size: 14px
           .product-actions
             .primary-btn
               margin-bottom: 20px
@@ -106,3 +120,30 @@
             max-height: 200px
       .product-gallery-wrapper
         margin-bottom: 60px
+
+@media (max-width: $small)
+  .single-product
+    .main-wrapper
+      margin: 40px 0
+      .product-content-wrapper
+        .product-details
+          .product-title
+            color: $secondary-color
+            font-size: 20px
+          .product-description
+            color: $secondary-color
+            font-size: 14px
+            line-height: 2
+          .product-actions
+            margin: 20px 0
+            display: flex
+            flex-direction: column
+            .primary-btn
+              width: 100%
+              text-align: center
+              margin-bottom: 10px
+            .secondary-btn
+              text-align: center
+              width: 100%
+          .product-tags
+            margin-bottom: 0

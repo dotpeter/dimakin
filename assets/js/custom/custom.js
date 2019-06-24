@@ -1,22 +1,19 @@
 (function($){
 
   // Flex Slider Configuration
-
-  var $window = $(window);
   var flexslider = { vars:{} } ;
 
+  $(window).load(function() {
 
-  function getItemWidth() {
-    return (window.innerWidth < 520) ? 300 : 356;
-  }
-  function getItemMargin() {
-    return (window.innerWidth < 520) ? 55 : 30;
-  }
-  function getItemsNumber(){
-    return (window.innerWidth < 520) ? 1 : 3;
-  }
-
-  $window.load(function() {
+    function getItemWidth() {
+      return (window.innerWidth < 520) ? 330 : 354;
+    }
+    function getItemMargin() {
+      return (window.innerWidth < 520) ? 55 : 30;
+    }
+    function getItemsNumber(){
+      return (window.innerWidth < 520) ? 1 : 3;
+    }
 
     $('.products-slider-wrapper').flexslider({
       selector: ".products-slider-container > .product",
@@ -27,9 +24,9 @@
       nextText: "",
       itemWidth: getItemWidth(),
       touch: true,
-      itemMargin: getItemMargin(),
+      itemMargin: 30,
       minItems: 1,
-      maxItems: getItemsNumber(),
+      maxItems: 3,
       direction: "horizontal",
     });
 
@@ -83,7 +80,7 @@
   });
 
   // check grid size on resize event
-  $window.resize(function() {
+  /*$window.resize(function() {
     var itemWidth = getItemWidth();
     var itemMargin = getItemMargin();
     var itemsNumber = getItemsNumber();
@@ -93,7 +90,7 @@
     flexslider.vars.maxItems = itemsNumber;
 
     console.log(getItemWidth(), getItemMargin(), getItemsNumber());
-  });
+  });*/
 
   // Searchbar toggle
   $( document ).ready(function() {

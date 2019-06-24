@@ -33,7 +33,7 @@ if(!empty($videos)){
 
     if(!empty($video)){
       ?>
-      <div class="col-12 col-md-3">
+      <div class="col-12 col-sm-6 col-md-3">
         <div class="videowrapper">
           <?php echo wp_oembed_get($video);?>
         </div>

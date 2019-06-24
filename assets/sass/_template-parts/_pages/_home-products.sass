@@ -4,6 +4,7 @@
   overflow: hidden
   .section-title
     color: $secondary-color
+    margin-bottom: 30px
   .primary-btn
     float: right
     display: block
@@ -19,7 +20,7 @@
     .flex-viewport
       .products-slider-container
         margin: 0
-        padding: 0
+        padding: 0 15px
         list-style-type: none
         .product
           position: relative
@@ -33,7 +34,7 @@
             .woocommerce-loop-product__link
               img
                 transform: scale(1.1)
-                //filter: contrast(90%)
+                transition: all .3ms ease-in-out
           .woocommerce-loop-product__link
             position: relative
             display: block
@@ -43,27 +44,14 @@
               transition: all .6s
               vertical-align: middle
               width: 100%
-              //filter: contrast(80%)
-            .onsale
-              position: absolute
-              top: 20px
-              right: 20px
-              background-color: $primary-color
-              z-index: 2
-              color: $light-color
-              padding: 10px
-              font-size: 10px
-              text-transform: uppercase
           .product-details
             padding: 30px 20px
             .product-cat
               margin-bottom: 5px
               text-transform: uppercase
-              //font-style: italic
               font-size: 11px
               font-family: $secondaryfont
               color: $primary-color
-
             .woocommerce-loop-product__title
               margin-bottom: 10px
               margin-top: 0
@@ -79,84 +67,37 @@
               margin: 0
               width: 100%
 
-      .flex-control-nav .flex-control-paging
-        position: absolute
-        top: 0
-        width: 50%
-      .flex-direction-nav
-        .flex-nav-prev
-          .flex-prev
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            left: -20px
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: flex-end
-            margin: 0
-            opacity: 1
-            transition: all 0.3s ease-in-out
-            background-color: $primary-color
-            width: 50px
-            height: 70px
-            padding: 20px 10px
-            cursor: pointer
-            &::before
-              font-family: 'FontAwesome'
-              content: '\f104'
-              font-size: 30px
-              display: block
-              color: #fff
-            &:hover
-              background-color: $secondary-color
-              color: #fff
-              left: 0
-
-        .flex-nav-next
-          .flex-next
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            right: -20px
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: flex-start
-            margin: 0
-            opacity: 1
-            transition: all 0.3s ease-in-out
-            background-color: $primary-color
-            width: 50px
-            height: 70px
-            padding: 20px 10px
-            &::before
-              font-family: 'FontAwesome'
-              content: '\f105'
-              font-size: 30px
-              display: block
-              color:  #fff
-            &:hover
-              background-color: $secondary-color
-              color: #fff
-              right: 0
+    .flex-direction-nav
+      z-index: 10
+      a
+        width: 25px
+        height: 100px
+        margin: -150px 0 0
+        background-color: $primary-color
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+        &::before
+          font-family: 'FontAwesome'
+          font-size: 22px
+          display: inline-block
+          content: '\f104'
+          color: #fff
+      .flex-nav-prev
+        .flex-prev
+          opacity: 1
+          left: 0
+      .flex-nav-next
+        .flex-next
+          opacity: 1
+          right: 0
+          &::before
+            content: '\f105'
 
 @media (max-width: $medium)
   .products-wrapper
     .section-title
+      font-size: 20px
     .primary-btn
-    .products-slider-wrapper
-      .flex-viewport
-        .products-slider-container
-          margin: 0 40px
-          padding: 0
-
-@media (max-width: $small)
-  .products-wrapper
-    .section-title
-    .primary-btn
-    .products-slider-wrapper
-      .flex-viewport
-        .products-slider-container
-          margin: 0 20px
-          padding: 0
+      float: none
