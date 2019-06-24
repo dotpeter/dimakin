@@ -14,7 +14,7 @@ if ( ! function_exists( 'dimakin_child_pages_loop' ) ) {
         <article class="child-card">
           <header id="post-<?php the_ID(); ?>" class="child-card-header">
             <?php if ( has_post_thumbnail() ) : ?>
-              <figure class="card-thumbnail">
+              <figure class="child-thumbnail">
                 <?php the_post_thumbnail('childpage-thumb'); ?>
               </figure>
             <?php endif; ?>

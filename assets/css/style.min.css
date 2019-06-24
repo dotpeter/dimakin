@@ -260,9 +260,9 @@ embed,iframe,object{max-width:100%}
 .services-wrapper .service-box:hover .service-bg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .services-wrapper .service-box:hover .service-overlay{background-color:rgba(27,31,35,0.8)}
 .child-card{box-shadow:0 7px 22px rgba(19,19,19,0.08);overflow:hidden;border:1px solid #f1f1f1;margin-bottom:30px}
-.child-card:hover .child-card-header .card-thumbnail img{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-filter:contrast(90%);filter:contrast(90%)}
-.child-card .child-card-header .card-thumbnail{overflow:hidden;height:260px;overflow:hidden}
-.child-card .child-card-header .card-thumbnail img{overflow:hidden;-webkit-transition:all .6s;transition:all .6s;vertical-align:middle;width:100%;-webkit-filter:contrast(80%);filter:contrast(80%)}
+.child-card:hover .child-card-header .child-thumbnail img{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-filter:contrast(90%);filter:contrast(90%)}
+.child-card .child-card-header .child-thumbnail{overflow:hidden}
+.child-card .child-card-header .child-thumbnail img{overflow:hidden;-webkit-transition:all .6s;transition:all .6s;vertical-align:middle;width:100%;-webkit-filter:contrast(80%);filter:contrast(80%)}
 .child-card .child-card-content{position:relative;padding:30px 30px 70px 30px}
 .child-card .child-card-content .child-card-title{margin-bottom:10px;color:#454545;font-size:15px;font-weight:600}
 .child-card .child-card-content .child-card-title::after{display:none}
@@ -330,7 +330,7 @@ embed,iframe,object{max-width:100%}
 .single-product .section-title{font-size:18px;font-weight:600;margin-bottom:30px}
 .single-product .section-title::after{margin-bottom:0}
 .pull-top{margin-top:0}
-.header-background{width:100%;max-width:100%;height:400px;background-color:#f9f9f9;background-position:center;background-repeat:no-repeat;background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;margin-bottom:60px}
+.header-background{width:100%;max-width:100%;height:400px;background-color:#f9f9f9;background-position:center center;background-repeat:no-repeat;background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;margin-bottom:60px}
 .header-background .title-wrapper{width:100%;padding:35px 20px;background-color:#fff}
 .header-background .title-wrapper .title{margin-bottom:0}
 .header-background .title-wrapper .title::after{margin-bottom:0}
