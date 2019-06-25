@@ -6,7 +6,7 @@
 // Cuidado ao colocar limitações do número de posts porque gera um erro na apresentação, Default: 200
 $products_args = array(
   'post_type' => 'product',
-  'posts_per_page' => 12,
+  'posts_per_page' => 200,
 );
 
 $products_loop = new WP_Query($products_args);
