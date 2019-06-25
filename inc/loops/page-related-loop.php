@@ -7,7 +7,7 @@
 
 global $post;
 
-$pageLinks = get_post_meta( get_the_ID(), '_dimakin_childpage_links', true );
+$pageLinks = get_post_meta( get_the_ID(), '_dimakin_page_links', true );
 
 if(!empty($pageLinks)) { ?>
   <section class="page-links-wrapper">

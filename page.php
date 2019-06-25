@@ -18,7 +18,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     get_template_part('template-parts/content/simple', 'header');
   }
 
-  get_template_part('inc/loops/child', 'related-loop');
+  get_template_part('inc/loops/page', 'related-loop');
 
   get_template_part('template-parts/cta');
 
