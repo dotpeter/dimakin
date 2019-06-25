@@ -325,7 +325,8 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn:hover{background-color:#121212;border-color:#121212}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags{margin:20px 0;font-size:12px;text-transform:uppercase}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags span{color:#8c8c8c;margin-right:8px}
-.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;background-color:#f9f9f9;padding:40px 0}
+.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;background-color:#f9f9f9;padding:40px 0 10px 0}
+.single-product .main-wrapper .videos-wrapper .videowrapper{margin-bottom:30px}
 .single-product .main-wrapper .videos-wrapper .videowrapper iframe{max-height:200px}
 .single-product .section-title{font-size:18px;font-weight:600;margin-bottom:30px}
 .single-product .section-title::after{margin-bottom:0}
