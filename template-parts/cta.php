@@ -13,10 +13,10 @@ if(get_post_meta( get_the_ID(), '_dimakin_page_cta', 1 )){
     <section class="cta-wrapper">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-md-10">
+          <div class="col-12 col-md-8">
             <p class="cta-description"><?php esc_html_e($ctaDescription); ?></p>
           </div>
-          <div class="col-12 col-md-2">
+          <div class="col-12 col-md-4">
             <a href=" <?php echo esc_url($ctaUrl); ?>" class="secondary-btn cta-btn"><?php _e('Fale Connosco', 'dimakin'); ?></a>
           </div>
         </div>

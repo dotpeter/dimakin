@@ -18,6 +18,8 @@ get_header(); ?>
   get_template_part( 'template-parts/home/home', 'services' );
 
   get_template_part( 'template-parts/home/home', 'news' );
+
+  get_template_part('template-parts/cta');
   ?>
 </main>
 
