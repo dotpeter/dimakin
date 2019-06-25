@@ -34,8 +34,7 @@ if(!empty($product_recommendations)) { ?>
                  <section class="card-content">
                    <?php $product_title = get_the_title(); ?>
                    <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
-                   <?php $excerpt = the_excerpt(); ?>
-                   <?php echo mb_strimwidth( $excerpt, 0, 80, '...' ); ?>
+                   <?php //$excerpt = the_excerpt(); ?>
                    <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                  </section>
                </article>
