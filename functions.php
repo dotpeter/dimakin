@@ -96,13 +96,13 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
     add_theme_support( 'align-wide' );
 
     // Add support for editor styles.
-    add_theme_support( 'editor-styles' );
+    //add_theme_support( 'editor-styles' );
 
     // Enqueue editor styles.
-    add_editor_style( 'style-editor.css' );
+    //add_editor_style( 'style-editor.css' );
 
     // Add custom editor font sizes.
-    add_theme_support(
+    /*add_theme_support(
       'editor-font-sizes',
       array(
         array(
@@ -130,10 +130,10 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
           'slug'      => 'huge',
         ),
       )
-    );
+    );*/
 
     // Editor color palette.
-    add_theme_support(
+    /*add_theme_support(
       'editor-color-palette',
       array(
         array(
@@ -162,7 +162,7 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
           'color' => '#FFF',
         ),
       )
-    );
+    );*/
 
     // Add support for responsive embedded content.
     add_theme_support( 'responsive-embeds' );
@@ -275,7 +275,7 @@ function dimakin_scripts() {
     // Enqueue vendors first.
     wp_enqueue_script( 'dimakin-vendorsjs', get_theme_file_uri( '/assets/js/vendors.min.js' ) , array( 'jquery' ), false, false );
 
-    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom.js' ) , array( 'jquery' ), false, true );
+    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom.min.js' ) , array( 'jquery' ), false, true );
 
     if ( is_singular() ) {
       wp_enqueue_script( "comment-reply" );
@@ -312,7 +312,7 @@ add_action( 'wp_print_footer_scripts', 'dimakin_skip_link_focus_fix' );
 * Enqueue supplemental block editor styles.
 */
 
-function dimakin_editor_customizer_styles() {
+/*function dimakin_editor_customizer_styles() {
 
   wp_enqueue_style( 'dimakin-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
 
@@ -324,13 +324,13 @@ function dimakin_editor_customizer_styles() {
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'dimakin_editor_customizer_styles' );
+add_action( 'enqueue_block_editor_assets', 'dimakin_editor_customizer_styles' );*/
 
 /**
 * Display custom color CSS in customizer and on frontend.
 */
 
-function dimakin_colors_css_wrap() {
+/*function dimakin_colors_css_wrap() {
 
   // Only include custom colors in customizer or frontend.
   if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
@@ -352,7 +352,7 @@ function dimakin_colors_css_wrap() {
 
 }
 
-add_action( 'wp_head', 'dimakin_colors_css_wrap' );
+add_action( 'wp_head', 'dimakin_colors_css_wrap' );/*
 
 
 /**

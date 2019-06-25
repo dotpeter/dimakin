@@ -43,13 +43,7 @@ function euAcceptCookiesWP() {
   $(window).load(function() {
 
     function getItemWidth() {
-      return (window.innerWidth < 520) ? 330 : 354;
-    }
-    function getItemMargin() {
-      return (window.innerWidth < 520) ? 55 : 30;
-    }
-    function getItemsNumber(){
-      return (window.innerWidth < 520) ? 1 : 3;
+      return (window.innerWidth < 420) ? 420 : 320;
     }
 
     $('.products-slider-wrapper').flexslider({
