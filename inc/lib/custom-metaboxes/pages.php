@@ -6,19 +6,24 @@
  */
 
 
-function dimakin_childpage_extras() {
-  $prefix = '_dimakin_childpage_';
+function dimakin_page_extras() {
+  $prefix = '_dimakin_page_';
 
   $cmb = new_cmb2_box( array(
     'id'            => $prefix . 'extras',
     'title'         => __( 'Detalhes da Página', 'dimakin' ),
     'object_types' => array( 'page' ), // post type
-    'show_on'      => array( 'key' => 'page-template', 'value' => 'page-childs.php' ),
     'context'       => 'normal',
     'priority'      => 'high',
     'show_names'    => true, // Show field names on the left
   ) );
 
+  $cmb->add_field( array(
+    'name' => __( 'Deseja uma Call to Action?', 'dimakin' ),
+    'desc' => __( 'Clique na caixa se desejar que esta página inclua uma CTA', 'dimakin' ),
+    'id'   => $prefix . 'cta',
+    'type' => 'checkbox',
+  ) );
 
   $cmb->add_field( array(
     'name'      	=> __( 'Links para outras páginas', 'dimakin' ),
@@ -36,4 +41,4 @@ function dimakin_childpage_extras() {
   ) );
 
 }
-add_action( 'cmb2_init', 'dimakin_childpage_extras' );
+add_action( 'cmb2_init', 'dimakin_page_extras' );
