@@ -5,6 +5,12 @@
  *
  */
 
+
+ /**
+  * Change number or products per row to 3
+  */
+
+
 /*----------- Add woocommerce support to the theme -----------*/
 function dimakin_add_woocommerce_support() {
   add_theme_support( 'woocommerce', array(

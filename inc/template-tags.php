@@ -5,71 +5,11 @@
  * -----------------------------------------------------------
  */
 
-
-/*----------- Social Icons -----------*/
-if ( ! function_exists( 'dimakin_social_icons' ) ) {
-
-  function dimakin_social_icons() {
-    $facebook_url = get_theme_mod( 'facebook_field' );
-    $linkedin_url = get_theme_mod( 'linkedin_field' );
-    $twitter_url = get_theme_mod( 'twitter_field' );
-    $youtube_url = get_theme_mod( 'youtube_field' );
-    $googleplus_url = get_theme_mod( 'googleplus_field' );
-    $instagram_url = get_theme_mod( 'instagram_field' );
-    if ( !empty( $facebook_url || $linkedin_url || $twitter_url || $youtube_url || $googleplus_url ) ) :
-      echo '<div class="social-icons">';
-      if ( !empty( $linkedin_url ) ) :
-        echo '<a href="' , esc_url( $linkedin_url ) , '" target="_blank" class="social-icon-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>';
-      endif;
-      if ( !empty( $youtube_url ) ) :
-        echo '<a href="' , esc_url( $youtube_url ) , '" target="_blank" class="social-icon-youtube"><i class="fa fa-youtube-play" aria-hidden="true""></i></a>';
-      endif;
-      if ( !empty( $facebook_url ) ) :
-        echo '<a href="' , esc_url( $facebook_url ) , '" target="_blank" class="social-icon-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
-      endif;
-      if ( !empty( $twitter_url ) ) :
-        echo '<a href="' , esc_url( $twitter_url ) , '" target="_blank" class="social-icon-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-      endif;
-      if ( !empty( $googleplus_url ) ) :
-        echo '<a href="' , esc_url( $googleplus_url ) , '" target="_blank" class="social-icon-googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>';
-      endif;
-      if ( !empty( $instagram_url ) ) :
-        echo '<a href="' , esc_url( $instagram_url ) , '" target="_blank" class="social-icon-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>';
-      endif;
-      echo '</div><!-- social icons ends -->';
-    endif;
-  }
-  add_action( 'dimakin_social', 'dimakin_social_icons' );
-}
-
-/*----------- News Loop -----------*/
-if ( ! function_exists( 'dimakin_news_loop' ) ) {
-  function dimakin_news_loop() {
-    ?>
-      <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <a href="<?php the_permalink(); ?>">
-          <article class="news-card">
-            <section class="news-card-content">
-              <?php $title = get_the_title(); ?>
-              <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 40, '...' ); ?></h3></a>
-              <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>" class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-            </section>
-            <header id="post-<?php the_ID(); ?>" class="news-card-header">
-              <?php if ( has_post_thumbnail() ) : ?>
-                <figure class="card-thumbnail">
-                  <?php the_post_thumbnail('post-custom-thumb'); ?>
-                </figure>
-              <?php endif; ?>
-            </header>
-          </article>
-        </a>
-      </div>
-    <?php
-  }
-  add_action( 'news_loop', 'dimakin_news_loop' );
-}
-
+/*----------- Load Loops -----------*/
+require get_template_directory() . '/inc/loops/default-loop.php';
+require get_template_directory() . '/inc/loops/news-loop.php';
+require get_template_directory() . '/inc/loops/childpages-loop.php';
+require get_template_directory() . '/inc/loops/related-posts-loop.php';
 
 /*----------- Theme Pagination -----------*/
 if ( ! function_exists( 'dimakin_page_pagination' ) ) {
@@ -97,71 +37,6 @@ if ( ! function_exists( 'dimakin_page_pagination' ) ) {
   }
   add_action( 'dimakin_pagination', 'dimakin_page_pagination' );
 }
-
-/*----------- Theme default loop for archives and search results -----------*/
-if ( ! function_exists( 'dimakin_default_loop' ) ) {
-  function dimakin_default_loop() {
-    ?>
-
-      <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-        <a href="<?php the_permalink(); ?>">
-          <article class="card">
-            <header class="card-header">
-              <?php if ( has_post_thumbnail() ) : ?>
-                  <figure class="card-thumbnail">
-                    <?php the_post_thumbnail(); ?>
-                  </figure>
-              <?php endif; ?>
-            </header>
-            <section class="card-content">
-              <?php
-              if ( is_home() ) {
-                $post_date = get_the_date( 'd-m-Y' );
-                echo '<span class="posted-on">' , $post_date , '</span>';
-              }
-              ?>
-              <?php $product_title = get_the_title(); ?>
-              <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
-              <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-            </section>
-          </article>
-        </a>
-      </div>
-    <?php
-  }
-  add_action( 'dimakin_loop', 'dimakin_default_loop' );
-}
-
-
-/*----------- Loop for child pages -----------*/
-if ( ! function_exists( 'dimakin_child_pages_loop' ) ) {
-  function dimakin_child_pages_loop() {
-    ?>
-    <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <a href="<?php the_permalink(); ?>">
-        <article class="news-card">
-          <section class="news-card-content">
-            <?php $title = get_the_title(); ?>
-            <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 40, '...' ); ?></h3></a>
-            <?php the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>" class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-          </section>
-          <header id="post-<?php the_ID(); ?>" class="news-card-header">
-            <?php if ( has_post_thumbnail() ) : ?>
-              <figure class="card-thumbnail">
-                <?php the_post_thumbnail('post-custom-thumb'); ?>
-              </figure>
-            <?php endif; ?>
-          </header>
-        </article>
-      </a>
-    </div>
-    <?php
-  }
-  add_action( 'dimakin_child_pages', 'dimakin_child_pages_loop' );
-}
-
 
 /*----------- Yoast Breadcrumbs -----------*/
 if ( ! function_exists( 'dimakin_custom_breadcrumbs') ) {
@@ -212,62 +87,6 @@ if(!function_exists('dimakin_single_post_navigation')) {
   add_action('dimakin_post_navigation', 'dimakin_single_post_navigation');
 }
 
-
-/*----------- Related Posts -----------*/
-if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
-  function dimakin_related_posts_loop() {
-
-    global $post;
-    $postid = get_the_ID();
-
-    $related_args = array(
-      'post__not_in' => array($postid),
-      'posts_per_page' => 3,
-      'order' => 'DESC'
-    );
-
-    $related_posts = new WP_Query( $related_args );
-
-    if ( $related_posts->have_posts() ) {
-      echo '<section class="related-posts"><div class="container"><div class="row"><div class="col-12"><h4 class="related-news-title">' , esc_html__('Outras notícias relevantes', 'dimakin') , '</h4></div></div><div class="row">';
-      while ( $related_posts->have_posts() ) : $related_posts->the_post();
-      ?>
-        <div class="col-12 col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <a href="<?php the_permalink(); ?>">
-            <article class="card">
-              <header class="card-header">
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <figure class="card-thumbnail">
-                      <?php the_post_thumbnail(); ?>
-                    </figure>
-                <?php endif; ?>
-              </header>
-              <section class="card-content">
-                <?php
-                if ( is_home() || is_single() ) {
-                  $post_date = get_the_date( 'd-m-Y' );
-                  echo '<span class="posted-on">' , $post_date , '</span>';
-                }
-                ?>
-                <?php $product_title = get_the_title(); ?>
-                <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 68, '...' ); ?></h3>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-              </section>
-            </article>
-          </a>
-        </div>
-      <?php
-      endwhile;
-      echo '</div></div></section>';
-      wp_reset_postdata();
-    }
-
-  }
-
-  add_action( 'dimakin_related_posts', 'dimakin_related_posts_loop' );
-}
-
 /*----------- Touch Icons -----------*/
 if ( ! function_exists( 'dimakin_all_touch_icons' ) ) {
 
@@ -311,6 +130,41 @@ if ( ! function_exists( 'dimakin_all_touch_icons' ) ) {
   add_action( 'dimakin_touch_icons', 'dimakin_all_touch_icons' );
 }
 
+/*----------- Social Icons -----------*/
+if ( ! function_exists( 'dimakin_social_icons' ) ) {
+
+  function dimakin_social_icons() {
+    $facebook_url = get_theme_mod( 'facebook_field' );
+    $linkedin_url = get_theme_mod( 'linkedin_field' );
+    $twitter_url = get_theme_mod( 'twitter_field' );
+    $youtube_url = get_theme_mod( 'youtube_field' );
+    $googleplus_url = get_theme_mod( 'googleplus_field' );
+    $instagram_url = get_theme_mod( 'instagram_field' );
+    if ( !empty( $facebook_url || $linkedin_url || $twitter_url || $youtube_url || $googleplus_url ) ) :
+      echo '<div class="social-icons">';
+      if ( !empty( $linkedin_url ) ) :
+        echo '<a href="' , esc_url( $linkedin_url ) , '" target="_blank" class="social-icon-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>';
+      endif;
+      if ( !empty( $youtube_url ) ) :
+        echo '<a href="' , esc_url( $youtube_url ) , '" target="_blank" class="social-icon-youtube"><i class="fa fa-youtube-play" aria-hidden="true""></i></a>';
+      endif;
+      if ( !empty( $facebook_url ) ) :
+        echo '<a href="' , esc_url( $facebook_url ) , '" target="_blank" class="social-icon-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+      endif;
+      if ( !empty( $twitter_url ) ) :
+        echo '<a href="' , esc_url( $twitter_url ) , '" target="_blank" class="social-icon-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
+      endif;
+      if ( !empty( $googleplus_url ) ) :
+        echo '<a href="' , esc_url( $googleplus_url ) , '" target="_blank" class="social-icon-googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>';
+      endif;
+      if ( !empty( $instagram_url ) ) :
+        echo '<a href="' , esc_url( $instagram_url ) , '" target="_blank" class="social-icon-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>';
+      endif;
+      echo '</div><!-- social icons ends -->';
+    endif;
+  }
+  add_action( 'dimakin_social', 'dimakin_social_icons' );
+}
 
 /*----------- Display post meta tags -----------*/
 if ( !function_exists( 'dimakin_post_meta_tags' ) ) {

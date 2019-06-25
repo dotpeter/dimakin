@@ -29,7 +29,14 @@
                </div>
                <div class="page-content-wrapper">
                  <div class="row">
-                  <?php the_content(); ?>
+                   <div class="col-12">
+                     <div class="description">
+                       <?php the_content(); ?>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="row">
+
                   <?php
                     $childs_args = array(
                       'post_type'      => 'page',

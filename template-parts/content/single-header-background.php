@@ -11,7 +11,7 @@
   <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'post-full-width'); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php do_action('dimakin_post_navigation'); ?>
-    <header class="header-background" style="background-image: url(' , esc_url($featured_img_url) , ');">
+    <header class="header-background" style="background-image: url(' <?php echo esc_url($featured_img_url); ?> ');">
       <div class="container">
         <div class="row">
           <div class="title-wrapper">

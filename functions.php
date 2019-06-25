@@ -44,7 +44,7 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     add_image_size( 'services-thumb', 520, 347, array('center','center') );
 
-    add_image_size( 'childpage-thumb', 830, 365, array('center','center') );
+    add_image_size( 'childpage-thumb', 830, 300, array('center','center') );
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(

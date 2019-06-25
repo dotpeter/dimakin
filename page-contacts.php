@@ -19,26 +19,19 @@ get_header();
 do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
-
-  if ( has_post_thumbnail($post->ID) ) {
-    echo '<main class="main-wrapper wthumb">';
-  }
-  else {
-    echo '<main class="main-wrapper">';
-  }
-
-  $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-
-  ?>
+?>
+<main class="main-wrapper pull-top">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
-    if(has_post_thumbnail()){
-      echo '<header class="page-header" style="background-image: url(' , esc_url($featured_img_url) , ');height: 400px;"></header>';
-    } else {
-      echo '<header class="page-header"></header>';
-    }
-    ?>
+
+    <header class="page-header">
+      <?php
+        if(!empty($contacts_map)){
+          echo '<section class="map-wrapper"><div class="container-fluid"><div class="row no-gutters"><div class="col-12">' , $contacts_map , '</div></div></div></section>';
+        }
+      ?>
+    </header>
     <div class="article-content">
+
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -74,11 +67,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
           </div>
         </div>
       </div>
-      <?php
-        if(!empty($contacts_map)){
-          echo '<section class="map-wrapper"><div class="container-fluid"><div class="row no-gutters"><div class="col-12">' , $contacts_map , '</div></div></div></section>';
-        }
-      ?>
     </div>
   </article>
 </main>

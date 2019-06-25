@@ -5,6 +5,12 @@
  * -----------------------------------------------------------
  */
 
+ add_filter('loop_shop_columns', 'loop_columns', 999);
+ if (!function_exists('loop_columns')) {
+ 	function loop_columns() {
+ 		return 3; // 3 products per row
+ 	}
+ }
 
 /*----------- Excerpt lenght -----------*/
 if ( ! function_exists( 'dimakin_excerpt_length' ) ) {
@@ -37,9 +43,6 @@ if( !function_exists('dimakin_hide_editor') ) {
       remove_post_type_support( 'page', 'editor' );
     }
     if( $template_file === 'page-operation-locals.php' ) {
-      remove_post_type_support( 'page', 'editor' );
-    }
-    if( $template_file === 'page-childs.php' ) {
       remove_post_type_support( 'page', 'editor' );
     }
 
