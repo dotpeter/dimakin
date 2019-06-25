@@ -1039,6 +1039,7 @@ p{font-size:13px;line-height:1.6}
 .site-branding-wrapper .custom-logo{max-width:60px;padding:10px 0}
 .woo-content-wrapper{padding-top:0}
 .woo-content-wrapper .related .products[class*=columns-] .product{width:100%}
+.woocommerce ul.products[class*=columns-] li.product,.woocommerce-page ul.products[class*=columns-] li.product{width:100%}
 .breadcrumbs-wrapper{display:none}
 .main-footer-wrapper .footer-extras .copyright-text{margin-bottom:40px;font-size:10px}
 .main-footer-wrapper .footer-extras .footer-menu{margin-bottom:30px;margin-top:10px}
