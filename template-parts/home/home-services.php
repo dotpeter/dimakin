@@ -21,11 +21,11 @@ if(!empty($service_items)) {
         $service_url = esc_html( $service[  '_dimakin_home_url' ] );
 
       if ( isset( $service[ '_dimakin_home_image' ] ) )
-        $service_image = wp_get_attachment_url( $service[ '_dimakin_home_image_id' ] );
+        $service_image = wp_get_attachment_image( $service[ '_dimakin_home_image_id' ], 'services-thumb' );
 
       if ( !empty( array( $service_title ) ) ) {
 
-        echo '<div class="col-12 col-md-4"><a class="service-box" href="' . $service_url . '"><img class="service-background" src="' . $service_image . '"><div class="service-overlay"><span class="service-btn"><i class="fa fa-plus"></i><p class="service-title">' . $service_title . '</p></span></div></a></div>';
+        echo '<div class="col-12 col-md-4"><a class="service-box" href="' . $service_url . '">' . $service_image . '<div class="service-overlay"><span class="service-btn"><i class="fa fa-plus"></i><p class="service-title">' . $service_title . '</p></span></div></a></div>';
 
       }
 

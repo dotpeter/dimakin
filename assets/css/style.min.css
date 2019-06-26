@@ -250,7 +250,7 @@ embed,iframe,object{max-width:100%}
 .services-wrapper{max-width:100%;overflow:hidden}
 .services-wrapper .container-fluid{padding-left:0;padding-right:0}
 .services-wrapper .service-box{display:block;position:relative;width:100%;max-width:100%;height:100%;overflow:hidden;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
-.services-wrapper .service-box .service-background{display:block;width:100%;max-width:100%;vertical-align:middle;border:0;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
+.services-wrapper .service-box .attachment-services-thumb{display:block;width:100%;max-width:100%;vertical-align:middle;border:0;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .service-overlay{position:absolute;width:100%;height:100%;top:0;left:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:rgba(1,128,187,0.2);-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .service-overlay:before{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #0180bb;border-radius:0;content:'';opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .service-overlay .service-btn{color:#e9e9e9;text-transform:uppercase;padding:10px 20px;background-color:#0180bb}

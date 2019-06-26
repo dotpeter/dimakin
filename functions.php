@@ -42,7 +42,7 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     add_image_size( 'post-custom-thumb', 540, 260, array('center','center') );
 
-    add_image_size( 'services-thumb', 520, 347, array('center','center') );
+    add_image_size( 'services-thumb', 455, 300, array('center','center') );
 
     add_image_size( 'childpage-thumb', 830, 300, array('center','center') );
 
