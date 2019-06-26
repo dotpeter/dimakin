@@ -524,8 +524,8 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .breadcrumbs-wrapper #breadcrumbs .breadcrumb_last{color:#272d33;margin-left:10px}
 .card{box-shadow:0 7px 22px rgba(19,19,19,0.08);overflow:hidden;border:1px solid #f1f1f1;margin-bottom:30px}
 .card:hover .card-header .card-thumbnail img{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-filter:contrast(90%);filter:contrast(90%)}
-.card .card-header .thumbnail{overflow:hidden}
-.card .card-header .thumbnail img{overflow:hidden;-webkit-transition:all .6s;transition:all .6s;vertical-align:middle;width:100%;-webkit-filter:contrast(80%);filter:contrast(80%)}
+.card .card-header .thumbnail,.card .card-header .card-thumbnail{overflow:hidden}
+.card .card-header .thumbnail img,.card .card-header .card-thumbnail img{overflow:hidden;-webkit-transition:all .6s;transition:all .6s;vertical-align:middle;width:100%;-webkit-filter:contrast(80%);filter:contrast(80%)}
 .card .card-content{position:relative;padding:30px 30px 70px 30px}
 .card .card-content .posted-on{display:block;text-transform:uppercase;font-weight:700;font-size:12px;margin-bottom:10px;color:#8c8c8c}
 .card .card-content .card-title{margin-bottom:10px;color:#454545;font-size:15px;font-weight:600}

@@ -16,7 +16,7 @@ if ( ! function_exists( 'dimakin_products_loop' ) ) {
             <?php if ( has_post_thumbnail() ) {
               ?>
               <figure class="card-thumbnail">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('woocommerce_single'); ?>
               </figure>
               <?php
             } ?>
