@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="page-title"><?php echo esc_html_e( 'Resultados de pesquisa para:', 'dimakin' ) ?> <span><?php the_search_query(); ?></span></h1>
+          <h1 class="title"><?php echo esc_html_e( 'Resultados de pesquisa para:', 'dimakin' ) ?> <span><?php the_search_query(); ?></span></h1>
         </div>
       </div>
     </div>
@@ -24,15 +24,11 @@ get_header(); ?>
             do_action( 'dimakin_loop' );
           endwhile;
           else:
-            get_template_part( 'template-parts/post/content', 'none' );
+            get_template_part( 'template-parts/content/content', 'none' );
           endif;
           ?>
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-           <?php do_action('dimakin_pagination'); ?>
-        </div>
-      </div>
+      <?php do_action('dimakin_pagination'); ?>
     </div>
   </section>
 </main>

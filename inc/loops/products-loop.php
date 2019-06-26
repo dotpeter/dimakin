@@ -8,34 +8,28 @@
 if ( ! function_exists( 'dimakin_products_loop' ) ) {
   function dimakin_products_loop() {
     global $product;
+    $product_title = $product->get_name();
+    $productDescpriton = $product->get_description();
     ?>
-    <div class="col-12 col-md-6">
-      <a href="<?php the_permalink($product->get_id()); ?>">
-        <article class="card">
+      <article class="product-card">
+        <header class="product-header">
+          <a href="<?php the_permalink($product->get_id()); ?>" class="product-link-wrapper">
           <?php
           if( get_post_meta( get_the_ID(), '_dimakin_products_isnew', 1 ) ) {
-           echo '<span class="itsnew">' . esc_html__( 'Novo!', 'dimakin' ) . '</span>';
+           echo '<span class="product-itsnew">' . esc_html__( 'Novo!', 'dimakin' ) . '</span>';
           }
           ?>
-          <header class="card-header">
-            <?php if ( has_post_thumbnail() ) {
-              ?>
-              <figure class="card-thumbnail">
-                <?php the_post_thumbnail('woocommerce_single'); ?>
-              </figure>
-              <?php
-            } ?>
-          </header>
-          <section class="card-content">
-            <?php $product_title = $product->get_name(); ?>
-            <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
-            <?php $productDescpriton = $product->get_description(); ?>
-            <p class="product-description"><?php echo mb_strimwidth( $productDescpriton, 0, 76, '...' ); ?></p>
-            <a href="<?php the_permalink($product->get_id()); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-          </section>
-        </article>
-      </a>
-    </div>
+          <?php if ( has_post_thumbnail() ) { the_post_thumbnail('woocommerce_single'); } ?>
+          </a>
+        </header>
+        <section class="product-content">
+          <h3 class="product-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
+          <div class="product-box">
+            <p class="product-description"><?php echo mb_strimwidth( $productDescpriton, 0, 70, '...' ); ?></p>
+            <a href="<?php the_permalink($product->get_id()); ?>" class="product-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          </div>
+        </section>
+      </article>
     <?php
   }
   add_action( 'products_loop', 'dimakin_products_loop' );

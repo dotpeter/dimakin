@@ -18,48 +18,38 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$products_args = array(
-  'post_type' => 'product',
-  'posts_per_page' => 10,
-);
-$products_loop = new WP_Query($products_args);
 
 ?>
 <main class="main-wrapper">
-
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1 class="tile"><?php _e('Produtos', 'dimakin'); ?></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-9">
-      <div class="row">
-      <?php
-      if ( $products_loop->have_posts() ) : while ( $products_loop->have_posts() ) : $products_loop->the_post();
-        do_action('products_loop');
-      endwhile;
-      else :
-        get_template_part( 'template-parts/content/content', 'none' );
-      endif;
-      ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="tile"><?php _e('Produtos', 'dimakin'); ?></h1>
       </div>
     </div>
-    <div class="col-12 col-md-3">
-      <div class="page-sidebar-wrapper">
-        <?php get_sidebar(); ?>
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <div class="row">
+        <?php
+        if ( have_posts() ) : while ( have_posts() ) : the_post();
+          echo '<div class="col-12 col-md-6">';
+          do_action('products_loop');
+          echo '</div>';
+        endwhile;
+        else :
+          get_template_part( 'template-parts/content/content', 'none' );
+        endif;
+        ?>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="page-sidebar-wrapper">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
     </div>
+     <?php do_action( 'dimakin_pagination' ); ?>
   </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-       <?php do_action( 'dimakin_pagination' ); ?>
-    </div>
-  </div>
-</div>
-
-
 </main>
 
 <?php

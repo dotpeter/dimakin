@@ -19,60 +19,16 @@
   .products-slider-wrapper
     .flex-viewport
       .products-slider-container
-        margin: 0
-        padding: 0 15px
-        list-style-type: none
         .product
-          position: relative
-          margin: 0
-          padding: 0
-          box-shadow: 0 7px 22px rgba(19,19,19,.08)
-          overflow: hidden
-          border: 1px solid #f1f1f1
-          margin-bottom: 30px
-          &:hover
-            .woocommerce-loop-product__link
-              img
-                transform: scale(1.1)
-                transition: all .3ms ease-in-out
-          .woocommerce-loop-product__link
-            position: relative
-            display: block
-            overflow: hidden
-            img
-              overflow: hidden
-              transition: all .6s
-              vertical-align: middle
-              width: 100%
-          .product-details
-            padding: 30px 20px
-            .product-cat
-              margin-bottom: 5px
-              text-transform: uppercase
-              font-size: 11px
-              font-family: $secondaryfont
-              color: $primary-color
-            .woocommerce-loop-product__title
-              margin-bottom: 10px
-              margin-top: 0
-              padding: 0
-              color: $secondary-color
-              font-size: 18px
-              &::after
-                display: none
-              &:hover
-                color: $primary-color
-            p
-              color: $smooth-grey
-              margin: 0
-              width: 100%
-
+          width: 320px
     .flex-direction-nav
       z-index: 10
+
       a
+
         width: 25px
         height: 100px
-        margin: -150px 0 0
+        margin: -100px 0 0
         background-color: $primary-color
         display: flex
         justify-content: center
@@ -85,13 +41,18 @@
           content: '\f104'
           color: #fff
       .flex-nav-prev
+        padding: 0
+        margin: 0
         .flex-prev
           opacity: 1
-          left: 0
+          left: -30px
+          position: absolute
       .flex-nav-next
+        padding: 0
+        margin: 0
         .flex-next
           opacity: 1
-          right: 0
+          right: -30px
           &::before
             content: '\f105'
 
@@ -101,3 +62,24 @@
       font-size: 20px
     .primary-btn
       float: none
+
+    .products-slider-wrapper
+      .flex-direction-nav
+        .flex-nav-prev
+          .flex-prev
+            left: -40px
+        .flex-nav-next
+          .flex-next
+            right: -40px
+
+
+@media (max-width: $small)
+  .products-wrapper
+    .products-slider-wrapper
+      .flex-direction-nav
+        .flex-nav-prev
+          .flex-prev
+            left: 0px
+        .flex-nav-next
+          .flex-next
+            right: 0px

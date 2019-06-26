@@ -43,14 +43,21 @@ function euAcceptCookiesWP() {
   $(window).load(function() {
 
     function getItemWidth() {
-      return (window.innerWidth < 420) ? 420 : 320;
+      //return (window.innerWidth < 420) ? 420 : 320;
+      if (window.innerWidth < 768) {
+        return 510;
+      }else if (window.innerWidth < 576) {
+        return 440;
+      }else {
+        return 320;
+      }
     }
 
     $('.products-slider-wrapper').flexslider({
       selector: ".products-slider-container > .product",
       animation: "slide",
       slideshow: false,
-      controlNav: true,
+      controlNav: false,
       prevText: "",
       nextText: "",
       itemWidth: getItemWidth(),

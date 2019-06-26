@@ -20,7 +20,7 @@ if ( ! function_exists( 'dimakin_page_pagination' ) ) {
     if ( $wp_query->max_num_pages <= 1 )
       return;
     echo '<hr>';
-    echo '<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">';
+    echo '<div class="row"><div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">';
     echo '<nav class="pagination-wrapper">';
     echo paginate_links( array(
       'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
@@ -34,7 +34,7 @@ if ( ! function_exists( 'dimakin_page_pagination' ) ) {
       'mid_size'     => 1
     ) );
     echo '</nav>';
-    echo '</div>';
+    echo '</div></div>';
   }
   add_action( 'dimakin_pagination', 'dimakin_page_pagination' );
 }
