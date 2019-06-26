@@ -10,6 +10,7 @@ require get_template_directory() . '/inc/loops/default-loop.php';
 require get_template_directory() . '/inc/loops/news-loop.php';
 require get_template_directory() . '/inc/loops/childpages-loop.php';
 require get_template_directory() . '/inc/loops/related-posts-loop.php';
+require get_template_directory() . '/inc/loops/products-loop.php';
 
 /*----------- Theme Pagination -----------*/
 if ( ! function_exists( 'dimakin_page_pagination' ) ) {

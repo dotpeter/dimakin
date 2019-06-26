@@ -319,8 +319,8 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-prev .flex-prev{opacity:1;left:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next{opacity:1;right:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next::before{content:'\f105'}
+.single-product .main-wrapper .product-content-wrapper .product-details p{color:#8c8c8c;font-size:16px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-title{color:#454545;font-size:26px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-description{color:#8c8c8c;font-size:14px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions{margin-top:40px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn{background-color:#0180bb;color:#fff;margin-right:10px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn:hover{background-color:#003b56;border-color:#017db6}

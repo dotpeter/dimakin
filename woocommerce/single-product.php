@@ -30,7 +30,8 @@ global $product;
             <div class="product-details">
               <?php
                 echo '<h1 class="product-title">', $product->get_name() , '</h1>';
-                echo '<p class="product-description">' , $product->get_description() , '<p>';
+                //echo '<p class="product-description">' , $product->get_description() , '<p>';
+                the_content();
               ?>
               <div class="product-actions">
                 <?php
