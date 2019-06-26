@@ -12,6 +12,11 @@ if ( ! function_exists( 'dimakin_products_loop' ) ) {
     <div class="col-12 col-md-6">
       <a href="<?php the_permalink($product->get_id()); ?>">
         <article class="card">
+          <?php
+          if( get_post_meta( get_the_ID(), '_dimakin_products_isnew', 1 ) ) {
+           echo '<span class="itsnew">' . esc_html__( 'Novo!', 'dimakin' ) . '</span>';
+          }
+          ?>
           <header class="card-header">
             <?php if ( has_post_thumbnail() ) {
               ?>
