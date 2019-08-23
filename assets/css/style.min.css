@@ -247,7 +247,7 @@ embed,iframe,object{max-width:100%}
 .services-wrapper .service-box{display:block;position:relative;width:100%;max-width:100%;height:100%;overflow:hidden;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .attachment-services-thumb{display:block;width:100%;max-width:100%;vertical-align:middle;border:0;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .service-overlay{position:absolute;width:100%;height:100%;top:0;left:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
-.services-wrapper .service-box .service-overlay:before{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #0180bb;border-radius:0;content:'';opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
+.services-wrapper .service-box .service-overlay:before{position:absolute;top:15px;right:15px;bottom:15px;left:15px;border:2px solid #0180bb;border-radius:0;content:'';opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .services-wrapper .service-box .service-overlay .service-btn{color:#e9e9e9;text-transform:uppercase;padding:10px 20px;background-color:#0180bb}
 .services-wrapper .service-box .service-overlay .service-btn:hover{background-color:#015d88}
 .services-wrapper .service-box .service-overlay .service-btn .fa{color:#e9e9e9}
@@ -305,6 +305,7 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper #product-slider{margin:0 0 20px 0;border:0}
 .single-product .main-wrapper .product-content-wrapper #product-slider:hover .flex-direction-nav{display:none}
 .single-product .main-wrapper .product-content-wrapper #product-gallery{margin:0;border:0}
+.single-product .main-wrapper .product-content-wrapper #product-gallery .flex-viewport{max-width:90%;margin:0 auto}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-viewport:hover{cursor:pointer}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav a{width:20px;height:100%;margin:-50px 0 0;background-color:#e9e9e9;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav a::before{font-family:'FontAwesome';font-size:18px;display:inline-block;content:'\f104';color:#454545;text-shadow:1px 1px 0 rgba(255,255,255,0.3)}
@@ -320,9 +321,11 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn:hover{background-color:#121212;border-color:#121212}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags{margin:20px 0;font-size:12px;text-transform:uppercase}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags span{color:#8c8c8c;margin-right:8px}
-.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;background-color:#f9f9f9;padding:40px 0 10px 0}
+.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;background-color:#f9f9f9;padding:40px 0}
 .single-product .main-wrapper .videos-wrapper .videowrapper{margin-bottom:30px}
 .single-product .main-wrapper .videos-wrapper .videowrapper iframe{max-height:200px}
+.single-product .main-wrapper .videos-wrapper .primary-btn{float:right;display:block;width:250px;text-align:center;margin:0 auto;background-color:#0180bb;color:#fff}
+.single-product .main-wrapper .videos-wrapper .primary-btn:hover{background-color:#454545}
 .single-product .section-title{font-size:18px;font-weight:600;margin-bottom:30px}
 .single-product .section-title::after{margin-bottom:0}
 .pull-top{margin-top:0}
@@ -976,6 +979,7 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .products-wrapper .products-slider-wrapper .flex-direction-nav .flex-nav-next .flex-next{right:-40px}
 .single-product .main-wrapper{margin:40px 0}
 .single-product .main-wrapper .product-content-wrapper #product-slider .flex-direction-nav{display:none}
+.single-product .main-wrapper .product-content-wrapper #product-gallery .flex-viewport{max-width:96%}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-prev .flex-prev{left:-18px}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next{right:-18px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-title{color:#454545;font-size:26px}
@@ -1024,6 +1028,7 @@ p{font-size:13px;line-height:1.6}
 .error404 .content{text-align:center}
 .error404 .content #search-form{max-width:100%;width:100%}
 .single-product .main-wrapper{margin:40px 0}
+.single-product .main-wrapper .product-content-wrapper #product-gallery .flex-viewport{max-width:96%}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-title{color:#454545;font-size:20px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-description{color:#454545;font-size:14px;line-height:2}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions{margin:20px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}

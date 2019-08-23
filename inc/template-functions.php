@@ -67,3 +67,29 @@ if(!function_exists('dimakin_primary_menu_extras')) {
   }
   add_filter('wp_nav_menu_items', 'dimakin_primary_menu_extras', 10, 2);
 }
+
+
+/*----------- Limite the excerpt -----------*/
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  }
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
+}
+
+function get_excerpt(){
+  $excerpt = get_the_content();
+  $excerpt = preg_replace(" ([.*?])",'',$excerpt);
+  $excerpt = strip_shortcodes($excerpt);
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, 82);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+  $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+  $excerpt = $excerpt.'...';
+  return $excerpt;
+}

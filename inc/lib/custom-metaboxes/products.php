@@ -23,6 +23,23 @@ function dimakin_product_extras() {
     'type' => 'checkbox',
   ) );
 
+  // Product Galleries
+  $cmb->add_field( array(
+      'name' => __( 'Galeria de Imagens do Produto', 'dimakin' ),
+      'desc' => __( 'Insira aqui a galeria de imagens do produto', 'dimakin' ),
+      'id'   => $prefix . 'gallerie_img',
+      'type' => 'file_list',
+      // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+      // Optional, override default text strings
+      'text' => array(
+          'add_upload_files_text' => __( 'Adicionar/Subir Ficheiros', 'dimakin' ), // default: "Add or Upload Files"
+          'remove_image_text' => __( 'Remover Imagem', 'dimakin' ), // default: "Remove Image"
+          'file_text' => __( 'Ficheiros', 'dimakin' ), // default: "File:"
+          'file_download_text' => __( 'Download', 'dimakin' ), // default: "Download"
+          'remove_text' => __( 'Remover', 'dimakin' ) // default: "Remove"
+      ),
+  ) );
+
   $cmb->add_field( array(
     'name'    => __( 'Catálogo do Produto', 'dimakin' ),
     'desc'    => __( 'Faça upload de um pdf ou insira um URL.', 'dimakin' ),
@@ -38,21 +55,6 @@ function dimakin_product_extras() {
     'query_args' => array(
       'type' => 'application/pdf', // Make library only display PDFs.
     ),
-  ) );
-
-  $cmb->add_field( array(
-    'name'      	=> __( 'Artigos Recomendados', 'dimakin' ),
-    'id'        	=> $prefix . 'recommendation',
-    'type'      	=> 'post_search_ajax',
-    'desc'			=> __( 'Escreva o nome do artigo/página/produto', 'dimakin' ),
-    // Optional :
-    'limit'      	=> 3, 		// Limit selection to X items only (default 1)
-    'sortable' 	 	=> true, 	// Allow selected items to be sortable (default false)
-    'query_args'	=> array(
-      'post_type'			=> array( 'post', 'page', 'product' ),
-      'post_status'		=> array( 'publish' ),
-      'posts_per_page'	=> -1
-    )
   ) );
 
   $group_field_id = $cmb->add_field( array(
@@ -77,6 +79,23 @@ function dimakin_product_extras() {
     'id'   => $prefix . 'video',
     'type' => 'oembed',
   ) );
+
+  $cmb->add_field( array(
+    'name'      	=> __( 'Artigos Recomendados', 'dimakin' ),
+    'id'        	=> $prefix . 'recommendation',
+    'type'      	=> 'post_search_ajax',
+    'desc'			=> __( 'Escreva o nome do artigo/página/produto', 'dimakin' ),
+    // Optional :
+    'limit'      	=> 3, 		// Limit selection to X items only (default 1)
+    'sortable' 	 	=> true, 	// Allow selected items to be sortable (default false)
+    'query_args'	=> array(
+      'post_type'			=> array( 'post', 'page', 'product' ),
+      'post_status'		=> array( 'publish' ),
+      'posts_per_page'	=> -1
+    )
+  ) );
+
+
 
 }
 add_action( 'cmb2_init', 'dimakin_product_extras' );

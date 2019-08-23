@@ -13,6 +13,8 @@
         margin: 0
         border: none
         .flex-viewport
+          max-width: 90%
+          margin: 0 auto
           &:hover
             cursor: pointer
         .flex-direction-nav
@@ -75,11 +77,23 @@
     .videos-wrapper
       margin-bottom: 60px
       background-color: $grey-ultra-light
-      padding: 40px 0 10px 0
+      padding: 40px 0
       .videowrapper
         margin-bottom: 30px
         iframe
           max-height: 200px
+      .primary-btn
+        float: right
+        display: block
+        width: 250px
+        text-align: center
+        margin: 0px auto
+        //margin-top: 20px
+        //margin-bottom: 40px
+        background-color: $primary-color
+        color: #fff
+        &:hover
+          background-color: $secondary-color
 
   .section-title
     font-size: 18px
@@ -97,6 +111,8 @@
           .flex-direction-nav
             display: none
         #product-gallery
+          .flex-viewport
+            max-width: 96%
           .flex-direction-nav
             .flex-nav-prev
               .flex-prev
@@ -127,6 +143,9 @@
     .main-wrapper
       margin: 40px 0
       .product-content-wrapper
+        #product-gallery
+          .flex-viewport
+            max-width: 96%
         .product-details
           .product-title
             color: $secondary-color

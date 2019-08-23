@@ -46,6 +46,14 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     add_image_size( 'childpage-thumb', 830, 300, array('center','center') );
 
+    add_image_size( 'product-mini', 150, 150, array('center','center') );
+
+    add_image_size( 'product-thumb', 360, 240, array('center','center') );
+
+    add_image_size( 'product-img', 550, 320, array('center','center') );
+
+    add_image_size( 'product-full', 720, 720, array('center','center') );
+
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(
       array(
@@ -172,6 +180,9 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     // cleaning up random code around images
     add_filter( 'the_content', 'dimakin_filter_ptags_on_images' );
+
+    //Flush rewrite rules
+    flush_rewrite_rules();
   }
 
 endif;
@@ -368,7 +379,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
 * The woocommerce configuration for the theme.
 */
-require get_template_directory() . '/inc/woocommerce.php';
+//require get_template_directory() . '/inc/woocommerce.php';
 
 /**
 * Customizer additions.
@@ -395,3 +406,9 @@ require get_template_directory() . '/inc/custom-metaboxes.php';
 * Custom Widgets.
 */
 require get_template_directory() . '/inc/widgets.php';
+
+
+/**
+* Custom Post Types.
+*/
+require get_template_directory() . '/inc/custom-post-types.php';
