@@ -321,7 +321,7 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn:hover{background-color:#121212;border-color:#121212}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags{margin:20px 0;font-size:12px;text-transform:uppercase}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags span{color:#8c8c8c;margin-right:8px}
-.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;background-color:#f9f9f9;padding:40px 0}
+.single-product .main-wrapper .videos-wrapper{margin-bottom:60px;padding:40px 0}
 .single-product .main-wrapper .videos-wrapper .videowrapper{margin-bottom:30px}
 .single-product .main-wrapper .videos-wrapper .videowrapper iframe{max-height:200px}
 .single-product .main-wrapper .videos-wrapper .primary-btn{float:right;display:block;width:250px;text-align:center;margin:0 auto;background-color:#0180bb;color:#fff}
@@ -335,8 +335,9 @@ embed,iframe,object{max-width:100%}
 .header-background .title-wrapper .title::after{margin-bottom:0}
 .page-links-wrapper{margin-bottom:40px}
 .single-post .content-wrapper{word-wrap:break-word}
+.single-post .content-wrapper img{margin-bottom:40px}
 .single-post .pull-top{margin-top:0}
-.single-post .pull-top .header-background{width:100%;max-width:100%;height:400px;background-color:#f9f9f9;background-position:center;background-repeat:no-repeat;background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;margin-bottom:60px}
+.single-post .pull-top .header-background{width:100%;max-width:100%;height:400px;background-color:#f9f9f9;background-position:center;background-repeat:no-repeat;background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;margin-bottom:40px}
 .single-post .pull-top .title-wrapper{width:100%;padding:35px 20px;background-color:#fff}
 .single-post .pull-top .title-wrapper .posted-on{display:block;text-transform:uppercase;font-weight:700;font-size:12px;margin-bottom:10px;color:#8c8c8c}
 .single-post .pull-top .title-wrapper .title{margin-bottom:0}
@@ -386,7 +387,7 @@ embed,iframe,object{max-width:100%}
 .top-bar-wrapper .language-wrapper .widget_icl_lang_sel_widget .wpml-ls-legacy-list-horizontal ul .wpml-ls-item .wpml-ls-link .wpml-ls-native{vertical-align:inherit}
 .top-bar-wrapper .language-wrapper .widget_icl_lang_sel_widget .wpml-ls-legacy-list-horizontal ul .wpml-ls-current-language .wpml-ls-link .wpml-ls-native{font-weight:600}
 .site-branding-wrapper{width:80px;display:inline-block}
-.site-branding-wrapper .custom-logo{max-width:90px;padding:15px 0}
+.site-branding-wrapper .custom-logo{max-width:90px;padding:30px 0}
 .site-branding-wrapper .branding-phrase{font-family:"Open Sans",sans-serif;font-weight:700;text-transform:uppercase;margin-left:20px;margin-top:20px;padding:20px;border-left:2px solid #cacaca}
 .site-branding-wrapper .site-branding-text{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 .main-navigation-wrapper{display:block;position:relative;width:100%;margin-bottom:10px;z-index:30}
@@ -595,6 +596,7 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .main-footer-wrapper .footer-extras .social-icons a{display:inline-block;color:#454545;margin-left:10px;border:2px solid #454545;padding:5px}
 .main-footer-wrapper .footer-extras .social-icons a .fa{width:20px;font-size:14px}
 .main-footer-wrapper .footer-extras .social-icons a:hover{color:#0180bb;border-color:#0180bb}
+.main-footer-wrapper .footer-extras .social-icons a:first-child{margin-left:0}
 .main-footer-wrapper .footer-extras .social-icons .social-icon-facebook:hover{color:#3b5998;border-color:#3b5998}
 .main-footer-wrapper .footer-extras .social-icons .social-icon-youtube:hover{color:red;border-color:red}
 .main-footer-wrapper .footer-extras .social-icons .social-icon-googleplus:hover{color:#d34836;border-color:#d34836}

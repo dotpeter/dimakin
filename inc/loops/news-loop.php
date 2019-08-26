@@ -15,7 +15,7 @@ if ( ! function_exists( 'dimakin_news_loop' ) ) {
           <article class="news-card">
             <section class="news-card-content">
               <?php $title = get_the_title(); ?>
-              <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 40, '...' ); ?></h3></a>
+              <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 34, '...' ); ?></h3></a>
               <?php the_excerpt(); ?>
               <a href="<?php the_permalink(); ?>" class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
             </section>

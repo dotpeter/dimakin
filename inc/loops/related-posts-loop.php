@@ -42,7 +42,7 @@ if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
                 }
                 ?>
                 <?php $product_title = get_the_title(); ?>
-                <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 68, '...' ); ?></h3>
+                <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 34, '...' ); ?></h3>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
               </section>
