@@ -122,12 +122,6 @@ function dimakin_register_required_plugins() {
     ),
 
     array(
-      'name'        => 'WooCommerce',
-      'slug'        => 'woocommerce',
-      'required'    => true,
-    ),
-
-    array(
       'name'        => 'Safe SVG',
       'slug'        => 'safe-svg',
       'required'    => true,

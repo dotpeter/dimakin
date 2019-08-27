@@ -52,7 +52,7 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     add_image_size( 'product-img', 550, 320, array('center','center') );
 
-    add_image_size( 'product-full', 720, 720, array('center','center') );
+    add_image_size( 'product-full', 720, 420, array('center','center') );
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(

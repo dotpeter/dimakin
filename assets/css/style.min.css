@@ -387,7 +387,7 @@ embed,iframe,object{max-width:100%}
 .top-bar-wrapper .language-wrapper .widget_icl_lang_sel_widget .wpml-ls-legacy-list-horizontal ul .wpml-ls-item .wpml-ls-link .wpml-ls-native{vertical-align:inherit}
 .top-bar-wrapper .language-wrapper .widget_icl_lang_sel_widget .wpml-ls-legacy-list-horizontal ul .wpml-ls-current-language .wpml-ls-link .wpml-ls-native{font-weight:600}
 .site-branding-wrapper{width:80px;display:inline-block}
-.site-branding-wrapper .custom-logo{max-width:90px;padding:30px 0}
+.site-branding-wrapper .custom-logo{max-width:90px;padding:15px 0}
 .site-branding-wrapper .branding-phrase{font-family:"Open Sans",sans-serif;font-weight:700;text-transform:uppercase;margin-left:20px;margin-top:20px;padding:20px;border-left:2px solid #cacaca}
 .site-branding-wrapper .site-branding-text{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 .main-navigation-wrapper{display:block;position:relative;width:100%;margin-bottom:10px;z-index:30}
