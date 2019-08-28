@@ -5,17 +5,11 @@
  * -----------------------------------------------------------
  */
 
- add_filter('loop_shop_columns', 'loop_columns', 999);
- if (!function_exists('loop_columns')) {
- 	function loop_columns() {
- 		return 3; // 3 products per row
- 	}
- }
 
 /*----------- Excerpt lenght -----------*/
 if ( ! function_exists( 'dimakin_excerpt_length' ) ) {
   function dimakin_excerpt_length( $length ) {
-    return 12;
+    return 11;
   }
   add_filter( 'excerpt_length', 'dimakin_excerpt_length', 999 );
 }

@@ -33,10 +33,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                   $getQote = esc_url(get_theme_mod( 'product_btn_contact_url' ));
                   $pdf = wp_get_attachment_url(get_post_meta( get_the_ID(), '_dimakin_products_catalog_id', true));
                   if(!empty($getQote)) {
-                    echo '<a href="', $getQote , '" class="primary-btn" >' , __('Fale Connosco', 'dimakin') , '</a>';
+                    echo '<a href="', $getQote , '" class="primary-btn" > <i class="fa fa-comments-o" aria-hidden="true"></i> ' , __('Fale Connosco', 'dimakin') , '</a>';
                   }
                   if(!empty($pdf)) {
-                    echo '<a href="', esc_url($pdf) , '" class="secondary-btn" target="_blank">' , __('Catálogo', 'dimakin') , '</a>';
+                    echo '<a href="', esc_url($pdf) , '" class="secondary-btn" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i> ' , __('Catálogo', 'dimakin') , '</a>';
                   }
                 ?>
               </div><!-- product-actions -->

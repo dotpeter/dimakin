@@ -27,8 +27,8 @@ if ( ! function_exists( 'dimakin_default_loop' ) ) {
                 echo '<span class="posted-on">' , $post_date , '</span>';
               }
               ?>
-              <?php $product_title = get_the_title(); ?>
-              <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
+              <?php $title = get_the_title(); ?>
+              <h3 class="card-title"><?php echo mb_strimwidth( $title, 0, 40, '...' ); ?></h3>
               <?php the_excerpt(); ?>
               <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
             </section>
