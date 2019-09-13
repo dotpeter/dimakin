@@ -282,11 +282,18 @@ function dimakin_scripts() {
     wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ) );
 
     wp_enqueue_script( 'jquery' );
-
     // Enqueue vendors first.
-    wp_enqueue_script( 'dimakin-vendorsjs', get_theme_file_uri( '/assets/js/vendors.min.js' ) , array( 'jquery' ), false, false );
 
-    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom.min.js' ) , array( 'jquery' ), false, true );
+    if(is_page_template('page-home.php') || is_singular('product') ) {
+        wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ) , array( 'jquery' ), false, false );
+        wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ) , array( 'jquery' ), false, false );
+        wp_enqueue_script( 'dimakin-scripts-setup', get_theme_file_uri( '/assets/js/custom/setup.js' ) , array( 'jquery' ), false, false );
+
+    }
+
+    //wp_enqueue_script( 'dimakin-vendorsjs', get_theme_file_uri( '/assets/js/vendors.min.js' ) , array( 'jquery' ), false, false );
+
+    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom/custom.js' ) , array( 'jquery' ), false, true );
 
     if ( is_singular() ) {
       wp_enqueue_script( "comment-reply" );

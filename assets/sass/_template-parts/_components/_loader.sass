@@ -1,0 +1,27 @@
+.loader
+  position: absolute
+  width: 100%
+  height: 457px
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 9999
+  background-color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  .fa
+    text-align: center
+    font-size: 40px
+    color: $primary-color
+    animation-name: simplerotate
+    animation-duration: 0.5s
+    animation-timing-function: linear
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+
+
+@keyframes simplerotate
+  100%
+    transform: rotate(360deg)

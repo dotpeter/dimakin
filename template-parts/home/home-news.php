@@ -30,7 +30,7 @@ $news_args = array(
 $news_loop = new WP_Query($news_args);
 
 if ( $news_loop->have_posts() ) :
-  echo '<section class="news-wrapper"><div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h2 class="section-title">' ,  esc_html__( 'Notícias', 'dimakin' ) , '</h2></div></div><div class="row">';
+  echo '<section class="news-wrapper"><div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="', get_permalink( get_option( 'page_for_posts' ) ) , '"><h2 class="section-title">' , esc_html__( 'Notícias', 'dimakin' ) , '</h2></a></div></div><div class="row">';
   while ( $news_loop->have_posts() ) : $news_loop->the_post();
     do_action('news_loop');
   endwhile;

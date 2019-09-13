@@ -14,7 +14,7 @@ if(!empty($product_recommendations)) { ?>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="section-title"><?php _e( 'Recomendações', 'dimakin' ); ?></h2>
+          <h2 class="section-title"><?php _e( 'Relacionados', 'dimakin' ); ?></h2>
         </div>
       </div>
       <div class="row">

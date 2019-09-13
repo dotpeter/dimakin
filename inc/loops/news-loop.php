@@ -21,9 +21,11 @@ if ( ! function_exists( 'dimakin_news_loop' ) ) {
             </section>
             <header id="post-<?php the_ID(); ?>" class="news-card-header">
               <?php if ( has_post_thumbnail() ) : ?>
-                <figure class="card-thumbnail">
-                  <?php the_post_thumbnail('post-custom-thumb'); ?>
-                </figure>
+                <a href="<?php the_permalink(); ?>">
+                  <figure class="card-thumbnail">
+                    <?php the_post_thumbnail('post-custom-thumb'); ?>
+                  </figure>
+                </a>
               <?php endif; ?>
             </header>
           </article>
