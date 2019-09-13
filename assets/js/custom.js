@@ -183,7 +183,6 @@ function euAcceptCookiesWP() {
     });
 
   $(".loader").fadeOut("slow");
-  console.log('alo?');
 
   });
 

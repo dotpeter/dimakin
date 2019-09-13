@@ -80,7 +80,6 @@
     });
 
   $(".loader").fadeOut("slow");
-  console.log('alo?');
 
   });
 
