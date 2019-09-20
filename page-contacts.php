@@ -16,6 +16,14 @@
 
 get_header();
 
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+  wpcf7_enqueue_scripts();
+}
+
+if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+  wpcf7_enqueue_styles();
+} 
+
 do_action('dimakin_breadcrumbs');
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
