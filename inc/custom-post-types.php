@@ -77,7 +77,7 @@ function dimakin_flush_rules_on_save_posts( $post_id ) {
 
     // Check the correct post type.
     // Example to check, if the post type isn't 'post' then don't flush, just return.
-    if ( ! empty( $_POST['post_type'] && $_POST['post_type'] != 'post' ) ) {
+    if ( ! empty( $_POST['product'] && $_POST['product'] != 'post' ) ) {
         return;
     }
 

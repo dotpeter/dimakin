@@ -64,24 +64,13 @@ if(!function_exists('dimakin_primary_menu_extras')) {
 
 
 /*----------- Limite the excerpt -----------*/
-function excerpt($limit) {
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
-  if (count($excerpt)>=$limit) {
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt).'...';
-  } else {
-    $excerpt = implode(" ",$excerpt);
-  }
-  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-  return $excerpt;
-}
 
 function get_excerpt(){
   $excerpt = get_the_content();
   $excerpt = preg_replace(" ([.*?])",'',$excerpt);
   $excerpt = strip_shortcodes($excerpt);
   $excerpt = strip_tags($excerpt);
-  $excerpt = substr($excerpt, 0, 80);
+  $excerpt = substr($excerpt, 0, 50);
   $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
   $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
   $excerpt = $excerpt.'...';
@@ -177,7 +166,7 @@ add_action('do_feed_atom', 'itsme_disable_feed', 1);
 add_action('do_feed_rss2_comments', 'itsme_disable_feed', 1);
 add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 
-/*----------- Disabele Contact Form 7 from load in all pages -----------*/
+/*----------- Disable Contact Form 7 from load in all pages -----------*/
 add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
