@@ -6,7 +6,7 @@ if ( ! function_exists( 'dimakin_jobs_loop' ) ) {
     $jobUrl = get_post_meta( get_the_ID(), '_dimakin_jobs_url', true );
 
     if(!empty($jobs)) {
-      echo '<section class="jobs-wrapper"><div class="row"><div class="col-12"><h2>' , __('Ofertas', 'dimakin') , '</h2></div></div><div class="row">';
+      echo '<section class="jobs-wrapper"><div class="row"><div class="col-12"><h2>' , __('Ofertas', 'dimakin') , '</h2><hr></div></div><div class="row">';
 
       if ( $jobs ) {
 
