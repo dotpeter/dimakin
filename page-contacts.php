@@ -14,6 +14,8 @@
  $contacts_form = get_post_meta( get_the_ID(), '_dimakin_contacts_shortcode', true );
  $contacts_map = get_post_meta( get_the_ID(), '_dimakin_contacts_map', true );
 
+$addressGroup = get_post_meta( get_the_ID(), '_dimakin_contacts_address_group', true );
+
 get_header();
 
 if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
@@ -22,7 +24,7 @@ if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
 
 if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
   wpcf7_enqueue_styles();
-} 
+}
 
 do_action('dimakin_breadcrumbs');
 
@@ -51,20 +53,46 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="contacts-info-wrapper">
-                <div class="contacts-info">
-                  <div class="address-wrapper">
-                      <?php
-                      if( !empty($contacts_address) ) {
-                        echo '<i class="fa fa-map-marker" aria-hidden="true"></i><div class="address">' , wpautop( $contacts_address ) , '</div>';
-                      }
-                      ?>
-                  </div>
-                  <?php
-                    if( !empty($contacts_phone) ) {
-                      echo '<p class="phone-number"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:' , esc_html( $contacts_phone ) . '">' , esc_html( $contacts_phone ) , '</a></p><p class="email-address"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:' , esc_attr( $contacts_email ) , '">' , esc_html( $contacts_email ) , '</a></p>';
+              <?php
+                if($addressGroup) {
+                  echo '<div class="contacts-address-wrapper">';
+                  if ($addressGroup) {
+                    foreach ((array)$addressGroup as $key => $addressItem) {
+                      $addressTitle = $addressAddress = $addressPhone = $addressEmail = '';
+                      if (isset($addressItem['_dimakin_contacts_address_title' ]))
+                        $addressTitle = esc_html($addressItem['_dimakin_contacts_address_title']);
+                      if (isset($addressItem['_dimakin_contacts_address_address']))
+                        $addressAddress = wpautop($addressItem['_dimakin_contacts_address_address']);
+                      if (isset($addressItem['_dimakin_contacts_address_phone']))
+                        $addressPhone = esc_html($addressItem['_dimakin_contacts_address_phone']);
+                      if (isset($addressItem['_dimakin_contacts_address_email']))
+                        $addressEmail = esc_html($addressItem['_dimakin_contacts_address_email']);
+                        ?>
+                        <div class="contacts-info">
+                          <h3><?php echo $addressTitle; ?></h3>
+                          <div class="address-wrapper">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <div class="address"><?php echo $addressAddress; ?></div>
+                          </div>
+                          <?php if(!empty($addressPhone)):?>
+                            <p class="phone-number">
+                              <i class="fa fa-phone" aria-hidden="true"></i>
+                              <a href="tel:<?php echo $addressPhone; ?>"><?php echo $addressPhone; ?></a>
+                            </p>
+                          <?php endif; ?>
+                          <?php if(!empty($addressEmail)):?>
+                            <p class="email-address">
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                              <?php echo $addressEmail; ?>
+                            </p>
+                        <?php endif; ?>
+                        </div>
+                        <?php
                     }
-                  ?>
-                </div>
+                  }
+                  echo '</div>';
+                }
+              ?>
 
               <h4><?php _e( 'Siga-nos nas redes sociais', 'dimakin' ); ?></h4>
               <?php do_action('dimakin_social'); ?>

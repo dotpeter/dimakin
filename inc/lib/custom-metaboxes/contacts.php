@@ -27,26 +27,42 @@
      'id'      => $prefix . 'desc',
      'type'    => 'textarea_small'
    ) );
-   $cmb->add_field( array(
-     'name'    => __( 'Titlo da Morada', 'dimakin' ),
-     'id'      => $prefix . 'title',
-     'type'    => 'text',
-   ) );
-   $cmb->add_field( array(
-     'name'    => __( 'Morada', 'dimakin' ),
-     'id'      => $prefix . 'address',
-     'type'    => 'textarea_small'
-   ) );
-   $cmb->add_field( array(
-     'name'    => __( 'Numero de Telefone', 'dimakin' ),
-     'id'      => $prefix . 'phone',
-     'type'    => 'text',
-   ) );
-   $cmb->add_field( array(
-     'name'    => __( 'Endereço de Email', 'dimakin' ),
-     'id'      => $prefix . 'email',
-     'type'    => 'text_email',
-   ) );
+   //start group field
+    $group_field_id = $cmb->add_field( array(
+     'id'          => $prefix . 'address_group',
+     'type'        => 'group',
+     'description' => __( 'Adicionar Morada', 'dimakin' ),
+     // 'repeatable'  => false, // use false if you want non-repeatable group
+     'options'     => array(
+         'group_title'   => __( 'Morada {#}', 'dimakin' ), // since version 1.1.4, {#} gets replaced by row number
+         'add_button'    => __( 'Adicionar Morada', 'dimakin' ),
+         'remove_button' => __( 'Remover Morada', 'dimakin' ),
+         'sortable'      => true, // beta
+         'closed'     => true, // true to have the groups closed by default
+       ),
+    ) );
+    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
+    $cmb->add_group_field( $group_field_id, array(
+       'name' => __( 'Titlo da Morada', 'dimakin' ),
+       'id'   => $prefix . 'address_title',
+       'type' => 'text',
+    ) );
+    $cmb->add_group_field( $group_field_id, array(
+       'name' => __( 'Morada', 'dimakin' ),
+       'id'   => $prefix . 'address_address',
+       'type' => 'wysiwyg',
+    ) );
+    $cmb->add_group_field( $group_field_id, array(
+       'name' => __( 'Telefone', 'dimakin' ),
+       'id'   => $prefix . 'address_phone',
+       'type' => 'text',
+    ) );
+    $cmb->add_group_field( $group_field_id, array(
+       'name' => __( 'Email', 'dimakin' ),
+       'id'   => $prefix . 'address_email',
+       'type' => 'text_email',
+    ) );
+
    $cmb->add_field( array(
      'name'    => __( 'Shortcode do Formulário', 'dimakin' ),
      'id'      => $prefix . 'shortcode',
