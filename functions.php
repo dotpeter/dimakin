@@ -267,7 +267,7 @@ function dimakin_scripts() {
     wp_enqueue_style( 'normalize', get_theme_file_uri( '/assets/css/vendor/normalize.css' ) );
 
     // Fonts styles.
-    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,700' );
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700' );
 
     // Theme styles.
     wp_enqueue_style( 'dimakin-styles', get_theme_file_uri( '/assets/css/style.min.css' ) );
