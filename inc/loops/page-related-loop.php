@@ -8,6 +8,7 @@
 global $post;
 
 $pageLinks = get_post_meta( get_the_ID(), '_dimakin_page_links', true );
+$product_title = get_the_title();
 
 if(!empty($pageLinks)) { ?>
   <section class="page-links-wrapper">
@@ -19,24 +20,25 @@ if(!empty($pageLinks)) { ?>
            <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
              <a href="<?php the_permalink(); ?>">
                <article class="card">
-                 <header class="card-header">
-                   <?php if ( has_post_thumbnail() ) : ?>
+                 <?php if ( has_post_thumbnail() ) : ?>
+                   <header class="card-header">
                      <figure class="card-thumbnail">
                        <?php the_post_thumbnail('post-custom-thumb'); ?>
                      </figure>
-                   <?php endif; ?>
-                 </header>
-                 <section class="card-content">
+                   </header>
+                 <?php endif; ?>
+                 <div class="card-title-and-date">
                    <?php
                    if ( is_home() ) {
                      $post_date = get_the_date( 'd-m-Y' );
                      echo '<span class="posted-on">' , $post_date , '</span>';
                    }
                    ?>
-                   <?php $product_title = get_the_title(); ?>
                    <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
-                   <?php the_excerpt(); ?>
-                   <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                 </div>
+                 <section class="card-content">
+                   <p class="excerpt"><?php echo get_excerpt(); ?></p>
+                   <span class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                  </section>
                </article>
              </a>

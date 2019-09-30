@@ -22,27 +22,27 @@
         vertical-align: middle
         width: 100%
         filter: contrast(80%)
+  .child-card-title
+    color: $secondary-color
+    font-size: 15px
+    font-weight: 600
+    padding: 30px 30px 10px
+    margin: 0
+    &::after
+      display: none
+    &:hover
+      color: $primary-color
   .child-card-content
-    position: relative
-    padding: 30px 30px 70px 30px
-    .child-card-title
-      margin-bottom: 10px
-      color: $secondary-color
-      font-size: 15px
-      font-weight: 600
-      &::after
-        display: none
-      &:hover
-        color: $primary-color
+    padding: 0 30px 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
     p
       color: $smooth-grey
       margin: 0
-      //width: 80%
       line-height: 1.2
+      margin-right: 10px
     .child-card-link
-      position: absolute
-      right: 20px
-      bottom: 20px
       border: 1px solid $blue-grey
       text-align: center
       color: $blue-grey

@@ -24,7 +24,7 @@ if ( ! function_exists( 'dimakin_products_loop' ) ) {
         <section class="product-content">
           <h3 class="product-title"><?php echo mb_strimwidth( $product_title, 0, 38, '...' ); ?></h3>
           <div class="product-box">
-            <p class="product-description"><?php echo get_excerpt(); ?></p>
+            <p class="product-description excerpt"><?php echo get_excerpt(); ?></p>
             <a href="<?php the_permalink(); ?>" class="product-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
           </div>
         </section>

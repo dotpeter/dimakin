@@ -13,21 +13,19 @@ if ( ! function_exists( 'dimakin_news_loop' ) ) {
       <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
         <a href="<?php the_permalink(); ?>">
           <article class="news-card">
+            <h3 class="news-card-title"><?php echo mb_strimwidth( get_the_title(), 0, 32, '...' ); ?></h3>
             <section class="news-card-content">
-              <?php $title = get_the_title(); ?>
-              <a href="<?php the_permalink(); ?>"><h3 class="news-card-title"><?php echo mb_strimwidth( $title, 0, 34, '...' ); ?></h3></a>
-              <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>" class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+              <p class="excerpt"><?php echo get_excerpt(); ?></p>
+              <span class="news-card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
             </section>
-            <header id="post-<?php the_ID(); ?>" class="news-card-header">
-              <?php if ( has_post_thumbnail() ) : ?>
-                <a href="<?php the_permalink(); ?>">
-                  <figure class="card-thumbnail">
-                    <?php the_post_thumbnail('post-custom-thumb'); ?>
-                  </figure>
-                </a>
-              <?php endif; ?>
-            </header>
+            <?php if ( has_post_thumbnail() ) : ?>
+              <header id="post-<?php the_ID(); ?>" class="news-card-header">
+                <figure class="card-thumbnail">
+                  <?php the_post_thumbnail('post-custom-thumb'); ?>
+                </figure>
+              </header>
+            <?php endif; ?>
+
           </article>
         </a>
       </div>

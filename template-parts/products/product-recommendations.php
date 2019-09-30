@@ -9,7 +9,9 @@ global $post;
 
 $product_recommendations = get_post_meta( get_the_ID(), '_dimakin_products_recommendation', true );
 
-if(!empty($product_recommendations)) { ?>
+if(!empty($product_recommendations)) {
+  $product_title = get_the_title();
+  ?>
   <section class="product-recommendations">
     <div class="container">
       <div class="row">
@@ -24,18 +26,19 @@ if(!empty($product_recommendations)) { ?>
            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
              <a href="<?php the_permalink(); ?>">
                <article class="card">
-                 <header class="card-header">
-                   <?php if ( has_post_thumbnail() ) : ?>
-                       <figure class="card-thumbnail">
-                         <?php the_post_thumbnail(); ?>
-                       </figure>
-                   <?php endif; ?>
-                 </header>
+                 <?php if ( has_post_thumbnail() ) : ?>
+                   <header class="card-header">
+                     <figure class="card-thumbnail">
+                       <?php the_post_thumbnail(); ?>
+                     </figure>
+                   </header>
+                 <?php endif; ?>
+                 <div class="card-title-and-date">
+                  <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
+                 </div>
                  <section class="card-content">
-                   <?php $product_title = get_the_title(); ?>
-                   <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 40, '...' ); ?></h3>
-                   <?php //$excerpt = the_excerpt(); ?>
-                   <a href="<?php the_permalink(); ?>" class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                   <p class="excerpt"><?php echo get_excerpt(); ?></p>
+                   <span class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                  </section>
                </article>
              </a>

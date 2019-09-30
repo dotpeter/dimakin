@@ -6,14 +6,6 @@
  */
 
 
-/*----------- Excerpt lenght -----------*/
-if ( ! function_exists( 'dimakin_excerpt_length' ) ) {
-  function dimakin_excerpt_length( $length ) {
-    return 11;
-  }
-  add_filter( 'excerpt_length', 'dimakin_excerpt_length', 999 );
-}
-
 /*----------- Removing [...] from the excerpt -----------*/
 if ( ! function_exists( 'dimakin_excerpt_change' ) ) {
   function dimakin_excerpt_change($more) {
@@ -64,13 +56,12 @@ if(!function_exists('dimakin_primary_menu_extras')) {
 
 
 /*----------- Limite the excerpt -----------*/
-
 function get_excerpt(){
   $excerpt = get_the_content();
   $excerpt = preg_replace(" ([.*?])",'',$excerpt);
   $excerpt = strip_shortcodes($excerpt);
   $excerpt = strip_tags($excerpt);
-  $excerpt = substr($excerpt, 0, 50);
+  $excerpt = substr($excerpt, 0, 68);
   $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
   $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
   $excerpt = $excerpt.'...';
