@@ -26,8 +26,10 @@ if ( ! function_exists( 'dimakin_jobs_loop' ) ) {
               <div class="col-12 col-md-6">
                 <div class="job-card">
                   <h3><?php echo $jobTitle ;?></h3>
-                  <?php echo $jobDesc; ?>
-                  <a class="primary-btn job-link" href="<?php echo esc_url($jobUrl); ?>"><?php _e('Candidatar', 'dimakin'); ?></a>
+                  <div class="job-desc">
+                    <?php echo $jobDesc; ?>
+                    <a class="primary-btn job-link" href="<?php echo esc_url($jobUrl); ?>"><?php _e('Candidatar', 'dimakin'); ?></a>
+                  </div>
                 </div>
               </div>
             <?php
