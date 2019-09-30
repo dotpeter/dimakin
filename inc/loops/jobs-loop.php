@@ -18,7 +18,7 @@ if ( ! function_exists( 'dimakin_jobs_loop' ) ) {
             $jobTitle = esc_html( $job[ '_dimakin_jobs_title' ] );
 
           if ( isset( $job[ '_dimakin_jobs_desc' ] ) )
-            $jobDesc = esc_html( $job[  '_dimakin_jobs_desc' ] );
+            $jobDesc =  wpautop($job[  '_dimakin_jobs_desc' ]);
 
 
           if ( !empty( array( $jobTitle ) ) ) {
@@ -26,7 +26,7 @@ if ( ! function_exists( 'dimakin_jobs_loop' ) ) {
               <div class="col-12 col-md-6">
                 <div class="job-card">
                   <h3><?php echo $jobTitle ;?></h3>
-                  <?php echo wpautop($jobDesc); ?>
+                  <?php echo $jobDesc; ?>
                   <a class="primary-btn job-link" href="<?php echo esc_url($jobUrl); ?>"><?php _e('Candidatar', 'dimakin'); ?></a>
                 </div>
               </div>
