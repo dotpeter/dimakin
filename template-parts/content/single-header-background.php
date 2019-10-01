@@ -30,7 +30,6 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <?php echo get_the_post_thumbnail( get_the_ID(), '', array( 'class' => 'aligncenter' ) ); ?>
             <?php the_content(); ?>
           </div><!-- col -->
         </div><!-- row -->
