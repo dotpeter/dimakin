@@ -22,18 +22,13 @@ if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
 
     if ( $related_posts->have_posts() ) {
       $product_title = get_the_title();
-      echo '<section class="related-posts"><div class="container"><div class="row"><div class="col-12"><h4 class="related-news-title">' , esc_html__('Outras notícias relevantes', 'dimakin') , '</h4></div></div><div class="row">';
+      echo '<section class="related-posts"><div class="row"><div class="col-12"><h4 class="related-news-title">' , esc_html__('Outras notícias relevantes', 'dimakin') , '</h4></div></div><div class="row">';
       while ( $related_posts->have_posts() ) : $related_posts->the_post();
       ?>
-        <div class="col-12 col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12">
           <a href="<?php the_permalink(); ?>">
             <article class="card">
               <?php if ( has_post_thumbnail() ) : ?>
-                <header class="card-header">
-                  <figure class="card-thumbnail">
-                    <?php the_post_thumbnail(); ?>
-                  </figure>
-                </header>
               <?php endif; ?>
               <div class="card-title-and-date">
                 <?php
@@ -45,7 +40,6 @@ if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
                 <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 34, '...' ); ?></h3>
               </div>
               <section class="card-content">
-                <p class="excerpt"><?php echo get_excerpt(); ?></p>
                 <span class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
               </section>
             </article>
@@ -53,7 +47,7 @@ if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
         </div>
       <?php
       endwhile;
-      echo '</div></div></section>';
+      echo '</div></section>';
       wp_reset_postdata();
     }
 
