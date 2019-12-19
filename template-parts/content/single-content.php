@@ -7,7 +7,6 @@
 ?>
 <main class="main-wrapper">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="header-simple"></header>
     <div class="content-wrapper">
       <div class="container">
         <div class="row">

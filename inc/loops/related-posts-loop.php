@@ -40,6 +40,7 @@ if ( !function_exists( 'dimakin_related_posts_loop' ) ) {
                 <h3 class="card-title"><?php echo mb_strimwidth( $product_title, 0, 34, '...' ); ?></h3>
               </div>
               <section class="card-content">
+                <p class="excerpt"><?php echo get_excerpt(); ?></p>
                 <span class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
               </section>
             </article>

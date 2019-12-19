@@ -1029,6 +1029,9 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .header-extras-wrapper,.header-search-form-wrapper,.top-bar-wrapper{display:none}
 .woo-content-wrapper{padding-top:0}
 .woo-content-wrapper .container .product .row .entry-summary{width:100%;margin:0 auto;padding:0 15px}
+.related-posts .card .card-content p{display:none}
+.related-posts .card .card-content .card-link{float:right}
+.related-posts .card .card-content .card-link .fa{font-size:12px;padding:8px}
 .cta-wrapper .col-md-4{text-align:center}
 .cta-wrapper .cta-description{font-size:14px;text-align:center;margin-bottom:10px}
 .cta-wrapper .cta-btn{font-size:11px;padding:10px 15px;background-color:#fff;color:#454545}

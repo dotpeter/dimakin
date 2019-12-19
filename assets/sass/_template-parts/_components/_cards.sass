@@ -175,5 +175,18 @@
           color: $light-color
           background-color: $primary-color
 
+@media (max-width: $medium)
+  .related-posts
+    .card
+      .card-content
+        p
+          display: none
+        .card-link
+          float: right
+          .fa
+            font-size: 12px
+            padding: 8px
+
+
 @import "product-card"
 @import "jobs-card"
