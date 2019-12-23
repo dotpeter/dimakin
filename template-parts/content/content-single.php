@@ -12,11 +12,10 @@
     <div class="content-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-8 co-lg-8">
+          <div class="col-12 col-sm-12 col-md-8">
             <div class="title-wrapper">
               <?php
-              $post_date = get_the_date( 'd-m-Y' );
-              echo '<span class="posted-on">' , esc_html($post_date) , '</span>';
+              echo '<time class="posted-on" datetime="' , get_the_date('c') , '" itemprop="datePublished">' , get_the_date() , '</time>';
               the_title( '<h1 class="post-title">', '</h1>' );
               ?>
             </div><!-- .title-wrapper -->
@@ -28,7 +27,7 @@
             do_action('dimakin_post_tags');
             ?>
           </div><!-- .col -->
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="col-12 col-sm-12 col-md-4">
             <?php get_template_part( 'template-parts/loops/related-news', 'loop' ); ?>
           </div><!-- .col -->
         </div><!-- row -->

@@ -29,8 +29,7 @@ if ( $related_posts->have_posts() ) :
         <article class="card">
           <div class="card-title-and-date">
             <?php
-            $post_date = get_the_date( 'd-m-Y' );
-            echo '<span class="posted-on">' , $post_date , '</span>';
+            echo '<time class="posted-on" datetime="' , get_the_date('c') , '" itemprop="datePublished">' , get_the_date() , '</time>';
             ?>
             <h3 class="card-title"><?php the_title(); ?></h3>
           </div><!-- .card-title-and-date -->

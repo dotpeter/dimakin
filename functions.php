@@ -226,7 +226,7 @@ function dimakin_scripts() {
 
     wp_enqueue_script( 'dimakin-mobile-menu-js', get_theme_file_uri( '/assets/js/custom/mobile-menu.js' ) , array( 'jquery' ), false, true );
 
-    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom/custom.min.js' ) , array( 'jquery' ), false, true );
+    wp_enqueue_script( 'dimakin-custom-js', get_theme_file_uri( '/assets/js/custom.min.js' ) , array( 'jquery' ), false, true );
 
     if ( is_singular() ) {
       wp_enqueue_script( "comment-reply" );

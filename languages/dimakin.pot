@@ -32,43 +32,43 @@ msgstr ""
 msgid "Produtos"
 msgstr ""
 
-#: functions.php:60
+#: functions.php:58
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:61
+#: functions.php:59
 msgid "Menu Secondário"
 msgstr ""
 
-#: functions.php:62
+#: functions.php:60
 msgid "Mobile Menu"
 msgstr ""
 
-#: functions.php:63
+#: functions.php:61
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:128
 msgid "Side Bar"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:130
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:214
+#: functions.php:140
 msgid "Footer"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:142
 msgid "Add widgets here to appear in your footer."
 msgstr ""
 
-#: functions.php:226
+#: functions.php:152
 msgid "Header Widgets"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:154
 msgid "Add widgets here to appear in your header."
 msgstr ""
 
@@ -688,6 +688,10 @@ msgstr ""
 
 #: template-parts/home/home-products.php:21
 msgid "Ver todos os Produtos"
+msgstr ""
+
+#: template-parts/loops/related-news-loop.php:23
+msgid "Notícias Recentes"
 msgstr ""
 
 #: template-parts/main-footer.php:14

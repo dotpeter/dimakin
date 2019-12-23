@@ -586,17 +586,16 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .job-card h3:after{display:none}
 .job-card .job-desc{padding:20px}
 .job-card .job-desc .job-link{margin:0 auto;display:inline-block}
-.related-news .card{-webkit-box-shadow:0 0 0 0 rgba(19,19,19,0.08);box-shadow:0 0 0 0 rgba(19,19,19,0.08);overflow:hidden;border:1px solid #f1f1f1;margin-bottom:30px}
-.related-news .card .card-title-and-date{padding:20px 20px 0}
-.related-news .card .card-title-and-date .posted-on{display:block;text-transform:uppercase;font-weight:700;font-size:12px;margin-bottom:10px;color:#8c8c8c}
+.related-news .card{-webkit-box-shadow:0 0 0 0 rgba(19,19,19,0.08);box-shadow:0 0 0 0 rgba(19,19,19,0.08);overflow:hidden;border:0 solid #f1f1f1;margin-bottom:30px}
+.related-news .card .card-title-and-date{padding:20px 0 0}
+.related-news .card .card-title-and-date .posted-on{display:block;text-transform:Capitalize;font-weight:400;font-size:10px;margin-bottom:5px;color:#8c8c8c}
 .related-news .card .card-title-and-date .card-title{margin-bottom:10px;color:#454545;font-size:15px;font-weight:600}
 .related-news .card .card-title-and-date .card-title::after{display:none}
 .related-news .card .card-title-and-date .card-title:hover{color:#0180bb}
-.related-news .card .card-content{padding:0 20px 20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
-.related-news .card .card-content .excerpt{color:#8c8c8c;margin:0;line-height:1.2;margin-right:10px;font-size:13px}
-.related-news .card .card-content .card-link{border:1px solid #3c4d5a;text-align:center;color:#3c4d5a}
-.related-news .card .card-content .card-link .fa{padding:12px 16px}
-.related-news .card .card-content .card-link:hover{border-color:#0180bb;color:#e9e9e9;background-color:#0180bb}
+.related-news .card .card-content{padding:0 20px 0 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
+.related-news .card .card-content .excerpt{color:#8c8c8c;margin:0;line-height:1.2;margin-right:10px;font-size:14px}
+.related-news .card .card-content .card-link{border:1px solid #0180bb;text-align:center;color:#3c4d5a}
+.related-news .card .card-content .card-link .fa{padding:10px;color:#e9e9e9;background-color:#0180bb}
 .pagination-wrapper{text-align:center;padding-top:20px}
 .pagination-wrapper .page-numbers{list-style-type:none}
 .pagination-wrapper .page-numbers li{display:inline-block}
