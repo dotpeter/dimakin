@@ -40,8 +40,6 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
 
     add_image_size( 'post-full-width', 1920, 400, array('center','center') );
 
-    add_image_size( 'post-custom-thumb', 540, 260, array('center','center') );
-
     add_image_size( 'services-thumb', 455, 300, array('center','center') );
 
     add_image_size( 'childpage-thumb', 830, 300, array('center','center') );
@@ -103,83 +101,11 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
     // Add support for full and wide align images.
     add_theme_support( 'align-wide' );
 
-    // Add support for editor styles.
-    //add_theme_support( 'editor-styles' );
-
-    // Enqueue editor styles.
-    //add_editor_style( 'style-editor.css' );
-
-    // Add custom editor font sizes.
-    /*add_theme_support(
-      'editor-font-sizes',
-      array(
-        array(
-          'name'      => __( 'Small', 'dimakin' ),
-          'shortName' => __( 'S', 'dimakin' ),
-          'size'      => 19.5,
-          'slug'      => 'small',
-        ),
-        array(
-          'name'      => __( 'Normal', 'dimakin' ),
-          'shortName' => __( 'M', 'dimakin' ),
-          'size'      => 22,
-          'slug'      => 'normal',
-        ),
-        array(
-          'name'      => __( 'Large', 'dimakin' ),
-          'shortName' => __( 'L', 'dimakin' ),
-          'size'      => 36.5,
-          'slug'      => 'large',
-        ),
-        array(
-          'name'      => __( 'Huge', 'dimakin' ),
-          'shortName' => __( 'XL', 'dimakin' ),
-          'size'      => 49.5,
-          'slug'      => 'huge',
-        ),
-      )
-    );*/
-
-    // Editor color palette.
-    /*add_theme_support(
-      'editor-color-palette',
-      array(
-        array(
-          'name'  => __( 'Primary', 'dimakin' ),
-          'slug'  => 'primary',
-          //'color' => dimakin_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 33 ),
-        ),
-        array(
-          'name'  => __( 'Secondary', 'dimakin' ),
-          'slug'  => 'secondary',
-          //'color' => dimakin_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? 199 : get_theme_mod( 'primary_color_hue', 199 ), 100, 23 ),
-        ),
-        array(
-          'name'  => __( 'Dark Gray', 'dimakin' ),
-          'slug'  => 'dark-gray',
-          'color' => '#111',
-        ),
-        array(
-          'name'  => __( 'Light Gray', 'dimakin' ),
-          'slug'  => 'light-gray',
-          'color' => '#767676',
-        ),
-        array(
-          'name'  => __( 'White', 'dimakin' ),
-          'slug'  => 'white',
-          'color' => '#FFF',
-        ),
-      )
-    );*/
-
     // Add support for responsive embedded content.
     add_theme_support( 'responsive-embeds' );
 
     // Add support for yoast breadcrumbs.
     add_theme_support( 'yoast-seo-breadcrumbs' );
-
-    // cleaning up random code around images
-    add_filter( 'the_content', 'dimakin_filter_ptags_on_images' );
 
     //Flush rewrite rules
     flush_rewrite_rules();
@@ -332,53 +258,6 @@ function dimakin_skip_link_focus_fix() {
 }
 
 add_action( 'wp_print_footer_scripts', 'dimakin_skip_link_focus_fix' );
-
-/**
-* Enqueue supplemental block editor styles.
-*/
-
-/*function dimakin_editor_customizer_styles() {
-
-  wp_enqueue_style( 'dimakin-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
-
-  if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
-    // Include color patterns.
-    require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-    wp_add_inline_style( 'dimakin-editor-customizer-styles', dimakin_custom_colors_css() );
-  }
-
-}
-
-add_action( 'enqueue_block_editor_assets', 'dimakin_editor_customizer_styles' );*/
-
-/**
-* Display custom color CSS in customizer and on frontend.
-*/
-
-/*function dimakin_colors_css_wrap() {
-
-  // Only include custom colors in customizer or frontend.
-  if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
-  return;
-  }
-
-  //require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-
-  $primary_color = 199;
-  if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
-  $primary_color = get_theme_mod( 'primary_color_hue', 199 );
-  }
-  ?>
-
-  <style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
-    <?php echo dimakin_custom_colors_css(); ?>
-  </style>
-  <?php
-
-}
-
-add_action( 'wp_head', 'dimakin_colors_css_wrap' );/*
-
 
 /**
 * Enhance the theme by hooking into WordPress.
