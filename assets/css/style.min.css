@@ -348,14 +348,15 @@ embed,iframe,object{max-width:100%}
 .single-post .content-wrapper img{margin-bottom:40px}
 .single-post .content-wrapper h2,.single-post .content-wrapper h3,.single-post .content-wrapper h4,.single-post .content-wrapper h5,.single-post .content-wrapper h6{color:#0180bb;margin-bottom:14px}
 .single-post .content-wrapper h2::after,.single-post .content-wrapper h3::after,.single-post .content-wrapper h4::after,.single-post .content-wrapper h5::after,.single-post .content-wrapper h6::after{display:none}
+.single-post .meta-tags-wrapper{margin-top:20px}
+.single-post .meta-tags-wrapper ul{list-style-type:none;padding:0;margin:0}
+.single-post .meta-tags-wrapper ul li{display:inline-block;list-style-type:none;padding:0;margin:0;font-size:14px}
+.single-post .meta-tags-wrapper ul li:before{display:none}
+.single-post .meta-tags-wrapper ul li a{color:#454545;background-color:#e9e9e9;padding:10px}
+.single-post .meta-tags-wrapper ul li a:hover{color:#0180bb}
+.single-post .meta-tags-wrapper ul .meta-tag-icon{margin-right:5px;background-color:#454545;color:#e9e9e9;padding:10px 10px;font-size:14px}
 .related-posts .related-news-title{margin-bottom:20px;text-transform:uppercase}
 #bannerR{line-height:1.8}
-.meta-tags-wrapper{margin-top:20px}
-.meta-tags-wrapper ul{list-style-type:none;padding:0;margin:0}
-.meta-tags-wrapper ul li{display:inline-block;padding:0;margin:0;font-size:14px}
-.meta-tags-wrapper ul li a{color:#454545;background-color:#e9e9e9;padding:5px 7px}
-.meta-tags-wrapper ul li a:hover{color:#0180bb}
-.meta-tags-wrapper ul .meta-tag-icon{margin-right:5px;background-color:#454545;color:#e9e9e9;padding:7px 7px;font-size:12px}
 .single-post-nav .previous-post{position:fixed;top:50%;-webkit-transform:translatey(-50%);-ms-transform:translatey(-50%);transform:translatey(-50%);left:-150px;padding:0 10px 0 0;background-color:#e9e9e9;-webkit-transition:all 250ms;transition:all 250ms;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100px;z-index:997}
 .single-post-nav .previous-post a{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .single-post-nav .previous-post a p{margin:0;padding:0 20px;font-size:11px;text-transform:uppercase;line-height:1.2;overflow:hidden;text-overflow:ellipsis;max-width:160px;width:160px;max-height:72px}
@@ -585,6 +586,17 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .job-card h3:after{display:none}
 .job-card .job-desc{padding:20px}
 .job-card .job-desc .job-link{margin:0 auto;display:inline-block}
+.related-news .card{-webkit-box-shadow:0 0 0 0 rgba(19,19,19,0.08);box-shadow:0 0 0 0 rgba(19,19,19,0.08);overflow:hidden;border:1px solid #f1f1f1;margin-bottom:30px}
+.related-news .card .card-title-and-date{padding:20px 20px 0}
+.related-news .card .card-title-and-date .posted-on{display:block;text-transform:uppercase;font-weight:700;font-size:12px;margin-bottom:10px;color:#8c8c8c}
+.related-news .card .card-title-and-date .card-title{margin-bottom:10px;color:#454545;font-size:15px;font-weight:600}
+.related-news .card .card-title-and-date .card-title::after{display:none}
+.related-news .card .card-title-and-date .card-title:hover{color:#0180bb}
+.related-news .card .card-content{padding:0 20px 20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
+.related-news .card .card-content .excerpt{color:#8c8c8c;margin:0;line-height:1.2;margin-right:10px;font-size:13px}
+.related-news .card .card-content .card-link{border:1px solid #3c4d5a;text-align:center;color:#3c4d5a}
+.related-news .card .card-content .card-link .fa{padding:12px 16px}
+.related-news .card .card-content .card-link:hover{border-color:#0180bb;color:#e9e9e9;background-color:#0180bb}
 .pagination-wrapper{text-align:center;padding-top:20px}
 .pagination-wrapper .page-numbers{list-style-type:none}
 .pagination-wrapper .page-numbers li{display:inline-block}

@@ -31,6 +31,32 @@
       margin-bottom: 14px
       &::after
         display: none
+  .meta-tags-wrapper
+    margin-top: 20px
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      li
+        display: inline-block
+        list-style-type: none
+        padding: 0
+        margin: 0
+        font-size: 14px
+        &:before
+          display: none
+        a
+          color: $secondary-color
+          background-color: $light-color
+          padding: 10px
+          &:hover
+            color: $primary-color
+      .meta-tag-icon
+        margin-right: 5px
+        background-color: $secondary-color
+        color: $light-color
+        padding: 10px 10px
+        font-size: 14px
 
 .related-posts
   .related-news-title
@@ -45,26 +71,3 @@
 #bannerR
   line-height: 1.8
 
-.meta-tags-wrapper
-  margin-top: 20px
-  ul
-    list-style-type: none
-    padding: 0
-    margin: 0
-    li
-      display: inline-block
-      padding: 0
-      margin: 0
-      font-size: 14px
-      a
-        color: $secondary-color
-        background-color: $light-color
-        padding: 5px 7px
-        &:hover
-          color: $primary-color
-    .meta-tag-icon
-      margin-right: 5px
-      background-color: $secondary-color
-      color: $light-color
-      padding: 7px 7px
-      font-size: 12px
