@@ -12,6 +12,7 @@
 *.tgz
 *.map
 
+
 # Logs and databases #
 ######################
 *.log
@@ -56,16 +57,11 @@ assets/bower_components/*
 ##########
 node_modules
 
+# Custom Folders and Files #
+##########
+package-lock.json
+
 # Compiled Files and Build Dirs #
 ##########
 /README.html
 /build/
-
-# PhpStrom Project Files #
-.idea/
-library/vendors/composer
-assets/img/.DS_Store
-assets/sass/HTML
-assets/sass/Rails
-HTML
-Rails
