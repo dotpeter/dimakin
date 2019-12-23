@@ -24,7 +24,7 @@
               the_post_thumbnail('post-full-width');
             endif;
             the_content();
-            do_action('dimakin_post_tags');
+            //do_action('dimakin_post_tags');
             ?>
           </div><!-- .col -->
           <div class="col-12 col-sm-12 col-md-4">
