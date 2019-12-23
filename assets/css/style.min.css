@@ -345,7 +345,7 @@ embed,iframe,object{max-width:100%}
 .single-post .content-wrapper .posted-on{display:block;font-size:12px;margin-bottom:10px;color:#b3b3b3}
 .single-post .content-wrapper ul{list-style:none;padding-left:20px;padding-bottom:0;margin-bottom:20px}
 .single-post .content-wrapper ul li::before{content:"\2022";color:#0180bb;font-weight:bold;font-size:20px;line-height:1;display:inline-block;width:1em;margin-left:-1em}
-.single-post .content-wrapper img{width:100%;margin-bottom:20px}
+.single-post .content-wrapper img{margin-bottom:20px}
 .single-post .content-wrapper h2,.single-post .content-wrapper h3,.single-post .content-wrapper h4,.single-post .content-wrapper h5,.single-post .content-wrapper h6{color:#0180bb;margin-bottom:14px}
 .single-post .content-wrapper h2::after,.single-post .content-wrapper h3::after,.single-post .content-wrapper h4::after,.single-post .content-wrapper h5::after,.single-post .content-wrapper h6::after{display:none}
 .single-post .meta-tags-wrapper{margin-top:20px}
