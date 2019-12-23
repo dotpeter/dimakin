@@ -19,7 +19,7 @@
                 echo '<span class="posted-on">' , esc_html($post_date) , '</span>';
                 the_title( '<h1 class="post-title">', '</h1>' );
                 if ( has_post_thumbnail() ) :
-                  the_post_thumbnail();
+                  the_post_thumbnail('post-full-width');
                 endif;
               ?>
             </div><!-- .title-wrapper -->

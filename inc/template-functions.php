@@ -61,7 +61,7 @@ function get_excerpt(){
   $excerpt = preg_replace(" ([.*?])",'',$excerpt);
   $excerpt = strip_shortcodes($excerpt);
   $excerpt = strip_tags($excerpt);
-  $excerpt = substr($excerpt, 0, 68);
+  $excerpt = substr($excerpt, 0, 64);
   $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
   $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
   $excerpt = $excerpt.'...';
@@ -196,19 +196,7 @@ function remove_json_api () {
     remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 }
 add_action( 'after_setup_theme', 'remove_json_api' );
-/*
-	Snippet completely disable the REST API and shows {"code":"rest_disabled","message":"The REST API is disabled on this site."}
-	when visiting http://yoursite.com/wp-json/
-*/
-function disable_json_api () {
-  // Filters for WP-API version 1.x
-  add_filter('json_enabled', '__return_false');
-  add_filter('json_jsonp_enabled', '__return_false');
-  // Filters for WP-API version 2.x
-  add_filter('rest_enabled', '__return_false');
-  add_filter('rest_jsonp_enabled', '__return_false');
-}
-add_action( 'after_setup_theme', 'disable_json_api' );
+
 
 
 /*----------- Remove WordPress version number -----------*/
