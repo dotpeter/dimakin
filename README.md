@@ -1,2 +1,2 @@
-# dimakin
-Dimakin  - Custom WordPress Theme
+# Dimakin - Custom WordPress Theme
+A custom WordPress Theme developed by CREW.pt
