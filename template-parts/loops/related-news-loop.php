@@ -21,18 +21,19 @@ if ( $related_posts->have_posts() ) :
   ?>
   <section class="related-news">
     <h4 class="related-news-title"><?php esc_html_e( 'Notícias Recentes', 'dimakin' ); ?></h4>
+    <hr />
     <?php
     while ( $related_posts->have_posts() ) :
       $related_posts->the_post();
       ?>
       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-        <article class="card">
-          <div class="card-title-and-date">
+        <article class="related-news-card-wrapper">
+          <header class="card-header">
             <?php
             echo '<time class="posted-on" datetime="' , get_the_date('c') , '" itemprop="datePublished">' , get_the_date() , '</time>';
             ?>
             <h3 class="card-title"><?php the_title(); ?></h3>
-          </div><!-- .card-title-and-date -->
+          </header><!-- .card-title-and-date -->
           <section class="card-content">
             <p class="excerpt"><?php echo get_excerpt(); ?></p>
             <span class="card-link"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
