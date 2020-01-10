@@ -36,23 +36,23 @@ if ( ! function_exists( 'dimakin_setup' ) ) :
     */
     add_theme_support( 'post-thumbnails' );
 
-    set_post_thumbnail_size( 540, 240, array( 'center', 'center') );
+    set_post_thumbnail_size( 540, 240, array( 'center', 'center' ) );
 
-    add_image_size( 'post-full-width', 1920, 400, array('center','center') );
+    add_image_size( 'post-full-width', 1920, 400, array( 'center', 'center' ) );
 
-    add_image_size( 'post-custom-thumb', 540, 260, array('center','center') );
+    add_image_size( 'post-custom-thumb', 540, 260, array( 'center', 'center' ) );
 
-    add_image_size( 'services-thumb', 455, 300, array('center','center') );
+    add_image_size( 'services-thumb', 455, 300, array( 'center', 'center' ) );
 
-    add_image_size( 'childpage-thumb', 830, 300, array('center','center') );
+    add_image_size( 'childpage-thumb', 830, 300, array( 'center', 'center' ) );
 
-    add_image_size( 'product-mini', 150, 150, array('center','center') );
+    add_image_size( 'product-mini', 150, 150, array( 'center', 'center' ) );
 
-    add_image_size( 'product-thumb', 360, 240, array('center','center') );
+    add_image_size( 'product-thumb', 360, 240, array( 'center', 'center' ) );
 
-    add_image_size( 'product-img', 550, 320, array('center','center') );
+    add_image_size( 'product-img', 550, 320, array( 'center', 'center' ) );
 
-    add_image_size( 'product-full', 720, 420, array('center','center') );
+    add_image_size( 'product-full', 720, 420, array( 'center', 'center' ) );
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(
