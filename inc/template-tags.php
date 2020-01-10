@@ -173,12 +173,12 @@ if ( !function_exists( 'dimakin_post_meta_tags' ) ) {
   function dimakin_post_meta_tags() {
     $metatags = '';
       if( has_tag() ) {
-        $metatags .= '<div class="meta-tags-wrapper"><div class="container"><div class="row"><div class="col-12">';
+        $metatags .= '<div class="meta-tags-wrapper">';
         $metatags .= '<ul>';
         $metatags .= '<li class="meta-tag-icon"><i class="fa fa-tag" aria-hidden="true"></i></li>';
         $metatags .= get_the_tag_list('<li>','</li> <li>','</li>');
         $metatags .= '</ul>';
-        $metatags .= '</div><!-- col --></div><!-- row --></div><!-- container --></div><!-- meta-tags-wrapper -->';
+        $metatags .= '</div>';
         echo $metatags;
       }
   }

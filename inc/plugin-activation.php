@@ -141,16 +141,6 @@ function dimakin_register_required_plugins() {
       'external_url' => 'https://wpml.org/pt-br/?download=6088&user_id=190702&subscription_key=f219ab7d7e5fdb001faca69014a44fbf&t=1558543156&version=4.2.6', // If set, overrides default API URL and points to an external URL.
     ),
 
-    array(
-      'name'         => 'Slider Revolution', // The plugin name.
-      'slug'         => 'revslider', // The plugin slug (typically the folder name).
-      'source'       => 'https://themeforest.net/user/crewdev/download_purchase/25901f4c-bbc6-4525-bf95-b1cf6ef904a0?accessor=wordpress_plugin', // The plugin source.
-      'required'     => true, // If false, the plugin is only 'recommended' instead of required.
-      'external_url' => 'https://themeforest.net/user/crewdev/download_purchase/25901f4c-bbc6-4525-bf95-b1cf6ef904a0?accessor=wordpress_plugin', // If set, overrides default API URL and points to an external URL.
-    ),
-
-
-
 	);
 
   /*

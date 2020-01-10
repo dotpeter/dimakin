@@ -1,0 +1,731 @@
+# Copyright (C) 2019 dimakin
+# This file is distributed under the same license as the dimakin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: dimakin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Crew <info@crew.pt>\n"
+"Last-Translator: Pedro Protest <dev@crew.pt>\n"
+"Report-Msgid-Bugs-To: https://crew.pt\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:14
+msgid "404!"
+msgstr ""
+
+#: 404.php:17
+msgid "Não encontramos por aquilo que procura, tente pesquisar de novo ou voltar à página inicial."
+msgstr ""
+
+#: 404.php:20
+msgid "Voltar ao Início"
+msgstr ""
+
+#: archive-product.php:17, inc/custom-post-types.php:14, inc/custom-post-types.php:15, inc/custom-post-types.php:47, template-parts/home/home-products.php:15, woocommerce/archive-product.php:27
+msgid "Produtos"
+msgstr ""
+
+#: functions.php:58
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:59
+msgid "Menu Secondário"
+msgstr ""
+
+#: functions.php:60
+msgid "Mobile Menu"
+msgstr ""
+
+#: functions.php:61
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:128
+msgid "Side Bar"
+msgstr ""
+
+#: functions.php:130
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:140
+msgid "Footer"
+msgstr ""
+
+#: functions.php:142
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:152
+msgid "Header Widgets"
+msgstr ""
+
+#: functions.php:154
+msgid "Add widgets here to appear in your header."
+msgstr ""
+
+#: inc/admin.php:64
+msgid "j F Y @ g:i a"
+msgstr ""
+
+#: inc/admin.php:75
+msgid "Recently on Themble (Customize on admin.php)"
+msgstr ""
+
+#: inc/admin.php:110
+msgid "<span id=\"footer-thankyou\">Developed by <a href=\"http://crew.pt\" target=\"_blank\">CREW</a></span>."
+msgstr ""
+
+#: inc/custom-post-types.php:12
+msgctxt "Post Type General Name"
+msgid "Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:13
+msgctxt "Post Type Singular Name"
+msgid "Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:16
+msgid "Arquivo de Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:17
+msgid "Item Attributes"
+msgstr ""
+
+#: inc/custom-post-types.php:18
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/custom-post-types.php:19
+msgid "Todos Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:20
+msgid "Adicionar Novo Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:21
+msgid "Adicionar Novo"
+msgstr ""
+
+#: inc/custom-post-types.php:22
+msgid "Novo Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:23
+msgid "Editar Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:24
+msgid "Actualizar Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:25
+msgid "Ver Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:26
+msgid "Ver Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:27
+msgid "Procurar Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:28
+msgid "Nada encontrado"
+msgstr ""
+
+#: inc/custom-post-types.php:29
+msgid "Nada encontrado no Lixo"
+msgstr ""
+
+#: inc/custom-post-types.php:30
+msgid "Imagem em Destaque"
+msgstr ""
+
+#: inc/custom-post-types.php:31
+msgid "Definir Imagem em Destaque"
+msgstr ""
+
+#: inc/custom-post-types.php:32
+msgid "Remover Imagem em Destaque"
+msgstr ""
+
+#: inc/custom-post-types.php:33
+msgid "Usar como Imagem em Destaque"
+msgstr ""
+
+#: inc/custom-post-types.php:34
+msgid "Inserir no Produto"
+msgstr ""
+
+#: inc/custom-post-types.php:35
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/custom-post-types.php:36
+msgid "Lista de Produtos"
+msgstr ""
+
+#: inc/custom-post-types.php:37
+msgid "Items list navigation"
+msgstr ""
+
+#: inc/custom-post-types.php:38
+msgid "Filter items list"
+msgstr ""
+
+#: inc/custom-post-types.php:48
+msgid "Catalogo de Produtos"
+msgstr ""
+
+#: inc/customizer.php:9
+msgid "Opções Dimakin"
+msgstr ""
+
+#: inc/customizer.php:10
+msgid "Opções relativas ao tema e website dimakin.pt"
+msgstr ""
+
+#: inc/customizer/cookie-bar.php:12
+msgid "Aviso de Cookies"
+msgstr ""
+
+#: inc/customizer/cookie-bar.php:13
+msgid "Defina o aviso de política de privacidade e uso de cookies."
+msgstr ""
+
+#: inc/customizer/cookie-bar.php:34
+msgid "Texto de aviso de Política de Privacidade"
+msgstr ""
+
+#: inc/customizer/general-settings.php:10
+msgid "Definições Gerais"
+msgstr ""
+
+#: inc/customizer/general-settings.php:11
+msgid "Defina algumas opçôes aqui."
+msgstr ""
+
+#: inc/customizer/general-settings.php:32
+msgid "Descrição na página das notícias"
+msgstr ""
+
+#: inc/customizer/general-settings.php:56
+msgid "Descrição na Call to Action"
+msgstr ""
+
+#: inc/customizer/general-settings.php:78
+msgid "Url da Call to Action"
+msgstr ""
+
+#: inc/customizer/home-settings.php:10
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer/home-settings.php:11
+msgid "Define your home slider."
+msgstr ""
+
+#: inc/customizer/home-settings.php:32
+msgid "Slider Shortcode"
+msgstr ""
+
+#: inc/customizer/images-icons.php:10
+msgid "Icons"
+msgstr ""
+
+#: inc/customizer/images-icons.php:11
+msgid "Icons para iPad, iPhone e Android"
+msgstr ""
+
+#: inc/customizer/images-icons.php:29
+msgid "Touch Icon iPhone"
+msgstr ""
+
+#: inc/customizer/images-icons.php:31
+msgid "Icon para iPhone(first generation or 2G), iPhone 3G, iPhone 3GS. Tamanho: 57x57"
+msgstr ""
+
+#: inc/customizer/images-icons.php:49
+msgid "Touch Icon iPad"
+msgstr ""
+
+#: inc/customizer/images-icons.php:51
+msgid "Icon para iPad and iPad mini @1x. Tamanho: 76x76"
+msgstr ""
+
+#: inc/customizer/images-icons.php:69
+msgid "Touch Icon iPhone Retina"
+msgstr ""
+
+#: inc/customizer/images-icons.php:71
+msgid "Icon para iPhone 4, iPhone 4s, iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, iPhone 6s, iPhone 7, iPhone 7s, iPhone8. Tamanho: 120x120"
+msgstr ""
+
+#: inc/customizer/images-icons.php:89
+msgid "Touch Icon iPad e iPad mini"
+msgstr ""
+
+#: inc/customizer/images-icons.php:91
+msgid "Icon para iPad and iPad mini @2x. Tamanho: 152x152"
+msgstr ""
+
+#: inc/customizer/images-icons.php:109
+msgid "Touch Icon iPad Pro"
+msgstr ""
+
+#: inc/customizer/images-icons.php:111
+msgid "Icon para iPad Pro. Tamanho: 167x167"
+msgstr ""
+
+#: inc/customizer/images-icons.php:129
+msgid "Touch Icon iPhone X"
+msgstr ""
+
+#: inc/customizer/images-icons.php:131
+msgid "Icon para iPhone X, iPhone 8 Plus, iPhone 7 Plus, iPhone 6s Plus, iPhone 6 Plus. Tamanho: 180x180"
+msgstr ""
+
+#: inc/customizer/images-icons.php:149
+msgid "Icon Android Grandes Resoluções"
+msgstr ""
+
+#: inc/customizer/images-icons.php:151
+msgid "Icon para Android com grandes resoluções. Tamanho: 192x192"
+msgstr ""
+
+#: inc/customizer/images-icons.php:169
+msgid "Icon Android"
+msgstr ""
+
+#: inc/customizer/images-icons.php:171
+msgid "Icon para Android com resoluções normais. Tamanho: 128x128"
+msgstr ""
+
+#: inc/customizer/products-settings.php:23
+msgid "Url do botão na página de produtos"
+msgstr ""
+
+#: inc/customizer/products-settings.php:44
+msgid "Url do botão para mais videos"
+msgstr ""
+
+#: inc/customizer/social-links.php:9
+msgid "Redes Socias"
+msgstr ""
+
+#: inc/customizer/social-links.php:10
+msgid "Insira aqui os links para as suas redes socias"
+msgstr ""
+
+#: inc/customizer/social-links.php:78
+msgid "Facebook Url:"
+msgstr ""
+
+#: inc/customizer/social-links.php:92
+msgid "Linkedin Url:"
+msgstr ""
+
+#: inc/customizer/social-links.php:106
+msgid "Twitter Url:"
+msgstr ""
+
+#: inc/customizer/social-links.php:120
+msgid "Youtube Url:"
+msgstr ""
+
+#: inc/customizer/social-links.php:134
+msgid "Google Url:"
+msgstr ""
+
+#: inc/customizer/social-links.php:148
+msgid "Instagram Url:"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:16
+msgid "Definições da Página de Contactos"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:26
+msgid "Contacts page description"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:34, inc/lib/custom-metaboxes/contacts.php:38
+msgid "Adicionar Morada"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:37
+msgid "Morada {#}"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:39
+msgid "Remover Morada"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:46
+msgid "Titlo da Morada"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:51, inc/lib/custom-metaboxes/operation-locals.php:61, inc/widgets/contacts-widget.php:65, inc/widgets/contacts-widget.php:66
+msgid "Morada"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:56, inc/lib/custom-metaboxes/operation-locals.php:67, inc/widgets/contacts-widget.php:37, inc/widgets/contacts-widget.php:71, inc/widgets/contacts-widget.php:72
+msgid "Telefone"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:61, inc/widgets/contacts-widget.php:79, inc/widgets/contacts-widget.php:80
+msgid "Email"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:67
+msgid "Shortcode do Formulário"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/contacts.php:72, inc/lib/custom-metaboxes/operation-locals.php:73
+msgid "Código para o Mapa Google"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:16
+msgid "Serviçoss"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:29, inc/lib/custom-metaboxes/home.php:33
+msgid "Adicionar Serviço"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:32
+msgid "Serviço {#}"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:34
+msgid "Remover Serviço"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:41
+msgid "Titlo do Serviços"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:42, inc/lib/custom-metaboxes/jobs.php:42
+msgid "Insira aqui o titulo do serviço"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:47
+msgid "URL"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:48
+msgid "Insira aqui o link de destino."
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:53
+msgid "Imagem de Fundo"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/home.php:54
+msgid "Insira aqui a imagem de fundo do serviço."
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:16
+msgid "Ofertas de Trabalho"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:29, inc/lib/custom-metaboxes/jobs.php:33
+msgid "Adicionar Oferta"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:32
+msgid "Oferta {#}"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:34
+msgid "Remover Oferta"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:41
+msgid "Titlo da Oferta"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:47, inc/lib/custom-metaboxes/operation-locals.php:33
+msgid "Descrição"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/jobs.php:54
+msgid "Link para o formulário"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:16, inc/lib/custom-metaboxes/operation-locals.php:41, page-operation-locals.php:3
+msgid "Locais de Operação"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:27
+msgid "Subtitlo da página"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:44
+msgid "Local de Operação {#}"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:45
+msgid "Adicionar Novo Local"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:46
+msgid "Remover Local"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/operation-locals.php:54
+msgid "Nome do Local"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/pages.php:14
+msgid "Detalhes da Página"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/pages.php:22
+msgid "Deseja uma Call to Action?"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/pages.php:23
+msgid "Clique na caixa se desejar que esta página inclua uma CTA"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/pages.php:29
+msgid "Links para outras páginas"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/pages.php:32, inc/lib/custom-metaboxes/products.php:87
+msgid "Escreva o nome do artigo/página/produto"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:12
+msgid "Detalhes do Produto"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:20
+msgid "Marcar produto como novo?"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:21
+msgid "Clique na caixa se desejar que este produto seja marcado como novo"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:28
+msgid "Galeria de Imagens do Produto"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:29
+msgid "Insira aqui a galeria de imagens do produto"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:35
+msgid "Adicionar/Subir Ficheiros"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:36
+msgid "Remover Imagem"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:37
+msgid "Ficheiros"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:38
+msgid "Download"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:39
+msgid "Remover"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:44
+msgid "Catálogo do Produto"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:45
+msgid "Faça upload de um pdf ou insira um URL."
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:63
+msgid "Adicione os videos"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:66
+msgid "Video {#}"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:67
+msgid "Adicionar Video"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:68
+msgid "Remover Video"
+msgstr ""
+
+#: inc/lib/custom-metaboxes/products.php:84
+msgid "Artigos Recomendados"
+msgstr ""
+
+#: inc/loops/jobs-loop.php:9
+msgid "Estamos a Recrutar"
+msgstr ""
+
+#: inc/loops/jobs-loop.php:31
+msgid "Candidatar"
+msgstr ""
+
+#: inc/loops/products-loop.php:18, inc/woocommerce.php:224
+msgid "Novo!"
+msgstr ""
+
+#: inc/loops/related-posts-loop.php:25
+msgid "Outras notícias relevantes"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:14
+msgid "Contactos"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:15
+msgid "Os seus contactos"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:40, inc/widgets/contacts-widget.php:76
+msgid "Fax"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:46, inc/widgets/contacts-widget.php:84
+msgid "GPS"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:58
+msgid "Novo titlo"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:62
+msgid "Titlo"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:68
+msgid "Adicionar automáticamente parágrafos"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:75
+msgid "Fax:"
+msgstr ""
+
+#: inc/widgets/contacts-widget.php:83
+msgid "As suas coordenadas GPS"
+msgstr ""
+
+#: inc/woocommerce.php:247, single-product.php:36, template-parts/cta.php:20, woocommerce/single-product.php:41
+msgid "Fale Connosco"
+msgstr ""
+
+#: index.php:18, template-parts/home/home-news.php:33
+msgid "Notícias"
+msgstr ""
+
+#: page-childs.php:3
+msgid "Page w/Childs"
+msgstr ""
+
+#: page-contacts.php:3
+msgid "Conctact Page"
+msgstr ""
+
+#: page-contacts.php:97
+msgid "Siga-nos nas redes sociais"
+msgstr ""
+
+#: page-home.php:3
+msgid "Home Page"
+msgstr ""
+
+#: page-jobs.php:3
+msgid "Jobs Page"
+msgstr ""
+
+#: page-operation-locals.php:81
+msgid "Tel."
+msgstr ""
+
+#: search.php:14
+msgid "Resultados de pesquisa para:"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search..."
+msgstr ""
+
+#: single-product.php:39, woocommerce/single-product.php:44
+msgid "Catálogo"
+msgstr ""
+
+#: single-product.php:46, woocommerce/single-product.php:51
+msgid "Tags: "
+msgstr ""
+
+#: template-parts/header-searchform.php:15
+msgid "Procurar..."
+msgstr ""
+
+#: template-parts/home/home-news.php:37
+msgid "Ver todas as Notícias"
+msgstr ""
+
+#: template-parts/home/home-products.php:21
+msgid "Ver todos os Produtos"
+msgstr ""
+
+#: template-parts/loops/related-news-loop.php:23
+msgid "Notícias Recentes"
+msgstr ""
+
+#: template-parts/main-footer.php:14
+msgid "Saber mais"
+msgstr ""
+
+#: template-parts/main-footer.php:14
+msgid "Continuar"
+msgstr ""
+
+#: template-parts/main-footer.php:50
+msgid "Todos os Direitos Reservados."
+msgstr ""
+
+#: template-parts/main-navigation.php:14
+msgid "Defina a sua navegação principal"
+msgstr ""
+
+#: template-parts/mobile-navigation.php:25
+msgid "Menu não definido"
+msgstr ""
+
+#: template-parts/products/product-recommendations.php:19
+msgid "Relacionados"
+msgstr ""
+
+#: template-parts/products/product-videos.php:18, woocommerce/product-videos.php:20
+msgid "Videos"
+msgstr ""
+
+#: template-parts/products/product-videos.php:47
+msgid "+ Videos"
+msgstr ""
+
+#: woocommerce/product-recommendations.php:17
+msgid "Recomendações"
+msgstr ""
