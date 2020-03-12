@@ -8,8 +8,8 @@
 $gallery = get_post_meta( get_the_ID(), '_dimakin_products_gallerie_img', true );
 if(!empty($gallery)) {
 ?>
+<div class="loader"><i class="fa fa-refresh" aria-hidden="true"></i></div>
 <div class="product-gallery-wrapper">
-  <div class="loader"><i class="fa fa-refresh" aria-hidden="true"></i></div>
   <div id="product-slider" class="flexslider">
     <ul class="slides">
       <?php
