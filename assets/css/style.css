@@ -1063,7 +1063,7 @@ embed, iframe, object { max-width: 100%; }
 
 .single-product .section-title::after { margin-bottom: 0; }
 
-.product-gallery-wrapper { position: relative; height: 500px; overflow: hidden; }
+.product-gallery-wrapper { position: relative; height: 550px; overflow: hidden; }
 
 @media (max-width: 768px) { .single-product .main-wrapper { margin: 40px 0; }
   .single-product .main-wrapper .product-content-wrapper #product-slider .flex-direction-nav { display: none; }
@@ -1762,7 +1762,7 @@ span.itsnew { position: absolute; top: 20px; right: 20px; background-color: #018
   #eu-cookie-bar .cookie-bar .cookie-buttons { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
   #eu-cookie-bar .cookie-bar .cookie-buttons .cookie-accept, #eu-cookie-bar .cookie-bar .cookie-buttons .cookie-read-more { font-size: 10px; } }
 
-.loader { position: absolute; width: 100%; height: 457px; top: 0; right: 0; left: 0; bottom: 0; z-index: 9999; background-color: white; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.loader { position: absolute; width: 100%; height: 550px; top: 0; right: 0; left: 0; bottom: 0; z-index: 9999; background-color: white; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
 .loader .fa { text-align: center; font-size: 40px; color: #0180bb; -webkit-animation-name: simplerotate; animation-name: simplerotate; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
 
