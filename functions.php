@@ -213,11 +213,9 @@ function dimakin_scripts() {
     wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ) );
 
     // Enqueue vendors first.
+    wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ) , array( 'jquery' ), false, false );
 
-    if( is_page_template( 'page-home.php' ) || is_singular( 'product' ) ) {
-        wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ) , array( 'jquery' ), false, false );
-        wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ) , array( 'jquery' ), false, false );
-    }
+    wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ) , array( 'jquery' ), false, false );
 
     wp_enqueue_script( 'dimakin-mobile-menu-js', get_theme_file_uri( '/assets/js/custom/mobile-menu.js' ) , array( 'jquery' ), false, true );
 
