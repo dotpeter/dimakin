@@ -1,4 +1,4 @@
-# Copyright (C) 2019 dimakin
+# Copyright (C) 2020 dimakin
 # This file is distributed under the same license as the dimakin package.
 msgid ""
 msgstr ""
@@ -32,43 +32,43 @@ msgstr ""
 msgid "Produtos"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:60
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:59
+#: functions.php:61
 msgid "Menu Secondário"
 msgstr ""
 
-#: functions.php:60
+#: functions.php:62
 msgid "Mobile Menu"
 msgstr ""
 
-#: functions.php:61
+#: functions.php:63
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:130
 msgid "Side Bar"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:132
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:140
+#: functions.php:142
 msgid "Footer"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:144
 msgid "Add widgets here to appear in your footer."
 msgstr ""
 
-#: functions.php:152
+#: functions.php:154
 msgid "Header Widgets"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:156
 msgid "Add widgets here to appear in your header."
 msgstr ""
 
