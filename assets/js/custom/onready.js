@@ -52,7 +52,6 @@
     // set timeout to hide a element
     setTimeout(function(){
       $(".loader").fadeOut("slow");
-      console.log('timeout!');
     }, 1000);
   });
 })(jQuery);
