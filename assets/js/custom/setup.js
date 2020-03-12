@@ -20,7 +20,8 @@
     $('.products-slider-wrapper').flexslider({
       selector: ".products-slider-container > .product",
       animation: "slide",
-      slideshow: false,
+      animationSpeed: 700,
+      slideshowSpeed: 3000,
       controlNav: false,
       prevText: "",
       nextText: "",
