@@ -217,8 +217,6 @@ function dimakin_scripts() {
 
     wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ) , array( 'jquery' ), false, false );
 
-    wp_enqueue_script( 'dimakin-mobile-menu-js', get_theme_file_uri( '/assets/js/custom/mobile-menu.js' ) , array( 'jquery' ), false, true );
-
     wp_enqueue_script( 'dimakin-cookie-bar-js', get_theme_file_uri( '/assets/js/custom/cookie-bar.js' ) , array( 'jquery' ), false, true );
 
     wp_enqueue_script( 'dimakin-onready-js', get_theme_file_uri( '/assets/js/custom/onready.js' ) , array( 'jquery' ), false, false );
