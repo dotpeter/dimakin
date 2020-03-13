@@ -1019,6 +1019,7 @@ span.itsnew{position:absolute;top:20px;right:20px;background-color:#0180bb;color
 .products-wrapper .primary-btn{float:none}
 .products-wrapper .products-slider-wrapper .flex-direction-nav .flex-nav-prev .flex-prev{left:-40px}
 .products-wrapper .products-slider-wrapper .flex-direction-nav .flex-nav-next .flex-next{right:-40px}
+.page-sidebar-wrapper{display:none}
 .single-product .main-wrapper{margin:40px 0}
 .single-product .main-wrapper .product-content-wrapper #product-slider .flex-direction-nav{display:none}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-viewport{max-width:90%}
