@@ -6,55 +6,66 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 <head>
-  <meta charset="utf-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160611977-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  <?php // force Internet Explorer to use the latest rendering engine available ?>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		gtag('config', 'UA-160611977-1');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148210018-4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  <?php // mobile meta (hooray!) ?>
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+		gtag('config', 'UA-148210018-4');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WL47PH7');</script>
+	<!-- End Google Tag Manager -->
 
-  <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-  <?php do_action('dimakin_touch_icons');  ?>
-  <link rel="icon" href="<?php get_site_icon_url(); ?>">
-  <!--[if IE]>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-  <![endif]-->
-  <?php // or, set /favicon.ico for IE10 win ?>
-  <meta name="msapplication-TileColor" content="#3481b9">
-  <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
-  <meta name="theme-color" content="#3481b9">
+	<meta charset="utf-8">
 
-  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+	<?php // force Internet Explorer to use the latest rendering engine available ?>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <?php wp_head(); ?>
+	<?php // mobile meta (hooray!) ?>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <!-- Google Tag Manager -->
-  <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WHLKG3B');</script>
-  <!-- End Google Tag Manager -->
+	<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+	<?php do_action( 'dimakin_touch_icons' );  ?>
+	<link rel="icon" href="<?php get_site_icon_url(); ?>">
+	<!--[if IE]>
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+	<![endif]-->
+	<?php // or, set /favicon.ico for IE10 win ?>
+	<meta name="msapplication-TileColor" content="#3481b9">
+	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
+	<meta name="theme-color" content="#3481b9">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160310617-1"></script>
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-    gtag('config', 'UA-160310617-1');
-  </script>
+	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHLKG3B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL47PH7"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
-  <?php
-  wp_body_open();
-  get_template_part('template-parts/main', 'header');
+	<?php
+	wp_body_open();
+	get_template_part('template-parts/main', 'header');

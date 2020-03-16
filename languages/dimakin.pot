@@ -646,7 +646,7 @@ msgstr ""
 msgid "Conctact Page"
 msgstr ""
 
-#: page-contacts.php:97
+#: page-contacts.php:100
 msgid "Siga-nos nas redes sociais"
 msgstr ""
 
