@@ -85,7 +85,7 @@ do_action( 'dimakin_breadcrumbs' );
 												?>
 													<p class="email-address">
 														<i class="fa fa-envelope" aria-hidden="true"></i>
-														<?php echo $address_email; ?>
+														<a href="mailto:<?php echo $address_email; ?>" target="_blank"><?php echo $address_email; ?></a>
 													</p><!-- email-address -->
 												<?php
 											endif;

@@ -74,6 +74,62 @@ select
       border-color: $secondary-color
       color: #fff
 
+
+.gdpr-descr
+  display: inline-block
+
+
+.wpcf7-acceptance
+  display: inline-block
+  margin: 0 5px 20px 0
+  .wpcf7-list-item
+    margin: 0
+    label
+      display: block
+      position: relative
+      padding-left: 35px
+      margin-bottom: 12px
+      cursor: pointer
+      font-size: 22px
+      user-select: none
+      &:hover
+        input ~ .wpcf7-list-item-label
+          background-color: #ccc
+      
+        
+      input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+        &:checked ~ 
+          .wpcf7-list-item-label
+            background-color: $primary-color
+          .wpcf7-list-item-label
+            &:after
+              display: block
+      .wpcf7-list-item-label
+        position: absolute
+        top: 0
+        left: 0
+        height: 25px
+        width: 25px
+        background-color: #eee
+        &:after
+          content: ""
+          position: absolute
+          display: none
+          left: 9px
+          top: 5px
+          width: 5px
+          height: 10px
+          border: solid white
+          border-width: 0 3px 3px 0
+          transform: rotate(45deg)
+
+
+
 .wpcf7-select
   position: relative
   padding: 20px

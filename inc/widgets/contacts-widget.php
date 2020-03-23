@@ -33,9 +33,9 @@ class dimakinContactsWidget extends WP_Widget {
     if(!empty($instance['text'])) {
       echo '<li><div class="icon-box"><i class="fa fa-map-marker" aria-hidden="true"></i></div><div class="contact-block"><p>' , !empty($instance['filter']) ? wpautop($text) : $text , '</p></div></li>';
     }
-    if(!empty($instance['phone'])) {
-      echo '<li><div class="icon-box"><i class="fa fa-phone" aria-hidden="true"></i></div><div class="contact-block"><p><span>', esc_html__('Telefone', 'dimakin') , '</span>' , esc_html($instance['phone']) , '</p></div></li>';
-    }
+    if ( ! empty( $instance['phone'] ) ) {
+			echo '<li><div class="icon-box"><i class="fa fa-phone" aria-hidden="true"></i></div><div class="contact-block"><p><span>', esc_html__( 'Telefone', 'dimakin' ) , '</span><a href="tel:', esc_attr( $instance['phone'] ) , '">' , esc_html( $instance['phone'] ) , '</a></p></div></li>';
+		}
     if(!empty($instance['fax'])) {
       echo '<li><div class="icon-box"><i class="fa fa-fax" aria-hidden="true"></i></div><div class="contact-block"><p><span>', esc_html__('Fax', 'dimakin') , '</span>' , esc_html($instance['fax']) , '</p></div></li>';
     }
