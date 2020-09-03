@@ -24,8 +24,14 @@ textarea
     outline: none
   &::placeholder
     color: #d0d0d0
+    opacity: 1
   &:focus
     outline: none
+  &:focus::placeholder
+    opacity: 0
+
+label:focus + input::placeholder
+  opacity: 0
 
 button,
 input[type="submit"]
@@ -59,10 +65,14 @@ select
     padding: 20px
     border: 0px solid $light-color
     color: $secondary-color
-    &:focus
-      outline: none
     &::placeholder
       color: $smooth-grey
+      opacity: 1
+    &:focus
+      outline: none
+    &:focus::placeholder
+      opacity: 0
+
   input[type="submit"]
     background-color: $primary-color
     color: #fff
@@ -73,6 +83,9 @@ select
       background-color: $secondary-color
       border-color: $secondary-color
       color: #fff
+
+  label:focus + input::placeholder
+    opacity: 0
 
 
 .gdpr-descr
