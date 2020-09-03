@@ -11,6 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+	wpcf7_enqueue_scripts();
+}
+
+if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+	wpcf7_enqueue_styles();
+}
+
 $product_contact_form = get_theme_mod( 'product_btn_contact_form' );
 
 do_action('dimakin_breadcrumbs');
@@ -31,7 +39,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 							<h1 class="product-title"><?php the_title(); ?></h1>
 							<?php the_content(); ?>
 							<div class="product-actions">
-								<a class="primary-btn" data-fancybox data-src="#product-buttons__modal-form" href="javascript:;" >
+								<a class="primary-btn" data-fancybox data-src="#product-buttons__modal-form" href="#product-buttons__modal-form" >
 									<i class="fa fa-comments-o" aria-hidden="true"></i>
 									<?php esc_html_e( 'Fale Connosco', 'dimakin' ); ?>
 								</a>

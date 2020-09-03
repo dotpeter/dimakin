@@ -11,7 +11,7 @@
     $(".fancybox").fancybox();
 
     $("[data-fancybox]").fancybox({
-      autoFocus: false
+    // Options will go here
      });
 
     // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
