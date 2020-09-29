@@ -58,7 +58,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 							</div><!-- product-actions -->
 							<?php
 								$productsTags = get_the_terms( get_the_ID(), 'post_tag' );
-								if ( $productsTags && ! is_wp_error( $productsTags) ) {
+								if ( $productsTags && ! is_wp_error( $productsTags ) ) {
 										echo '<p class="product-tags"><i class="fa fa-tags" aria-hidden="true"></i><strong>', __('Tags: ', 'dimakin') ,'</strong>';
 										foreach ($productsTags as $tag) {
 												$tagTitle = $tag->name; // tag name
@@ -71,10 +71,24 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 						</div><!-- product-details -->
 					</div><!-- col -->
 				</div><!-- row -->
+				<?php
+				$product_full_description = get_post_meta( get_the_ID(), '_dimakin_products_fulltext', true );
+				if ( $product_full_description ) : 
+					?>
+					<div class="row">
+						<div class="col-12">
+						<?php
+							echo wp_kses_post( wpautop( $product_full_description ) );
+						?>
+						</div><!-- col -->
+					</div><!-- row -->
+					<?php
+				endif;
+				?>
 			</div><!-- container -->
 		</div><!-- product-content-wrapper -->
-		<?php get_template_part('template-parts/products/product', 'videos'); ?>
-		<?php get_template_part('template-parts/products/product', 'recommendations'); ?>
+		<?php get_template_part( 'template-parts/products/product', 'videos' ); ?>
+		<?php get_template_part( 'template-parts/products/product', 'recommendations' ); ?>
 	</article><!-- article -->
 </main><!-- main-wrapper -->
 <?php

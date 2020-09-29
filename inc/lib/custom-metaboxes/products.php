@@ -23,6 +23,13 @@ function dimakin_product_extras() {
     'type' => 'checkbox',
   ) );
 
+  $cmb->add_field( array(
+    'name'    => __( 'Descrição Completa do Produto', 'dimakin' ),
+    'id'      => $prefix . 'fulltext',
+    'type'    => 'wysiwyg',
+    'options' => array(),
+  ) );
+
   // Product Galleries
   $cmb->add_field( array(
       'name' => __( 'Galeria de Imagens do Produto', 'dimakin' ),

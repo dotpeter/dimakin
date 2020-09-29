@@ -315,7 +315,7 @@ msgid "Icon para Android com resoluções normais. Tamanho: 128x128"
 msgstr ""
 
 #: inc/customizer/products-settings.php:23
-msgid "Url do botão na página de produtos"
+msgid "Shortcode do formulário de produto"
 msgstr ""
 
 #: inc/customizer/products-settings.php:44
@@ -630,7 +630,7 @@ msgstr ""
 msgid "As suas coordenadas GPS"
 msgstr ""
 
-#: inc/woocommerce.php:247, single-product.php:36, template-parts/cta.php:20, woocommerce/single-product.php:41
+#: inc/woocommerce.php:247, single-product.php:44, template-parts/cta.php:20, woocommerce/single-product.php:41
 msgid "Fale Connosco"
 msgstr ""
 
@@ -670,11 +670,15 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: single-product.php:39, woocommerce/single-product.php:44
+#: single-product.php:48
+msgid "Obtenha mais informações sobre o produto."
+msgstr ""
+
+#: single-product.php:55, woocommerce/single-product.php:44
 msgid "Catálogo"
 msgstr ""
 
-#: single-product.php:46, woocommerce/single-product.php:51
+#: single-product.php:62, woocommerce/single-product.php:51
 msgid "Tags: "
 msgstr ""
 
