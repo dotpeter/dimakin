@@ -506,7 +506,7 @@ msgstr ""
 msgid "Links para outras páginas"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/pages.php:32, inc/lib/custom-metaboxes/products.php:94
+#: inc/lib/custom-metaboxes/pages.php:32, inc/lib/custom-metaboxes/products.php:99
 msgid "Escreva o nome do artigo/página/produto"
 msgstr ""
 
@@ -526,59 +526,59 @@ msgstr ""
 msgid "Descrição Completa do Produto"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:35
+#: inc/lib/custom-metaboxes/products.php:40
 msgid "Galeria de Imagens do Produto"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:36
+#: inc/lib/custom-metaboxes/products.php:41
 msgid "Insira aqui a galeria de imagens do produto"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:42
+#: inc/lib/custom-metaboxes/products.php:47
 msgid "Adicionar/Subir Ficheiros"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:43
+#: inc/lib/custom-metaboxes/products.php:48
 msgid "Remover Imagem"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:44
+#: inc/lib/custom-metaboxes/products.php:49
 msgid "Ficheiros"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:45
+#: inc/lib/custom-metaboxes/products.php:50
 msgid "Download"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:46
+#: inc/lib/custom-metaboxes/products.php:51
 msgid "Remover"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:51
+#: inc/lib/custom-metaboxes/products.php:56
 msgid "Catálogo do Produto"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:52
+#: inc/lib/custom-metaboxes/products.php:57
 msgid "Faça upload de um pdf ou insira um URL."
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:70
+#: inc/lib/custom-metaboxes/products.php:75
 msgid "Adicione os videos"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:73
+#: inc/lib/custom-metaboxes/products.php:78
 msgid "Video {#}"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:74
+#: inc/lib/custom-metaboxes/products.php:79
 msgid "Adicionar Video"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:75
+#: inc/lib/custom-metaboxes/products.php:80
 msgid "Remover Video"
 msgstr ""
 
-#: inc/lib/custom-metaboxes/products.php:91
+#: inc/lib/custom-metaboxes/products.php:96
 msgid "Artigos Recomendados"
 msgstr ""
 

@@ -71,18 +71,9 @@ function dimakin_cpt() {
 add_action( 'init', 'dimakin_cpt', 0 );
 
 
-
-
-function dimakin_flush_rules_on_save_posts( $post_id ) {
-
-    // Check the correct post type.
-    // Example to check, if the post type isn't 'post' then don't flush, just return.
-    if ( ! empty( $_POST['product'] && $_POST['product'] != 'post' ) ) {
-        return;
-    }
-
-    flush_rewrite_rules();
-
+function dimakin_flush_rules() {
+  dimakin_cpt();
+  flush_rewrite_rules();
 }
 
-add_action( 'save_post', 'dimakin_flush_rules_on_save_posts', 20, 2);
+add_action( 'after_setup_theme', 'dimakin_flush_rules');

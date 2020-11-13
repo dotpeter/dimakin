@@ -1,42 +1,69 @@
-(function($) {
-  $(function() {
-    YoastCMB2FieldAnalysis = function() {
-      YoastSEO.app.registerPlugin('YoastCMB2FieldAnalysis', {status: 'ready'});
-      YoastSEO.app.registerModification(
-        'content',
-        this.addCMB2FieldsToContent,
-        'YoastCMB2FieldAnalysis'
-      );
+"use strict";
 
-      $('#post-body').find(
-        'input[yoast-analysis=1]:not(".cmb2-upload-file-id"), textarea[yoast-analysis=1]'
-      ).on('keyup paste cut click', function() {
-        YoastSEO.app.pluginReloaded('YoastCMB2FieldAnalysis');
-      });
-    };
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
 
-    YoastCMB2FieldAnalysis.prototype.addCMB2FieldsToContent = function(data) {
-	  tinyMCE.triggerSave();
-	  var cmb2_content = '';
-      $('#post-body').find(
-        'input[yoast-analysis=1]:not(".cmb2-upload-file-id"), textarea[yoast-analysis=1]'
-      ).each(function() { 
-		  if( $(this).val() ){
-			  cmb2_content += ' ';
-			  if( $(this).attr('yoast-analysis-before') ){ cmb2_content += $(this).attr('yoast-analysis-before'); }
-			  if( $(this).hasClass('cmb2-upload-file') ){
-				  cmb2_content += '<img src="' + $(this).parent().find('.img-status img').attr('src') + '" alt="' + $(this).parent().find('.img-status img').attr('alt') + '" />';
-			  }
-			  else{
-				cmb2_content += $(this).val();  
-			  }
-			  if( $(this).attr('yoast-analysis-after') ){ cmb2_content += $(this).attr('yoast-analysis-after'); }
-		  }
-	  });
-      return data + cmb2_content;
-	};
+function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    new YoastCMB2FieldAnalysis();
-	  
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* global YoastSEO */
+var MyCustomDataPlugin = /*#__PURE__*/function () {
+  function MyCustomDataPlugin() {
+    _classCallCheck(this, MyCustomDataPlugin);
+
+    // Ensure YoastSEO.js is present and can access the necessary features.
+    if (typeof YoastSEO === "undefined" || typeof YoastSEO.analysis === "undefined" || typeof YoastSEO.analysis.worker === "undefined") {
+      return;
+    }
+
+    YoastSEO.app.registerPlugin("MyCustomDataPlugin", {
+      status: "ready"
+    });
+    this.registerModifications();
+  }
+  /**
+   * Registers the addContent modification.
+   *
+   * @returns {void}
+   */
+
+
+  _createClass(MyCustomDataPlugin, [{
+    key: "registerModifications",
+    value: function registerModifications() {
+      var callback = this.addContent.bind(this); // Ensure that the additional data is being seen as a modification to the content.
+
+      YoastSEO.app.registerModification("content", callback, "MyCustomDataPlugin", 10);
+    }
+    /**
+     * Adds to the content to be analyzed by the analyzer.
+     *
+     * @param {string} data The current data string.
+     *
+     * @returns {string} The data string parameter with the added content.
+     */
+
+  }, {
+    key: "addContent",
+    value: function addContent(data) {
+      data += "Hello, I'm some additional data!";
+      return data;
+    }
+  }]);
+
+  return MyCustomDataPlugin;
+}();
+/**
+ * Adds eventlistener to load the plugin.
+ */
+
+
+if (typeof YoastSEO !== "undefined" && typeof YoastSEO.app !== "undefined") {
+  new MyCustomDataPlugin();
+} else {
+  jQuery(window).on("YoastSEO:ready", function () {
+    new MyCustomDataPlugin();
   });
-})(jQuery);
+}

@@ -30,6 +30,8 @@ function dimakin_product_extras() {
     'options' => array(),
     'attributes' => array(
       'yoast-analysis'		=> '1', // Enable Yoast Analysis for this textField
+      'yoast-analysis-before' 	=> 'BeforeString ', // Optionnal string that must be added before field value
+      'yoast-analysis-after' 	=> ' AfterString', // Optionnal string that must be added after field value
     ),
   ) );
 
