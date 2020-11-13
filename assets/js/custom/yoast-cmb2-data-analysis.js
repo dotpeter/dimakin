@@ -64,7 +64,6 @@
           }
         });
         data += cmb2_content;
-        console.log(data);
         return data;
         
       }
