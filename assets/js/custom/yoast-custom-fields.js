@@ -1,52 +1,42 @@
-/* global YoastSEO */
+(function($) {
+  $(function() {
+    YoastCMB2FieldAnalysis = function() {
+      YoastSEO.app.registerPlugin('YoastCMB2FieldAnalysis', {status: 'ready'});
+      YoastSEO.app.registerModification(
+        'content',
+        this.addCMB2FieldsToContent,
+        'YoastCMB2FieldAnalysis'
+      );
 
-class YoastCustomFields {
-  constructor() {
-     // Ensure YoastSEO.js is present and can access the necessary features.
-     if ( typeof YoastSEO === "undefined" || typeof YoastSEO.analysis === "undefined" || typeof YoastSEO.analysis.worker === "undefined" ) {
-          return;
-      }
+      $('#post-body').find(
+        'input[yoast-analysis=1]:not(".cmb2-upload-file-id"), textarea[yoast-analysis=1]'
+      ).on('keyup paste cut click', function() {
+        YoastSEO.app.pluginReloaded('YoastCMB2FieldAnalysis');
+      });
+    };
 
-      YoastSEO.app.registerPlugin( "YoastCustomFields", { status: "ready" } );
-      
-      this.registerModifications();
-  }
+    YoastCMB2FieldAnalysis.prototype.addCMB2FieldsToContent = function(data) {
+	  tinyMCE.triggerSave();
+	  var cmb2_content = '';
+      $('#post-body').find(
+        'input[yoast-analysis=1]:not(".cmb2-upload-file-id"), textarea[yoast-analysis=1]'
+      ).each(function() { 
+		  if( $(this).val() ){
+			  cmb2_content += ' ';
+			  if( $(this).attr('yoast-analysis-before') ){ cmb2_content += $(this).attr('yoast-analysis-before'); }
+			  if( $(this).hasClass('cmb2-upload-file') ){
+				  cmb2_content += '<img src="' + $(this).parent().find('.img-status img').attr('src') + '" alt="' + $(this).parent().find('.img-status img').attr('alt') + '" />';
+			  }
+			  else{
+				cmb2_content += $(this).val();  
+			  }
+			  if( $(this).attr('yoast-analysis-after') ){ cmb2_content += $(this).attr('yoast-analysis-after'); }
+		  }
+	  });
+      return data + cmb2_content;
+	};
 
-  /**
-   * Registers the addContent modification.
-   *
-   * @returns {void}
-   */
-  registerModifications() {
-      const callback = this.addContent.bind( this );
-
-      // Ensure that the additional data is being seen as a modification to the content.
-      YoastSEO.app.registerModification( "content", callback, "YoastCustomFields", 10 );
-  }
-
-  /**
-   * Adds to the content to be analyzed by the analyzer.
-   *
-   * @param {string} data The current data string.
-   *
-   * @returns {string} The data string parameter with the added content.
-   */
-  addContent( data ) {
-      data += "Hello, I'm some additional data!";
-
-      return data ;
-  }
-}
-/**
-* Adds eventlistener to load the plugin.
-*/
-if ( typeof YoastSEO !== "undefined" && typeof YoastSEO.app !== "undefined" ) {
-  new YoastCustomFields();
-} else {
-  jQuery( window ).on(
-    "YoastSEO:ready",
-    function() {
-      new YoastCustomFields();
-    }
-  );
-}
+    new YoastCMB2FieldAnalysis();
+	  
+  });
+})(jQuery);

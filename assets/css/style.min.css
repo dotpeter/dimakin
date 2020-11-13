@@ -346,16 +346,16 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-prev .flex-prev{opacity:1;left:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next{opacity:1;right:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next::before{content:'\f105'}
-.single-product .main-wrapper .product-content-wrapper .product-details p{color:#8c8c8c;font-size:16px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-title{color:#454545;font-size:26px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions{margin-top:40px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .fa{margin-right:5px;margin-left:0;font-size:16px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn{background-color:#0180bb;color:#fff;margin-right:10px}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn:hover{background-color:#003b56;border-color:#017db6}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn{background-color:#454545;color:#fff;border-color:#454545}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn:hover{background-color:#121212;border-color:#121212}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-tags{margin:20px 0;font-size:12px;text-transform:uppercase}
-.single-product .main-wrapper .product-content-wrapper .product-details .product-tags span{color:#8c8c8c;margin-right:8px}
+.single-product .main-wrapper .product-content-wrapper .product-details p,.single-product .main-wrapper .product-content-wrapper .full-description p{color:#5d5d5d;font-size:16px}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-title,.single-product .main-wrapper .product-content-wrapper .full-description .product-title{color:#454545;font-size:26px}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions{margin-top:40px}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .fa,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions .fa{margin-right:5px;margin-left:0;font-size:16px}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions .primary-btn{background-color:#0180bb;color:#fff;margin-right:10px}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn:hover,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions .primary-btn:hover{background-color:#003b56;border-color:#017db6}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions .secondary-btn{background-color:#454545;color:#fff;border-color:#454545}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn:hover,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions .secondary-btn:hover{background-color:#121212;border-color:#121212}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-tags,.single-product .main-wrapper .product-content-wrapper .full-description .product-tags{margin:20px 0;font-size:12px;text-transform:uppercase}
+.single-product .main-wrapper .product-content-wrapper .product-details .product-tags span,.single-product .main-wrapper .product-content-wrapper .full-description .product-tags span{color:#8c8c8c;margin-right:8px}
 .single-product .main-wrapper .videos-wrapper{padding:30px 0}
 .single-product .main-wrapper .videos-wrapper .videowrapper{margin-bottom:30px}
 .single-product .main-wrapper .videos-wrapper .videowrapper iframe{max-height:200px}

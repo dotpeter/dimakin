@@ -76,7 +76,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 				if ( $product_full_description ) : 
 					?>
 					<div class="row">
-						<div class="col-12">
+						<div class="col-12 full-description">
 						<?php
 							echo wp_kses_post( wpautop( $product_full_description ) );
 						?>

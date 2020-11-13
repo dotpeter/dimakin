@@ -28,6 +28,9 @@ function dimakin_product_extras() {
     'id'      => $prefix . 'fulltext',
     'type'    => 'wysiwyg',
     'options' => array(),
+    'attributes' => array(
+      'yoast-analysis'		=> '1', // Enable Yoast Analysis for this textField
+    ),
   ) );
 
   // Product Galleries
