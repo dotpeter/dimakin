@@ -346,6 +346,7 @@ embed,iframe,object{max-width:100%}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-prev .flex-prev{opacity:1;left:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next{opacity:1;right:0}
 .single-product .main-wrapper .product-content-wrapper #product-gallery .flex-direction-nav .flex-nav-next .flex-next::before{content:'\f105'}
+.single-product .main-wrapper .product-content-wrapper .product-details .col-12 p:last-of-type,.single-product .main-wrapper .product-content-wrapper .full-description .col-12 p:last-of-type{margin-bottom:0}
 .single-product .main-wrapper .product-content-wrapper .product-details p,.single-product .main-wrapper .product-content-wrapper .full-description p{color:#5d5d5d;font-size:16px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-title,.single-product .main-wrapper .product-content-wrapper .full-description .product-title{color:#454545;font-size:26px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions,.single-product .main-wrapper .product-content-wrapper .full-description .product-actions{margin-top:40px}
@@ -1114,6 +1115,7 @@ h6{font-size:12px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .primary-btn{width:100%;text-align:center;margin-bottom:10px}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-actions .secondary-btn{text-align:center;width:100%}
 .single-product .main-wrapper .product-content-wrapper .product-details .product-tags{margin-bottom:0}
+.single-product .main-wrapper .product-gallery-wrapper{margin-bottom:40px}
 .pull-top{margin-top:0}
 .header-background{height:300px;margin-bottom:40px}
 .header-background .title-wrapper{margin:0 15px}

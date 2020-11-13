@@ -75,8 +75,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 				$product_full_description = get_post_meta( get_the_ID(), '_dimakin_products_fulltext', true );
 				if ( $product_full_description ) : 
 					?>
-					<div class="row">
-						<div class="col-12 full-description">
+					<div class="row full-description">
+						<div class="col-12">
 						<?php
 							echo wp_kses_post( wpautop( $product_full_description ) );
 						?>
