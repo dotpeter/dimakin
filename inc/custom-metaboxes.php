@@ -25,4 +25,4 @@ require_once dirname( __FILE__ ) . '/lib/cmb2-field-post-search-ajax-master/cmb-
 
 require_once dirname( __FILE__ ) . '/lib/custom-metaboxes/metaboxes.php';
 
-//require_once dirname( __FILE__ ) . '/lib/yoast-cmb2-field-analysis.php';
+require_once dirname( __FILE__ ) . '/lib/yoast-cmb2-data-analysis.php';
