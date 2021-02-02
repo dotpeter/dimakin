@@ -40,6 +40,8 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL47PH7"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+	<script type="text/javascript" src="https://secure.text6film.com/js/205728.js" ></script>
+	<noscript><img src="https://secure.text6film.com/205728.png" style="display:none;" /></noscript>
 
 	<?php
 	wp_body_open();
