@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Clan-Book';
+    src: url('Clan-Book.woff2') format('woff2'),
+        url('Clan-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clan';
+    src: url('Clan-Medium.woff2') format('woff2'),
+        url('Clan-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

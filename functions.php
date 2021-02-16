@@ -193,13 +193,13 @@ function dimakin_scripts() {
 
 	if ( ! is_admin() ) :
 		// Enqueue theme styles
-		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700', array(), $theme_version );
-		wp_enqueue_style( 'normalize', get_theme_file_uri( '/assets/css/vendor/normalize.css' ), array(), $theme_version );
-		wp_enqueue_style( 'font-awesome-styles', get_theme_file_uri( '/assets/css/vendor/font-awesome.min.css' ), array(), $theme_version );
-		wp_enqueue_style( 'fancybox-styles', get_theme_file_uri( '/assets/css/vendor/jquery.fancybox.min.css' ), array(), $theme_version );
-		wp_enqueue_style( 'animate-css', get_theme_file_uri( '/assets/css/vendor/animate.css' ), array(), $theme_version );
-		wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ), array(), $theme_version );
-		wp_enqueue_style( 'dimakin-theme-styles', get_theme_file_uri( '/assets/css/style.min.css' ), array(), $theme_version );
+		//wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700', array(), $theme_version );
+		//wp_enqueue_style( 'normalize', get_theme_file_uri( '/assets/css/vendor/normalize.css' ), array(), $theme_version );
+		//wp_enqueue_style( 'font-awesome-styles', get_theme_file_uri( '/assets/css/vendor/font-awesome.min.css' ), array(), $theme_version );
+		//wp_enqueue_style( 'fancybox-styles', get_theme_file_uri( '/assets/css/vendor/jquery.fancybox.min.css' ), array(), $theme_version );
+		//wp_enqueue_style( 'animate-css', get_theme_file_uri( '/assets/css/vendor/animate.css' ), array(), $theme_version );
+		//wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ), array(), $theme_version );
+		wp_enqueue_style( 'dimakin-theme-styles', get_theme_file_uri( '/assets/css/main.min.css' ), array(), $theme_version );
 
 		// Enqueue theme scripts
 		wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ), array( 'jquery' ), $theme_version, false );

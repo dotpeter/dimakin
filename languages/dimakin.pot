@@ -1,4 +1,4 @@
-# Copyright (C) 2020 dimakin
+# Copyright (C) 2021 dimakin
 # This file is distributed under the same license as the dimakin package.
 msgid ""
 msgstr ""

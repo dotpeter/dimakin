@@ -1,8 +1,26 @@
-$primaryfont: 'Open Sans', sans-serif
-$secondaryfont: 'Roboto', sans-serif
+@font-face
+  font-family: 'Clan-Book'
+  src: url('../fonts/clan/Clan-Book.woff2') format('woff2'), url('../fonts/clan/Clan-Book.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Clan'
+  src: url('../fonts/clan/Clan-Medium.woff2') format('woff2'), url('../fonts/clan/Clan-Medium.woff') format('woff')
+  font-weight: 500
+  font-style: normal
+
+
+$primaryfont: 'Clan', sans-serif
+$secondaryfont: 'Clan-Book', sans-serif
+
+//$primaryfont: 'Open Sans', sans-serif
+//$secondaryfont: 'Roboto', sans-serif
 
 $font__main: sans-serif
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace
 $font__pre: "Courier 10 Pitch", Courier, monospace
 $font__line-height-body: 1.5
 $font__line-height-pre: 1.6
+
+

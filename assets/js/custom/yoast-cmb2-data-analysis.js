@@ -78,11 +78,11 @@
 
   if (typeof YoastSEO !== "undefined" && typeof YoastSEO.app !== "undefined") {
     new MyCustomDataPlugin();
-    console.log('ya detectou o yoast');
+    //console.log('ya detectou o yoast');
   } else {
     jQuery(window).on("YoastSEO:ready", function () {
       new MyCustomDataPlugin();
-      console.log('o yoast ficou ready e activei');
+      //console.log('o yoast ficou ready e activei');
     });
   }
 

@@ -5,7 +5,9 @@ const
 
   // CSS Related
   sass = require('gulp-sass'), // Gulp pluign for Sass compilation.
+  concatCSS = require('gulp-concat-css'), // Concatenates css files.
   minifycss = require('gulp-uglifycss'), // Minifies CSS files.
+  //cssmin = require('gulp-cssmin'),
   autoPrefixer = require('gulp-autoprefixer'), // Autoprefixing magic.
   mmq = require('gulp-merge-media-queries'), // Combine matching media queries into one media query definition.
   sourceMaps = require('gulp-sourcemaps'), // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
@@ -110,7 +112,7 @@ function sassCompiler() {
     .pipe(sourceMaps.write('./'))
     .pipe(lineec())
     .pipe(gulp.dest(cssOptions.build))
-    .pipe(filter('**/*.css'))
+    .pipe(filter('**/style.css'))
     .pipe(mmq({
       log: true
     }))
@@ -134,6 +136,33 @@ function sassCompiler() {
 
 }
 exports.sassCompiler = gulp.series(sassCompiler);
+
+
+
+function cssConcat() {
+  return gulp.src(['assets/css/**/*.css', '!assets/css/admin-login.css', '!assets/css/style.min.css'])
+  .pipe(concatCSS('main.css'))
+  .pipe(filter('**/main.css'))
+  .pipe(autoPrefixer(prefixerOptions))
+  .pipe(minifycss({
+    maxLineLen: 0,
+    uglyComments: true
+  }))
+  .pipe(lineec())
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest(cssOptions.build))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+  .pipe(notify({
+    message: 'CSS Concatenated! 💯',
+    onLast: true
+  }));
+}
+
+exports.cssConcat = gulp.series(cssConcat);
 
 // - JS Vendor Task - //
 function jsVendor() {
@@ -231,4 +260,4 @@ function watch(done) {
 }
 
 //** Default Tasks **//
-exports.default = gulp.series(exports.sassCompiler, exports.jsVendor, exports.jsCustom, exports.translate, watch, server);
+exports.default = gulp.series(exports.sassCompiler, exports.jsVendor, exports.jsCustom, exports.translate, exports.cssConcat, watch, server);

@@ -1,30 +1,15 @@
 <?php
 
-class YoastCmb2DataAnalysis {
+function dimakin_yoast_cmb_2_data_analysis_scripts() {
 
-  /**
-   * MyCustomPlugin constructor.
-   */
-  public function __construct() {
-    // ...
-    add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
-  }
+	$theme_version = wp_get_theme()->get( 'Version' );
 
-  /** 
-   * Enqueues the plugin file.
-   */
-  public function enqueue_scripts() {
-    $current_screen = get_current_screen();
-    $current_post_type = get_post_type_object($current_screen->post_type);
-
-    if($current_post_type->public === false) return;
-    wp_enqueue_script( 'yoast-cmb-2-data-analysis', get_theme_file_uri( 'assets/js/custom/yoast-cmb2-data-analysis.js' ), [], '1.', true );
-  }
+	if ( is_admin() ) :
+		// Enqueue theme scripts
+		wp_enqueue_script( 'yoast-cmb-2-data-analysis', get_theme_file_uri( 'assets/js/custom/yoast-cmb2-data-analysis.js' ), array( 'jquery' ), $theme_version, true );
+	endif;
 
 }
 
-/** 
- * Loads the plugin.
- */
-new YoastCmb2DataAnalysis();
+add_action( 'admin_enqueue_scripts', 'dimakin_yoast_cmb_2_data_analysis_scripts' );
 
