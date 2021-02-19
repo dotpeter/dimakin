@@ -1,4 +1,6 @@
 //** Gulpfile Configuration **//
+const { src, series, parallel, dest, watch } = require('gulp');
+
 const
   // Modules
   gulp = require('gulp'), // Gulp of-course
@@ -7,6 +9,8 @@ const
   sass = require('gulp-sass'), // Gulp pluign for Sass compilation.
   concatCSS = require('gulp-concat-css'), // Concatenates css files.
   minifycss = require('gulp-uglifycss'), // Minifies CSS files.
+  cleancss = require('gulp-clean-css'),
+  purge = require('gulp-css-purge'),
   //cssmin = require('gulp-cssmin'),
   autoPrefixer = require('gulp-autoprefixer'), // Autoprefixing magic.
   mmq = require('gulp-merge-media-queries'), // Combine matching media queries into one media query definition.
@@ -64,7 +68,7 @@ const
   // CSS Settings
   cssOptions = {
     src: dir.sassSrc,
-    watch: dir.sassWatch,
+    watchdir: dir.sassWatch,
     build: dir.cssDest,
     sassOptions: {
       outputStyle: 'compact',
@@ -99,74 +103,56 @@ const
 // - CSS Task - //
 function sassCompiler() {
   sass.compiler = require('node-sass');
-  return gulp.src(cssOptions.src)
+  return src(cssOptions.src)
     .pipe(sourceMaps.init())
     .pipe(sass(cssOptions.sassOptions).on('error', sass.logError))
-    .pipe(sourceMaps.write({
-      includeContent: false
-    }))
-    .pipe(sourceMaps.init({
-      loadMaps: true
-    }))
     .pipe(autoPrefixer(prefixerOptions))
     .pipe(sourceMaps.write('./'))
-    .pipe(lineec())
     .pipe(gulp.dest(cssOptions.build))
     .pipe(filter('**/style.css'))
     .pipe(mmq({
       log: true
     }))
-    .pipe(browserSync.stream())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(minifycss({
-      maxLineLen: 10
-    }))
-    .pipe(lineec())
-    .pipe(gulp.dest(cssOptions.build))
-    .pipe(filter('**/*.css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(dest(cssOptions.build))
     .pipe(notify({
-      message: 'TASK: CSS Completed! 💯',
+      message: 'SASS Compiled! 💯',
       onLast: true
     }));
 
 }
-exports.sassCompiler = gulp.series(sassCompiler);
+exports.sassCompiler = sassCompiler;
 
-
+function vendorCssConcat() {
+  return src('./assets/css/vendor/*.css')
+  .pipe(sourceMaps.init())
+  .pipe(concatCSS('vendor.css'))
+  .pipe(sourceMaps.write('./'))
+  .pipe(dest('./assets/css/vendor/'))
+}
+exports.cssConcat = vendorCssConcat;
 
 function cssConcat() {
-  return gulp.src(['assets/css/**/*.css', '!assets/css/admin-login.css', '!assets/css/style.min.css'])
-  .pipe(concatCSS('main.css'))
-  .pipe(filter('**/main.css'))
-  .pipe(autoPrefixer(prefixerOptions))
-  .pipe(minifycss({
-    maxLineLen: 0,
-    uglyComments: true
-  }))
+  return src(['./assets/css/style.css', './assets/css/vendor/vendor.css'])
+  .pipe(sourceMaps.init())
+  .pipe(concatCSS('main.min.css'))
+  .pipe(cleancss({compatibility: 'ie8', level: '2'}))
+  .pipe(sourceMaps.write('./'))
+  .pipe(autoPrefixer(prefixerOptions))  
   .pipe(lineec())
-  .pipe(rename({
-    suffix: '.min'
-  }))
-  .pipe(gulp.dest(cssOptions.build))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
+  .pipe(dest(cssOptions.build))
+  .pipe(browserSync.stream())
+  .pipe(browserSync.reload())
   .pipe(notify({
     message: 'CSS Concatenated! 💯',
     onLast: true
   }));
 }
+exports.cssConcat = cssConcat;
 
-exports.cssConcat = gulp.series(cssConcat);
 
 // - JS Vendor Task - //
 function jsVendor() {
-  return gulp.src(dir.jsVendorSrc)
+  return src(dir.jsVendorSrc)
     .pipe(concat(dir.jsVendor + '.js'))
     .pipe(rename({
       basename: dir.jsVendorFile,
@@ -174,20 +160,20 @@ function jsVendor() {
     }))
     .pipe(uglify())
     .pipe(lineec())
-    .pipe(gulp.dest(dir.jsDest))
+    .pipe(dest(dir.jsDest))
     .pipe(notify({
-      message: 'TASK: Vendors.js Completed! 💯',
+      message: 'Vendors.js Completed! 💯',
       onLast: true
     }))
     .pipe(browserSync.reload({
       stream: true
     }));
 }
-exports.jsVendor = gulp.series(jsVendor);
+exports.jsVendor = jsVendor;
 
 // - JS Custom Task - //
 function jsCustom() {
-  return gulp.src(dir.jsCustomSrc)
+  return src(dir.jsCustomSrc)
     .pipe(concat(dir.jsCustomFile + '.js'))
     .pipe(rename({
       basename: dir.jsCustomFile,
@@ -197,18 +183,18 @@ function jsCustom() {
     .pipe(lineec())
     .pipe(gulp.dest(dir.jsDest))
     .pipe(notify({
-      message: 'TASK: Custom.js Completed! 💯',
+      message: 'Custom.js Completed! 💯',
       onLast: true
     }))
     .pipe(browserSync.reload({
       stream: true
     }));
 }
-exports.jsCustom = gulp.series(jsCustom);
+exports.jsCustom = jsCustom;
 
 // - Images Task - //
 function images() {
-  return gulp.src(dir.imgSrc)
+  return src(dir.imgSrc)
     .pipe(imageMin({
       progressive: true,
       optimizationLevel: 4, // 0-7 low-high
@@ -217,17 +203,17 @@ function images() {
         removeViewBox: false
       }]
     }))
-    .pipe(gulp.dest(dir.imgDes))
+    .pipe(dest(dir.imgDes))
     .pipe(notify({
-      message: 'TASK: Images Completed! 💯',
+      message: 'Images Completed! 💯',
       onLast: true
     }));
 }
-exports.images = gulp.series(images);
+exports.images = images;
 
 // - Translate - //
 function translate() {
-  return gulp.src(dir.phpSrc)
+  return src(dir.phpSrc)
     .pipe(sort())
     .pipe(wpPot({
       domain: translationOptions.textDomain,
@@ -236,13 +222,13 @@ function translate() {
       lastTranslator: translationOptions.lastTranslator,
       team: translationOptions.team
     }))
-    .pipe(gulp.dest(translationOptions.destDir + '/' + translationOptions.destFile))
+    .pipe(dest(translationOptions.destDir + '/' + translationOptions.destFile))
     .pipe(notify({
-      message: 'TASK: Translation Completed! 💯',
+      message: 'Translation Completed! 💯',
       onLast: true
     }));
 }
-exports.translate = gulp.series(translate);
+exports.translate = translate;
 
 // - Server Task (Private) - //
 function server(done) {
@@ -251,13 +237,13 @@ function server(done) {
 }
 
 // - Watch Task - //
-function watch(done) {
-  gulp.watch(cssOptions.watch, sassCompiler); // CSS changes
-  gulp.watch(dir.phpSrc).on('change', reload); // PHP changes
-  gulp.watch(dir.jsVendorSrc, jsVendor).on('change', jsVendor); // JS Vendor changes
-  gulp.watch(dir.jsCustomSrc, jsCustom).on('change', jsCustom); // JS Custom changes
+function watchTask(done) {
+  watch(cssOptions.watchdir, series(sassCompiler, cssConcat)); // CSS changes
+  watch(dir.phpSrc).on('change', reload); // PHP changes
+  watch(dir.jsVendorSrc, jsVendor).on('change', jsVendor); // JS Vendor changes
+  watch(dir.jsCustomSrc, jsCustom).on('change', jsCustom); // JS Custom changes
   done();
 }
 
 //** Default Tasks **//
-exports.default = gulp.series(exports.sassCompiler, exports.jsVendor, exports.jsCustom, exports.translate, exports.cssConcat, watch, server);
+exports.default = series( parallel(jsVendor, jsCustom, translate ), vendorCssConcat, sassCompiler, cssConcat, watchTask, server);
