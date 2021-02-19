@@ -13,7 +13,6 @@
       <div class="col-2 col-sm-11 col-md-11">
         <div class="navigation-wrapper">
           <?php get_template_part('template-parts/main', 'navigation'); ?>
-          <?php get_template_part('template-parts/secondary', 'navigation'); ?>
         </div>
         <?php get_template_part('template-parts/mobile', 'buttons'); ?>
       </div> <!-- col -->
@@ -22,3 +21,14 @@
 </header>
 <?php get_template_part('template-parts/header', 'searchform'); ?>
 <?php get_template_part('template-parts/mobile', 'navigation'); ?>
+<div id="product-categories-menu">
+  <div class="container">
+    <div class="row align-items-center align-content-center">
+      <div class="col-12">
+        <div class="navigation-wrapper">
+          <?php get_template_part('template-parts/secondary', 'navigation'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

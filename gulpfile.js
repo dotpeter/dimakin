@@ -114,11 +114,7 @@ function sassCompiler() {
       log: true
     }))
     .pipe(dest(cssOptions.build))
-    .pipe(notify({
-      message: 'SASS Compiled! 💯',
-      onLast: true
-    }));
-
+    .pipe(browserSync.stream())
 }
 exports.sassCompiler = sassCompiler;
 
@@ -134,18 +130,19 @@ exports.cssConcat = vendorCssConcat;
 function cssConcat() {
   return src(['./assets/css/style.css', './assets/css/vendor/vendor.css'])
   .pipe(sourceMaps.init())
-  .pipe(concatCSS('main.min.css'))
-  .pipe(cleancss({compatibility: 'ie8', level: '2'}))
+  .pipe(concatCSS('main.css'))
+  .pipe(cleancss({compatibility: 'ie8', level: '1'}))
   .pipe(sourceMaps.write('./'))
-  .pipe(autoPrefixer(prefixerOptions))  
+  .pipe(autoPrefixer(prefixerOptions))
   .pipe(lineec())
+  .pipe(rename({
+    suffix: '.min'
+  }))
   .pipe(dest(cssOptions.build))
   .pipe(browserSync.stream())
-  .pipe(browserSync.reload())
-  .pipe(notify({
-    message: 'CSS Concatenated! 💯',
-    onLast: true
-  }));
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 }
 exports.cssConcat = cssConcat;
 

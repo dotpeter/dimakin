@@ -1,3 +1,7 @@
+#product-categories-menu
+  background-color: $primary-color
+  padding: 15px 0px
+  
 .secondary-navigation-wrapper
   display: block
   position: relative
@@ -8,27 +12,30 @@
     margin: 0
     padding: 0
     width: 100%
+    display: flex
+    justify-content: space-between
+    align-content: center
     .menu-item
       display: inline-block
       padding: 0 10px 0 0
       margin: 0 10px 0 0
       transition: .5s .2s all cubic-bezier(0.73, 0.06, 0.21, 1.2)
-      border-right: 2px solid $primary-color
+      border-right: none
       &:last-child
         margin-right: 0
         border-right: none
         padding-right: 0
       a
         font-family: $primaryfont
-        font-size: 14px
-        text-transform: uppercase
-        color: $dark-grey
+        font-size: 1rem
+        //text-transform: uppercase
+        color: white
         display: block
         position: relative
         transition: all .3s
         padding: 0
         &:hover
-          color: $primary-color
+          color: $dark-grey
 
     .menu-item-has-children
       position: relative

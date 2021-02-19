@@ -35,7 +35,7 @@ body {
 
 body {
 	position: relative;
-	background-color: red;
+	background-color: white;
 }
 
 /* width */
@@ -3228,7 +3228,6 @@ object {
 	display: block;
 	position: relative;
 	width: 100%;
-	margin-bottom: 10px;
 	z-index: 30;
 }
 
@@ -3253,14 +3252,14 @@ object {
 
 .main-navigation-wrapper .menu .menu-item a {
 	font-family: "Clan", sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
 	text-transform: uppercase;
-	color: #8c8c8c;
+	color: #454545;
 	display: block;
 	position: relative;
 	-webkit-transition: all .3s;
 	transition: all .3s;
-	padding: 0 0 10px 0;
+	padding: 0 0 5px 0;
 }
 
 .main-navigation-wrapper .menu .menu-item a:hover {
@@ -3355,6 +3354,11 @@ object {
 	display: none;
 }
 
+#product-categories-menu {
+	background-color: #0180bb;
+	padding: 15px 0px;
+}
+
 .secondary-navigation-wrapper {
 	display: block;
 	position: relative;
@@ -3367,6 +3371,17 @@ object {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
 }
 
 .secondary-navigation-wrapper .menu .menu-item {
@@ -3375,7 +3390,7 @@ object {
 	margin: 0 10px 0 0;
 	-webkit-transition: 0.5s 0.2s all cubic-bezier(0.73, 0.06, 0.21, 1.2);
 	transition: 0.5s 0.2s all cubic-bezier(0.73, 0.06, 0.21, 1.2);
-	border-right: 2px solid #0180bb;
+	border-right: none;
 }
 
 .secondary-navigation-wrapper .menu .menu-item:last-child {
@@ -3386,9 +3401,8 @@ object {
 
 .secondary-navigation-wrapper .menu .menu-item a {
 	font-family: "Clan", sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #272d33;
+	font-size: 1rem;
+	color: white;
 	display: block;
 	position: relative;
 	-webkit-transition: all .3s;
@@ -3397,7 +3411,7 @@ object {
 }
 
 .secondary-navigation-wrapper .menu .menu-item a:hover {
-	color: #0180bb;
+	color: #272d33;
 }
 
 .secondary-navigation-wrapper .menu .menu-item-has-children {
