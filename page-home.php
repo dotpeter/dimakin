@@ -15,11 +15,11 @@ get_header(); ?>
 
 	get_template_part( 'template-parts/home/home', 'products' );
 
-	get_template_part( 'template-parts/home/home', 'highlight' );
+	get_template_part( 'template-parts/home/home', 'services-v2' );
 
 	get_template_part( 'template-parts/home/home', 'news' );
 
-	get_template_part( 'template-parts/home/home', 'services-v2' );
+	get_template_part( 'template-parts/home/home', 'highlight' );
 
 	//get_template_part( 'template-parts/home/home', 'services' );
 

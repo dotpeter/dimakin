@@ -4,7 +4,7 @@
 */
 ?>
 <header class="main-header-wrapper">
-  <?php get_template_part('template-parts/header', 'topbar'); ?>
+  <?php //get_template_part('template-parts/header', 'topbar'); ?>
   <div class="container">
     <div class="row align-items-center">
       <div class="col-10 col-sm-1 col-md-1">
