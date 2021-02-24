@@ -67,6 +67,10 @@
   overflow: hidden
   border: 1px solid #f1f1f1
   margin-bottom: 30px
+  min-height: 340px
+  display: flex
+  align-content: space-between
+  flex-direction: column
   &:hover
     .news-card-header
       .card-thumbnail
@@ -104,6 +108,7 @@
         color: $light-color
         background-color: $primary-color
   .news-card-header
+    margin-top: auto
     .card-thumbnail
       overflow: hidden
       img

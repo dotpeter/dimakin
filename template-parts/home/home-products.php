@@ -18,7 +18,7 @@ if ( $products_loop->have_posts() ) :
     do_action('products_loop');
     echo '</div>';
   endwhile;
-  echo '</div></div></div></div><div class="row"><div class="col-12"><a href="', get_post_type_archive_link( 'product' ) , '" class="primary-btn">' , esc_html__( 'Ver todos os Produtos', 'dimakin' ) , '<i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div></div></section>';
+  echo '</div></div></div></div><div class="row"><div class="col-12"><a href="', get_post_type_archive_link( 'product' ) , '" class="primary-btn">' , esc_html__( 'Ver + Produtos', 'dimakin' ) , '<i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div></div></section>';
 endif;
 
 wp_reset_postdata();

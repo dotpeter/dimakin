@@ -49,4 +49,6 @@
   });
 
 
+  //import Swiper from 'swiper';
+
 })(jQuery);

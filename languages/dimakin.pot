@@ -691,11 +691,11 @@ msgid "Procurar..."
 msgstr ""
 
 #: template-parts/home/home-news.php:37
-msgid "Ver todas as Notícias"
+msgid "Ver + Notícias"
 msgstr ""
 
 #: template-parts/home/home-products.php:21
-msgid "Ver todos os Produtos"
+msgid "Ver + Produtos"
 msgstr ""
 
 #: template-parts/loops/related-news-loop.php:23

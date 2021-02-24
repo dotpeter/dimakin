@@ -199,14 +199,14 @@ function dimakin_scripts() {
 		//wp_enqueue_style( 'fancybox-styles', get_theme_file_uri( '/assets/css/vendor/jquery.fancybox.min.css' ), array(), $theme_version );
 		//wp_enqueue_style( 'animate-css', get_theme_file_uri( '/assets/css/vendor/animate.css' ), array(), $theme_version );
 		//wp_enqueue_style( 'flexslider', get_theme_file_uri( '/assets/css/vendor/flexslider.css' ), array(), $theme_version );
-		wp_enqueue_style( 'dimakin-theme-styles', get_theme_file_uri( '/assets/css/main.min.css' ), array(), $theme_version );
+		wp_enqueue_style( 'dimakin-theme-styles', get_theme_file_uri( '/dist/style.css' ), array(), $theme_version );
 
 		// Enqueue theme scripts
-		wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ), array( 'jquery' ), $theme_version, false );
-		wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ), array( 'jquery' ), $theme_version, false );
-		wp_enqueue_script( 'dimakin-onready-js', get_theme_file_uri( '/assets/js/custom/onready.js' ), array( 'jquery' ), $theme_version, false );
-		wp_enqueue_script( 'dimakin-cookie-bar-js', get_theme_file_uri( '/assets/js/custom/cookie-bar.js' ), array( 'jquery' ), $theme_version, true );
-		wp_enqueue_script( 'dimakin-onload-js', get_theme_file_uri( '/assets/js/custom/onload.js' ), array( 'jquery' ), $theme_version, true );
+		//wp_enqueue_script( 'dimakin-flexslider', get_theme_file_uri( '/assets/js/vendor/jquery.flexslider.js' ), array( 'jquery' ), $theme_version, false );
+		//wp_enqueue_script( 'dimakin-fancybox', get_theme_file_uri( '/assets/js/vendor/jquery.fancybox.min.js' ), array( 'jquery' ), $theme_version, false );
+		//wp_enqueue_script( 'dimakin-onready-js', get_theme_file_uri( '/assets/js/custom/onready.js' ), array( 'jquery' ), $theme_version, false );
+		//wp_enqueue_script( 'dimakin-cookie-bar-js', get_theme_file_uri( '/assets/js/custom/cookie-bar.js' ), array( 'jquery' ), $theme_version, true );
+		wp_enqueue_script( 'dimakin-theme-js', get_theme_file_uri( '/dist/app.js' ), array( 'jquery' ), $theme_version, true );
 
 	endif;
 

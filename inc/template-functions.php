@@ -54,7 +54,7 @@ function get_excerpt(){
   $excerpt = preg_replace(" ([.*?])",'',$excerpt); //Perform a regular expression search and replace.
   $excerpt = strip_shortcodes($excerpt);
   $excerpt = strip_tags($excerpt); //Strip HTML and PHP tags from a string
-  $excerpt = substr($excerpt, 0, 40); //Return part of a string
+  $excerpt = substr($excerpt, 0, 76); //Return part of a string
   $excerpt = substr($excerpt, 0, strripos($excerpt, " ")); //strripos — Find the position of the last occurrence of a case-insensitive substring in a string
   $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt)); //Strip whitespace (or other characters) from the beginning and end of a string
   $excerpt = $excerpt.'...';

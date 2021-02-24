@@ -34,7 +34,7 @@ if ( $news_loop->have_posts() ) :
   while ( $news_loop->have_posts() ) : $news_loop->the_post();
     do_action('news_loop');
   endwhile;
-  echo '</div><div class="row"><div class="col-12"><a href="', get_permalink( get_option( 'page_for_posts' ) ) , '" class="primary-btn">' , esc_html__( 'Ver todas as Notícias', 'dimakin' ) , '<i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div></div></section>';
+  echo '</div><div class="row"><div class="col-12"><a href="', get_permalink( get_option( 'page_for_posts' ) ) , '" class="primary-btn">' , esc_html__( 'Ver + Notícias', 'dimakin' ) , '<i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div></div></section>';
 endif;
 
 wp_reset_postdata();

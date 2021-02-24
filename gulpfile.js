@@ -73,7 +73,8 @@ const
     sassOptions: {
       outputStyle: 'compact',
       precision: 10,
-      errLogToConsole: true
+      errLogToConsole: true,
+      includePaths: ['node_modules']
     },
   },
 
